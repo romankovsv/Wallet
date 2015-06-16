@@ -28,7 +28,7 @@ public class DeleteCurrency extends HttpServlet {
             CurrencyDao currencyDao = daoFactory.getCurrencyDao(connection);
             int id = Integer.parseInt(request.getParameter("id"));
             currencyDao.delete(id);
-            response.sendRedirect("/currency");
+            getServletContext().getRequestDispatcher("/currency-list").forward(request, response);
         } catch (SQLException e) {
             e.printStackTrace();
         }

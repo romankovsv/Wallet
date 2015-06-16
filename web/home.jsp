@@ -18,7 +18,7 @@
   <input type="submit" name="enter" value="Enter">
 </form>
 <button>
-  <a href="/adduser.jsp">Registration</a>
+  <a href="/newuser.jsp">Registration</a>
 </button>
 </body>
 </html>

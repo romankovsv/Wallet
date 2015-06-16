@@ -22,7 +22,7 @@ import java.util.List;
 /**
  * Created by SpiritMoon
  */
-@WebServlet(name = "AddWallet", urlPatterns = "/user/addwallet")
+@WebServlet(name = "AddWallet", urlPatterns = "/user/add-wallet")
 public class AddWallet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

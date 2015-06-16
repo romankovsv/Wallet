@@ -15,8 +15,6 @@ public class Filter implements javax.servlet.Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException, IOException {
         if (((HttpServletRequest)request).getSession().getAttribute("id") != null) {
             chain.doFilter(request, response);
-        } else {
-            request.getRequestDispatcher("/error.jsp").forward(request, response);
         }
     }
 

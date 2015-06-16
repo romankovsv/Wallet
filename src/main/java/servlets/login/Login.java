@@ -27,7 +27,7 @@ public class Login extends HttpServlet {
                 request.getSession().setAttribute("id", user.getId());
                 response.sendRedirect("/user");
             } else {
-                request.getRequestDispatcher("error.jsp").forward(request, response);
+                response.sendError(301);
             }
         } catch (SQLException e) {
             e.printStackTrace();

@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * Created by SpiritMoon
  */
-@WebServlet(name = "CurrencyList", urlPatterns = "/currency")
+@WebServlet(name = "CurrencyList", urlPatterns = "/currency-list")
 public class CurrencyList extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

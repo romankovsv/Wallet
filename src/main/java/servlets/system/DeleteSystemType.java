@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * Created by SpiritMoon
  */
-@WebServlet(name = "DeleteSystemType", urlPatterns = "/delete-type")
+@WebServlet(name = "DeleteSystemType", urlPatterns = "/delete-system-type")
 public class DeleteSystemType extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -37,6 +37,6 @@ public class DeleteSystemType extends HttpServlet {
         }
 
         request.setAttribute("list", list);
-        getServletContext().getRequestDispatcher("/type.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/systemtype.jsp").forward(request, response);
     }
 }

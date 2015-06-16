@@ -15,7 +15,7 @@
 
 <p>
     <button>
-        <a href="/user/addwallet">Add Wallet</a>
+        <a href="/user/add-wallet">Add Wallet</a>
     </button>
 </p>
 
