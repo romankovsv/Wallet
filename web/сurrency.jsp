@@ -5,9 +5,7 @@
 <head>
   <title>Currency</title>
   <style>
-    a {
-      text-decoration: none;
-    }
+    <%@include file="style.css"%>
   </style>
 </head>
 <body>

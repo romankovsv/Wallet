@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * Created by SpiritMoon
  */
-@WebServlet(name = "ServletPage", urlPatterns = "/user")
+@WebServlet(name = "UserPage", urlPatterns = "/user")
 public class UserPage extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -28,6 +28,7 @@ public class UserPage extends HttpServlet {
         DaoFactory daoFactory = new MySqlDaoFactory();
         List<Wallet> list = new ArrayList<>();
         int id = (int) request.getSession().getAttribute("id");
+        String name = (String) request.getSession().getAttribute("name");
 
         try (Connection connection = daoFactory.getConnection()) {
             WalletDao walletDao = daoFactory.getWalletDao(connection);
@@ -37,6 +38,7 @@ public class UserPage extends HttpServlet {
         }
 
         request.setAttribute("list", list);
+        request.setAttribute("name", name);
         getServletContext().getRequestDispatcher("/userpage.jsp").forward(request, response);
     }
 }

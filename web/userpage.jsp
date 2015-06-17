@@ -4,14 +4,12 @@
 <head>
     <title>User Page</title>
     <style>
-        a {
-            text-decoration: none;
-        }
+        <%@include file="style.css"%>
     </style>
 </head>
 <body>
 
-<h1>Welcome</h1>
+<h1>Welcome ${name}</h1>
 
 <p>
     <button>

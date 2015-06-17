@@ -25,9 +25,10 @@ public class Login extends HttpServlet {
             User user = userDao.login(request.getParameter("email"), request.getParameter("password"));
             if (user != null) {
                 request.getSession().setAttribute("id", user.getId());
+                request.getSession().setAttribute("name", user.getName());
                 response.sendRedirect("/user");
             } else {
-                response.sendError(301);
+                response.sendError(401);
             }
         } catch (SQLException e) {
             e.printStackTrace();

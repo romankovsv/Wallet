@@ -3,15 +3,13 @@
 <head>
     <title>Error</title>
     <style>
-      a {
-        text-decoration : none;
-      }
+        <%@include file="style.css"%>
     </style>
 </head>
 <body>
 
-<p><h3>Sorry, incorrect data</h3></p>
-<p><a href="home.jsp"><h3>Try again</h3></a></p>
+<p><h3>Access allowed only for registered users.</h3></p>
+<p><a href="login.jsp"><h3>Login</h3></a></p>
 
 </body>
 </html>
