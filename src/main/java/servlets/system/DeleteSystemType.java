@@ -37,6 +37,6 @@ public class DeleteSystemType extends HttpServlet {
         }
 
         request.setAttribute("list", list);
-        getServletContext().getRequestDispatcher("/systemtype.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/systemTypes.jsp").forward(request, response);
     }
 }

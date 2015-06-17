@@ -39,6 +39,6 @@ public class UserPage extends HttpServlet {
 
         request.setAttribute("list", list);
         request.setAttribute("name", name);
-        getServletContext().getRequestDispatcher("/userpage.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/userMainPage.jsp").forward(request, response);
     }
 }
