@@ -4,13 +4,20 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
-    <welcome-file-list>
-        <welcome-file>login.jsp</welcome-file>
-    </welcome-file-list>
-
     <error-page>
         <error-code>401</error-code>
         <location>/401.jsp</location>
     </error-page>
+    
+    <filter>
+        <filter-name>AuthenticationFilter</filter-name>
+        <filter-class>servlets.security.Filter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>AuthenticationFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+    </filter-mapping>
 
 </web-app>

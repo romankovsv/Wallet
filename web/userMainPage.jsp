@@ -30,5 +30,11 @@
     </c:forEach>
 </table>
 
+<p>
+<form action="/logout" method="post">
+    <input type="submit" value="Logout">
+</form>
+</p>
+
 </body>
 </html>

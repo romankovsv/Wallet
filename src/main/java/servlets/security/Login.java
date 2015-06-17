@@ -1,4 +1,4 @@
-package servlets.login;
+package servlets.security;
 
 import tables.factory.DaoFactory;
 import tables.factory.MySqlDaoFactory;
