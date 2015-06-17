@@ -9,7 +9,7 @@
 <body>
 
 <p><h3>Access allowed only for registered users.</h3></p>
-<p><a href="login.jsp"><h3>Login</h3></a></p>
+<p><a href="/"><h3>Login</h3></a></p>
 
 </body>
 </html>

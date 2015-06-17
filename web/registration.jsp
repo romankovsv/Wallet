@@ -12,16 +12,11 @@
 
 <div class="RegistrationBlock">
     <form action="/registration" method="post">
-        Name<br>
-        <input type="text" name="name"><br>
-        Date of birth<br>
-        <input type="text" name="date of birth"><br>
-        Sex<br>
-        <input type="text" name="sex"><br>
-        Email<br>
-        <input type="text" name="email"><br>
-        Password<br>
-        <input type="text" name="password">
+        <input type="text" name="name" required placeholder="Name"><br>
+        <input type="text" name="date of birth" required placeholder="Date of birth"><br>
+        <input type="text" name="sex" required placeholder="Sex"><br>
+        <input type="text" name="email" required placeholder="Email"><br>
+        <input type="text" name="password" required placeholder="Password">
         <p><input type="submit" name="create" value="Create"></p>
     </form>
 </div>
