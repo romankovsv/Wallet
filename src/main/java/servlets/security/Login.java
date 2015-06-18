@@ -5,12 +5,15 @@ import tables.factory.MySqlDaoFactory;
 import tables.users.User;
 import tables.users.UserDao;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.awt.print.Printable;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.*;
 /**
  * Created by SpiritMoon
@@ -28,7 +31,7 @@ public class Login extends HttpServlet {
                 request.getSession().setAttribute("name", user.getName());
                 response.sendRedirect("/user");
             } else {
-                response.sendError(401);
+                getServletContext().getRequestDispatcher("/loginError.jsp").forward(request, response);
             }
         } catch (SQLException e) {
             e.printStackTrace();

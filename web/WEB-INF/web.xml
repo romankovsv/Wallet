@@ -8,20 +8,13 @@
         <welcome-file>login.jsp</welcome-file>
     </welcome-file-list>
 
-    <error-page>
-        <error-code>401</error-code>
-        <location>/401.jsp</location>
-    </error-page>
-    
     <filter>
-        <filter-name>AuthenticationFilter</filter-name>
-        <filter-class>servlets.security.Filter</filter-class>
+        <filter-name>UserCheckFilter</filter-name>
+        <filter-class>servlets.security.UserCheckFilter</filter-class>
+        <init-param>
+            <param-name>loginActionFilter</param-name>
+            <param-value>servlets.security.Login</param-value>
+        </init-param>
     </filter>
-
-    <filter-mapping>
-        <filter-name>AuthenticationFilter</filter-name>
-        <url-pattern>/*</url-pattern>
-        <dispatcher>REQUEST</dispatcher>
-    </filter-mapping>
 
 </web-app>
