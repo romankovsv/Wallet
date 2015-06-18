@@ -11,7 +11,7 @@
 <h1>Login, please.</h1>
 
 <div class="Block">
-  <form action="login" method="post">
+  <form action="user" method="post">
     Email<br>
     <input type="text" name="email" required><br>
     Password<br>
@@ -21,6 +21,7 @@
       <input type="button" name="registration" value="Registration" onclick="parent.location='/registration.jsp'" />
     </p>
   </form>
+  ${error}
 </div>
 
 </body>

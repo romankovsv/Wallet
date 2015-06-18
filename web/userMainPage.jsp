@@ -9,11 +9,11 @@
 </head>
 <body>
 
-<h1>Welcome ${name}</h1>
+<h1>Welcome ${user.name}</h1>
 
 <p>
     <button>
-        <a href="/user/add-wallet">Add Wallet</a>
+        <a href="user/add-wallet">Add Wallet</a>
     </button>
 </p>
 
@@ -31,7 +31,7 @@
 </table>
 
 <p>
-<form action="/logout" method="post">
+<form action="logout" method="post">
     <input type="submit" value="Logout">
 </form>
 </p>

@@ -1,45 +1,48 @@
 package servlets.security;
 
+import tables.factory.DaoFactory;
+import tables.factory.MySqlDaoFactory;
 import tables.users.User;
+import tables.users.UserDao;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.SQLException;
 /**
  * Created by SpiritMoon
  */
 @WebFilter("/AuthenticationFilter")
 public class UserCheckFilter implements javax.servlet.Filter {
-    private String LOGIN_ACTION_URI;
+    private FilterConfig filterConfig = null;
 
     public void init(FilterConfig config) throws ServletException {
-        LOGIN_ACTION_URI = config.getInitParameter("loginActionURI");
+        this.filterConfig = config;
+
     }
 
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException, IOException {
         HttpServletRequest req = (HttpServletRequest) request;
-        HttpSession session = req.getSession();
-        String name = (String) session.getAttribute("name");
+        DaoFactory daoFactory = new MySqlDaoFactory();
 
-        if (name == null && !LOGIN_ACTION_URI.equals(req.getRequestURI())) {
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/login.jsp");
-            requestDispatcher.forward(request, response);
+        try (Connection connection = daoFactory.getConnection()) {
+            UserDao userDao = daoFactory.getUserDao(connection);
+            User user = userDao.login(request.getParameter("email"), request.getParameter("password"));
+            if (user != null) {
+                req.getSession().setAttribute("user", user);
+                chain.doFilter(request, response);
+            } else {
+                req.setAttribute("error", "<font color=red>Wrong email/password.</font>");
+                req.getRequestDispatcher("login.jsp").forward(request, response);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-
-        chain.doFilter(request, response);
-
-//        if (((HttpServletRequest)request).getSession().getAttribute("id") != null) {
-//            chain.doFilter(request, response);
-//        } else {
-//            ((HttpServletResponse)response).sendRedirect("login.jsp");
-//        }
     }
 
     public void destroy() {
-
+        this.filterConfig = null;
     }
 }
