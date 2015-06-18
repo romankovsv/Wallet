@@ -26,7 +26,7 @@ public class Filter implements javax.servlet.Filter {
 
         HttpSession session = req.getSession(false);
 
-        if(session == null && !(uri.endsWith("jsp") || uri.endsWith("login"))){
+        if(session == null && !(uri.endsWith("login.jsp")) || uri.endsWith("login")) {
             this.context.log("Unauthorized access request");
             res.sendRedirect("login.jsp");
         }else{
