@@ -9,14 +9,13 @@
     </welcome-file-list>
 
     <filter>
-        <description>Requires user to log in as a member</description>
         <filter-name>UserCheckFilter</filter-name>
         <filter-class>servlets.security.UserCheckFilter</filter-class>
     </filter>
 
     <filter-mapping>
         <filter-name>UserCheckFilter</filter-name>
-        <url-pattern>/user/*</url-pattern>
+        <url-pattern>/user</url-pattern>
     </filter-mapping>
 
 </web-app>

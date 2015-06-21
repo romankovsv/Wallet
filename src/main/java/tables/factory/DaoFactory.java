@@ -14,23 +14,23 @@ import java.sql.SQLException;
 /** Фабрика объектов для работы с базой данных */
 public interface DaoFactory {
     /** Возвращает подключение к базе данных */
-    public Connection getConnection() throws SQLException;
+    Connection getConnection() throws SQLException;
 
     /** Возвращает объект для работы с состоянием user */
-    public UserDao getUserDao(Connection connection);
+    UserDao getUserDao(Connection connection);
 
     /** Возвращает объект для работы с состоянием wallets */
-    public WalletDao getWalletDao(Connection connection);
+    WalletDao getWalletDao(Connection connection);
 
     /** Возвращает объект для работы с состоянием currency */
-    public CurrencyDao getCurrencyDao(Connection connection);
+    CurrencyDao getCurrencyDao(Connection connection);
 
     /** Возвращает объект для работы с состоянием system */
-    public SystemTypeDao getSystemTypeDao(Connection connection);
+    SystemTypeDao getSystemTypeDao(Connection connection);
 
     /** Возвращает объект для работы с состоянием system_currency */
-    public SystemCurrencyDao getS_CDao(Connection connection);
+    SystemCurrencyDao getS_CDao(Connection connection);
 
     /** Возвращает объект для работы с состоянием wallets_system */
-    public WalletSystemDao getW_SDao(Connection connection);
+    WalletSystemDao getW_SDao(Connection connection);
 }

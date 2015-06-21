@@ -6,7 +6,6 @@ import tables.users.User;
 import tables.users.UserDao;
 
 import javax.servlet.*;
-import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.sql.Connection;
@@ -14,12 +13,8 @@ import java.sql.SQLException;
 /**
  * Created by SpiritMoon
  */
-@WebFilter("/AuthenticationFilter")
 public class UserCheckFilter implements javax.servlet.Filter {
-    private FilterConfig filterConfig = null;
-
     public void init(FilterConfig config) throws ServletException {
-        this.filterConfig = config;
 
     }
 
@@ -43,6 +38,6 @@ public class UserCheckFilter implements javax.servlet.Filter {
     }
 
     public void destroy() {
-        this.filterConfig = null;
+
     }
 }

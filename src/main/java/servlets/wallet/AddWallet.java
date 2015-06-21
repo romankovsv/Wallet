@@ -6,6 +6,9 @@ import tables.factory.DaoFactory;
 import tables.factory.MySqlDaoFactory;
 import tables.system.SystemType;
 import tables.system.SystemTypeDao;
+import tables.system_currency.SystemCurrency;
+import tables.users.MySqlUserDao;
+import tables.users.User;
 import tables.wallets.WalletDao;
 
 import javax.servlet.ServletException;
@@ -18,7 +21,6 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
 /**
  * Created by SpiritMoon
  */
@@ -30,22 +32,18 @@ public class AddWallet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         DaoFactory daoFactory = new MySqlDaoFactory();
-        int id = (int) request.getSession().getAttribute("id");
-        List<SystemType> systemTypeList = new ArrayList<>();
         List<Currency> currencyList = new ArrayList<>();
+        List<SystemType> systemTypeList = new ArrayList<>();
 
         try(Connection connection = daoFactory.getConnection()) {
-            WalletDao walletDao = daoFactory.getWalletDao(connection);
-            CurrencyDao currencyDao = daoFactory.getCurrencyDao(connection);
-            SystemTypeDao systemType = daoFactory.getSystemTypeDao(connection);
-
-            systemTypeList = systemType.getAll();
-            currencyList = currencyDao.getAll();
-
+            currencyList = daoFactory.getCurrencyDao(connection).getAll();
+            systemTypeList = daoFactory.getSystemTypeDao(connection).getAll();
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        getServletContext().getRequestDispatcher("/user").forward(request, response);
+        request.setAttribute("type", systemTypeList);
+        request.setAttribute("currency", currencyList);
+        getServletContext().getRequestDispatcher("/addNewWallet.jsp").forward(request, response);
     }
 }
