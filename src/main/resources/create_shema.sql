@@ -17,15 +17,9 @@ CREATE TABLE IF NOT EXISTS user (
 CREATE TABLE IF NOT EXISTS wallets (
   id INT NOT NULL AUTO_INCREMENT ,
   users_id INT NOT NULL ,
-  sum INT DEFAULT 0 ,
-  PRIMARY KEY (id)
-);
-
--- Table wallet_system
-CREATE TABLE IF NOT EXISTS wallet_system (
-  id INT NOT NULL AUTO_INCREMENT ,
-  wallets_id INT NOT NULL ,
   system_id INT NOT NULL ,
+  currency_id INT NOT NULL ,
+  sum INT DEFAULT 0 ,
   PRIMARY KEY (id)
 );
 
@@ -58,14 +52,14 @@ ON UPDATE CASCADE ON DELETE CASCADE;
 ALTER TABLE system_currency ADD FOREIGN KEY (currency_id) REFERENCES currency (id)
 ON UPDATE CASCADE ON DELETE CASCADE;
 
-ALTER TABLE wallet_system ADD FOREIGN KEY (system_id) REFERENCES system (id)
-ON UPDATE CASCADE ON DELETE CASCADE;
-
-ALTER TABLE wallet_system ADD FOREIGN KEY (wallets_id) REFERENCES wallets (id)
-ON UPDATE CASCADE ON DELETE CASCADE;
-
 ALTER TABLE wallets ADD FOREIGN KEY (users_id) REFERENCES user (id)
 ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE wallets ADD FOREIGN KEY (system_id) REFERENCES system (id)
+  ON UPDATE CASCADE ON DELETE CASCADE;
+
+ALTER TABLE wallets ADD FOREIGN KEY (currency_id) REFERENCES currency (id)
+  ON UPDATE CASCADE ON DELETE CASCADE;
 
 -- system's values
 INSERT INTO system (name) VALUES ("Bitcoin"), ("Yandex Money"), ("WebMoney");

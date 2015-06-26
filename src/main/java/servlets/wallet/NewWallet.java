@@ -24,8 +24,8 @@ import java.util.List;
 /**
  * Created by SpiritMoon
  */
-@WebServlet(name = "AddWallet", urlPatterns = "/user/add-wallet")
-public class AddWallet extends HttpServlet {
+@WebServlet(name = "AddWallet", urlPatterns = "/user/new-wallet")
+public class NewWallet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
@@ -34,16 +34,19 @@ public class AddWallet extends HttpServlet {
         DaoFactory daoFactory = new MySqlDaoFactory();
         List<Currency> currencyList = new ArrayList<>();
         List<SystemType> systemTypeList = new ArrayList<>();
+        List<SystemCurrency> systemCurrencies = new ArrayList<>();
 
         try(Connection connection = daoFactory.getConnection()) {
             currencyList = daoFactory.getCurrencyDao(connection).getAll();
             systemTypeList = daoFactory.getSystemTypeDao(connection).getAll();
+            systemCurrencies = daoFactory.getS_CDao(connection).getAll();
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
         request.setAttribute("type", systemTypeList);
         request.setAttribute("currency", currencyList);
-        getServletContext().getRequestDispatcher("/addNewWallet.jsp").forward(request, response);
+        request.setAttribute("sc", systemCurrencies);
+        getServletContext().getRequestDispatcher("/newWallet.jsp").forward(request, response);
     }
 }

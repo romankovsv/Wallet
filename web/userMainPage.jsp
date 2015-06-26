@@ -9,22 +9,24 @@
 </head>
 <body>
 
-<h1>Welcome ${user.name}</h1>
+<h1>Welcome, ${user.name}</h1>
 
 <p>
     <button>
-        <a href="user/add-wallet">Add Wallet</a>
+        <a href="user/new-wallet">Add Wallet</a>
     </button>
 </p>
 
 <table border="1">
     <tr>
-        <td>Id</td>
-        <td>Sum</td>
+        <th>Name</th>
+        <th>Currency</th>
+        <th>Sum</th>
     </tr>
     <c:forEach items="${list}" var="wallet">
         <tr>
             <td>${wallet.id}</td>
+            <td></td>
             <td>${wallet.sum}</td>
         </tr>
     </c:forEach>

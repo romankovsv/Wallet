@@ -6,7 +6,6 @@ import tables.currency.CurrencyDao;
 import tables.system.SystemTypeDao;
 import tables.system_currency.SystemCurrencyDao;
 import tables.users.UserDao;
-import tables.wallet_system.WalletSystemDao;
 import tables.wallets.WalletDao;
 
 import java.sql.Connection;
@@ -30,7 +29,4 @@ public interface DaoFactory {
 
     /** Возвращает объект для работы с состоянием system_currency */
     SystemCurrencyDao getS_CDao(Connection connection);
-
-    /** Возвращает объект для работы с состоянием wallets_system */
-    WalletSystemDao getW_SDao(Connection connection);
 }

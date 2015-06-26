@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -9,9 +10,9 @@
 <body>
 
 
-<h1>Login, please.</h1>
+<h1>Login, please</h1>
 <div class="Block">
-  <form action="user" method="post">
+  <form action="login" method="post">
     <input type="text" name="email" required placeholder="Name"><br>
     <input type="password" name="password" required placeholder="Password"><br>
     <p>

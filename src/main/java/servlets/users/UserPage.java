@@ -22,6 +22,10 @@ import java.util.List;
 @WebServlet(name = "UserPage", urlPatterns = "/user")
 public class UserPage extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         DaoFactory daoFactory = new MySqlDaoFactory();
         List<Wallet> list = new ArrayList<>();
         User user = (User) request.getSession().getAttribute("user");
@@ -35,9 +39,5 @@ public class UserPage extends HttpServlet {
 
         request.setAttribute("list", list);
         getServletContext().getRequestDispatcher("/userMainPage.jsp").forward(request, response);
-    }
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
     }
 }

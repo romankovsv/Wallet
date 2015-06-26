@@ -1,6 +1,5 @@
 package tables.factory;
 
-import com.mysql.fabric.jdbc.FabricMySQLDriver;
 import tables.currency.CurrencyDao;
 import tables.currency.MySqlCurrencyDao;
 import tables.system.MySqlSystemTypeDao;
@@ -9,13 +8,10 @@ import tables.system_currency.MySqlSystemCurrencyDao;
 import tables.system_currency.SystemCurrencyDao;
 import tables.users.MySqlUserDao;
 import tables.users.UserDao;
-import tables.wallet_system.MySqlWalletSystemDao;
-import tables.wallet_system.WalletSystemDao;
 import tables.wallets.MySqlWalletDao;
 import tables.wallets.WalletDao;
 
 import java.sql.Connection;
-import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 /**
@@ -49,10 +45,6 @@ public class MySqlDaoFactory implements DaoFactory {
 
     public SystemCurrencyDao getS_CDao(Connection connection) {
         return new MySqlSystemCurrencyDao(connection);
-    }
-
-    public WalletSystemDao getW_SDao(Connection connection) {
-        return new MySqlWalletSystemDao(connection);
     }
 
     public MySqlDaoFactory() {
