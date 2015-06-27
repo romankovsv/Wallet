@@ -13,6 +13,6 @@ public interface SystemTypeDao {
     void update(int id);
     /** Удалить объект System */
     void delete(int id);
-    //** Вывод всех записей по System */
+    /** Вывод всех записей по System */
     List<SystemType> getAll();
 }

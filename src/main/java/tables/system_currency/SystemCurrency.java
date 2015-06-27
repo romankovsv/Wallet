@@ -4,8 +4,8 @@ package tables.system_currency;
  */
 public class SystemCurrency {
     private int id;
-    private int system_id;
-    private int currency_id;
+    private int systemId;
+    private int currencyId;
 
     SystemCurrency() {}
 
@@ -17,19 +17,19 @@ public class SystemCurrency {
         this.id = id;
     }
 
-    public int getSystem_id() {
-        return system_id;
+    public int getSystemId() {
+        return systemId;
     }
 
-    public void setSystem_id(int system_id) {
-        this.system_id = system_id;
+    public void setSystemId(int systemId) {
+        this.systemId = systemId;
     }
 
-    public int getCurrency_id() {
-        return currency_id;
+    public int getCurrencyId() {
+        return currencyId;
     }
 
-    public void setCurrency_id(int currency_id) {
-        this.currency_id = currency_id;
+    public void setCurrencyId(int currencyId) {
+        this.currencyId = currencyId;
     }
 }

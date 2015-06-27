@@ -21,7 +21,7 @@ public class MySqlUserDao implements UserDao {
 
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, user.getName());
-            statement.setString(2, user.getDate_of_birth());
+            statement.setString(2, user.getDateOfBirth());
             statement.setDate(3, new Date(System.currentTimeMillis()));
             statement.setString(4, user.getSex());
             statement.setString(5, user.getEmail());
@@ -50,8 +50,8 @@ public class MySqlUserDao implements UserDao {
             resultSet.next();
             user.setId(resultSet.getInt("id"));
             user.setName(resultSet.getString("name"));
-            user.setDate_of_birth(resultSet.getString("date_of_birth"));
-            user.setDate_of_registration(resultSet.getDate("date_of_registration"));
+            user.setDateOfBirth(resultSet.getString("date_of_birth"));
+            user.setDateOfRegistration(resultSet.getDate("date_of_registration"));
             user.setSex(resultSet.getString("sex"));
             user.setEmail(resultSet.getString("email"));
             user.setPassword(resultSet.getString("password"));
@@ -110,19 +110,16 @@ public class MySqlUserDao implements UserDao {
     @Override
     public List<User> getAll() {
         List<User> list = new ArrayList<User>();
-        PreparedStatement statement = null;
-        ResultSet resultSet = null;
         String sql = "SELECT * FROM user";
 
-        try {
-            statement = connection.prepareStatement(sql);
-            resultSet = statement.executeQuery();
+        try (PreparedStatement statement = connection.prepareStatement(sql);
+             ResultSet resultSet = statement.executeQuery()){
             while (resultSet.next()) {
                 User user = new User();
                 user.setId(resultSet.getInt("id"));
                 user.setName(resultSet.getString("name"));
-                user.setDate_of_birth(resultSet.getString("date_of_birth"));
-                user.setDate_of_registration(resultSet.getDate("date_of_registration"));
+                user.setDateOfBirth(resultSet.getString("date_of_birth"));
+                user.setDateOfRegistration(resultSet.getDate("date_of_registration"));
                 user.setSex(resultSet.getString("sex"));
                 user.setEmail(resultSet.getString("email"));
                 user.setPassword(resultSet.getString("password"));
@@ -130,13 +127,6 @@ public class MySqlUserDao implements UserDao {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                statement.close();
-                resultSet.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
 
         return list;
@@ -157,8 +147,8 @@ public class MySqlUserDao implements UserDao {
                 user = new User();
                 user.setId(resultSet.getInt("id"));
                 user.setName(resultSet.getString("name"));
-                user.setDate_of_birth(resultSet.getString("date_of_birth"));
-                user.setDate_of_registration(resultSet.getDate("date_of_registration"));
+                user.setDateOfBirth(resultSet.getString("date_of_birth"));
+                user.setDateOfRegistration(resultSet.getDate("date_of_registration"));
                 user.setSex(resultSet.getString("sex"));
                 user.setEmail(resultSet.getString("email"));
                 user.setPassword(resultSet.getString("password"));

@@ -7,7 +7,9 @@ import tables.system.SystemType;
  */
 public class Wallet {
     private int id;
-    private int user_id;
+    private int userId;
+    private int systemId;
+    private int currencyId;
     private int sum;
     private SystemType systemType;
     private Currency currency;
@@ -22,12 +24,28 @@ public class Wallet {
         this.id = id;
     }
 
-    public int getUser_id() {
-        return user_id;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    public int getSystemId() {
+        return systemId;
+    }
+
+    public void setSystemId(int systemId) {
+        this.systemId = systemId;
+    }
+
+    public int getCurrencyId() {
+        return currencyId;
+    }
+
+    public void setCurrencyId(int currencyId) {
+        this.currencyId = currencyId;
     }
 
     public int getSum() {

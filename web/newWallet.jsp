@@ -11,29 +11,31 @@
 
 <h1>New Wallet</h1>
 
-<form action="new-wallet/create" method="post">
-    <table>
-        <tr bordercolor="solid black">
-            <th>System type</th>
-            <th>Currency type</th>
-        </tr>
-        <c:forEach items="${type}" var="type">
-            <c:forEach items="${sc}" var="sc">
-                <c:forEach items="${currency}" var="currency">
-                    <c:if test="${type.id == sc.system_id}">
-                        <c:if test="${currency.id == sc.currency_id}">
-                            <tr>
-                                <td>${type.name}</td>
-                                <td>${currency.name}</td>
-                                <td><input type="submit" name="create" value="Create"></td>
-                            </tr>
-                        </c:if>
+<table>
+    <tr bordercolor="solid black">
+        <th>System type</th>
+        <th>Currency type</th>
+    </tr>
+    <c:forEach items="${type}" var="type">
+        <c:forEach items="${sc}" var="sc">
+            <c:forEach items="${currency}" var="currency">
+                <c:if test="${type.id == sc.systemId}">
+                    <c:if test="${currency.id == sc.currencyId}">
+                        <tr>
+                            <td>${type.name}</td>
+                            <td>${currency.name}</td>
+                            <td>
+                                <button>
+                                    <a href="new-wallet/create?type=${type.id}&currency=${currency.id}">Create</a>
+                                </button>
+                            </td>
+                        </tr>
                     </c:if>
-                </c:forEach>
+                </c:if>
             </c:forEach>
         </c:forEach>
-    </table>
-</form>
+    </c:forEach>
+</table>
 
 </body>
 </html>

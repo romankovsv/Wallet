@@ -13,8 +13,8 @@ public interface UserDao {
     void update(int id);
     /** Удалить объект User */
     void delete(int id);
-    //** Вывод всех записей по User */
+    /** Вывод всех записей по User */
     List<User> getAll();
-    //** Аутентификация пользователя */
+    /** Аутентификация пользователя */
     User login(String email, String password);
 }

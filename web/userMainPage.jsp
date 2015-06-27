@@ -25,9 +25,14 @@
     </tr>
     <c:forEach items="${list}" var="wallet">
         <tr>
-            <td>${wallet.id}</td>
-            <td></td>
+            <td>${wallet.systemId}</td>
+            <td>${wallet.currencyId}</td>
             <td>${wallet.sum}</td>
+            <td>
+                <button>
+                    <a href="/user/delete-wallet?id=${wallet.id}">Delete</a>
+                </button>
+            </td>
         </tr>
     </c:forEach>
 </table>

@@ -13,6 +13,6 @@ public interface CurrencyDao {
     void update(int id);
     /** Удалить объект Currency по ID */
     void delete(int id);
-    //** Вывод всех записей по Currency */
+    /** Вывод всех записей по Currency */
     List<Currency> getAll();
 }

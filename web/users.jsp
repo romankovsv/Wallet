@@ -25,8 +25,8 @@
         <tr>
             <td>${user.id}</td>
             <td>${user.name}</td>
-            <td>${user.date_of_birth}</td>
-            <td>${user.date_of_registration}</td>
+            <td>${user.dateOfBirth}</td>
+            <td>${user.dateOfRegistration}</td>
             <td>${user.sex}</td>
             <td>${user.email}</td>
             <td>

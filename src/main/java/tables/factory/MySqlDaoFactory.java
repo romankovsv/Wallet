@@ -43,7 +43,7 @@ public class MySqlDaoFactory implements DaoFactory {
         return new MySqlSystemTypeDao(connection);
     }
 
-    public SystemCurrencyDao getS_CDao(Connection connection) {
+    public SystemCurrencyDao getSCDao(Connection connection) {
         return new MySqlSystemCurrencyDao(connection);
     }
 

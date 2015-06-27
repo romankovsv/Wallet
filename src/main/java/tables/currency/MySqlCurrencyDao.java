@@ -90,14 +90,11 @@ public class MySqlCurrencyDao implements CurrencyDao {
 
     @Override
     public List<Currency> getAll() {
-        PreparedStatement statement = null;
-        ResultSet resultSet = null;
         List<Currency> list = new ArrayList<Currency>();
         String sql = "SELECT * FROM currency";
 
-        try {
-            statement = connection.prepareStatement(sql);
-            resultSet = statement.executeQuery();
+        try (PreparedStatement statement = connection.prepareStatement(sql);
+             ResultSet resultSet = statement.executeQuery()) {
             while (resultSet.next()) {
                 Currency currency = new Currency();
                 currency.setId(resultSet.getInt("id"));
@@ -106,13 +103,6 @@ public class MySqlCurrencyDao implements CurrencyDao {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                statement.close();
-                resultSet.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
 
         return list;

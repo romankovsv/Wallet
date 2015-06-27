@@ -91,14 +91,11 @@ public class MySqlSystemTypeDao implements SystemTypeDao {
 
     @Override
     public List<SystemType> getAll() {
-        PreparedStatement statement = null;
-        ResultSet resultSet = null;
         List<SystemType> list = new ArrayList<SystemType>();
         String sql = "SELECT * FROM system;";
 
-        try {
-            statement = connection.prepareStatement(sql);
-            resultSet = statement.executeQuery();
+        try (PreparedStatement statement = connection.prepareStatement(sql);
+             ResultSet resultSet = statement.executeQuery()){
             while (resultSet.next()) {
                 SystemType systemType = new SystemType();
                 systemType.setId(resultSet.getInt("id"));
@@ -107,13 +104,6 @@ public class MySqlSystemTypeDao implements SystemTypeDao {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                resultSet.close();
-                statement.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
 
         return list;

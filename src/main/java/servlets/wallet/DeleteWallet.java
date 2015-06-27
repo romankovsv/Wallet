@@ -2,7 +2,6 @@ package servlets.wallet;
 
 import tables.factory.DaoFactory;
 import tables.factory.MySqlDaoFactory;
-import tables.users.User;
 import tables.wallets.WalletDao;
 
 import javax.servlet.ServletException;
@@ -16,25 +15,22 @@ import java.sql.SQLException;
 /**
  * Created by SpiritMoon
  */
-@WebServlet(name = "CreateWallet", urlPatterns = "/user/new-wallet/create")
-public class CreateWallet extends HttpServlet {
+@WebServlet(name = "DeleteWallet", urlPatterns = "/user/delete-wallet")
+public class DeleteWallet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         DaoFactory daoFactory = new MySqlDaoFactory();
-        User user = (User) request.getSession().getAttribute("user");
-        int walletId = Integer.parseInt(request.getParameter("type"));
-        int currencyId = Integer.parseInt(request.getParameter("currency"));
 
         try (Connection connection = daoFactory.getConnection()) {
             WalletDao walletDao = daoFactory.getWalletDao(connection);
-            walletDao.create(user.getId(), walletId, currencyId);
+            int id = Integer.parseInt(request.getParameter("id"));
+            walletDao.delete(id);
+            response.sendRedirect("/user");
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-        response.sendRedirect("/user");
     }
 }

@@ -16,6 +16,6 @@ public interface SystemCurrencyDao {
     void update(int system_id, int currency_id , int id);
     /** Удалить обхъект SystemCurrency используя id */
     void delete(int id);
-    //** Вывести все записи SystemCurrency */
+    /** Вывести все записи SystemCurrency */
     List<SystemCurrency> getAll();
 }

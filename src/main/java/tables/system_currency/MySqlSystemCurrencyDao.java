@@ -41,8 +41,8 @@ public class MySqlSystemCurrencyDao implements SystemCurrencyDao {
             resultSet = statement.executeQuery();
             resultSet.next();
             systemCurrency.setId(resultSet.getInt("id"));
-            systemCurrency.setCurrency_id(resultSet.getInt("system_id"));
-            systemCurrency.setCurrency_id(resultSet.getInt("currency_id"));
+            systemCurrency.setCurrencyId(resultSet.getInt("system_id"));
+            systemCurrency.setCurrencyId(resultSet.getInt("currency_id"));
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -85,30 +85,20 @@ public class MySqlSystemCurrencyDao implements SystemCurrencyDao {
 
     @Override
     public List<SystemCurrency> getAll() {
-        PreparedStatement statement = null;
-        ResultSet resultSet = null;
         List<SystemCurrency> list = new ArrayList<SystemCurrency>();
         String sql = "SELECT * FROM system_currency";
 
-        try {
-            statement = connection.prepareStatement(sql);
-            resultSet = statement.executeQuery();
+        try (PreparedStatement statement = connection.prepareStatement(sql);
+             ResultSet resultSet = statement.executeQuery()){
             while (resultSet.next()) {
                 SystemCurrency systemCurrency = new SystemCurrency();
                 systemCurrency.setId(resultSet.getInt("id"));
-                systemCurrency.setSystem_id(resultSet.getInt("system_id"));
-                systemCurrency.setCurrency_id(resultSet.getInt("currency_id"));
+                systemCurrency.setSystemId(resultSet.getInt("system_id"));
+                systemCurrency.setCurrencyId(resultSet.getInt("currency_id"));
                 list.add(systemCurrency);
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                resultSet.close();
-                statement.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
 
         return list;

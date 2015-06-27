@@ -28,5 +28,5 @@ public interface DaoFactory {
     SystemTypeDao getSystemTypeDao(Connection connection);
 
     /** Возвращает объект для работы с состоянием system_currency */
-    SystemCurrencyDao getS_CDao(Connection connection);
+    SystemCurrencyDao getSCDao(Connection connection);
 }

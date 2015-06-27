@@ -1,15 +1,10 @@
 package servlets.wallet;
 
 import tables.currency.Currency;
-import tables.currency.CurrencyDao;
 import tables.factory.DaoFactory;
 import tables.factory.MySqlDaoFactory;
 import tables.system.SystemType;
-import tables.system.SystemTypeDao;
 import tables.system_currency.SystemCurrency;
-import tables.users.MySqlUserDao;
-import tables.users.User;
-import tables.wallets.WalletDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -39,7 +34,7 @@ public class NewWallet extends HttpServlet {
         try(Connection connection = daoFactory.getConnection()) {
             currencyList = daoFactory.getCurrencyDao(connection).getAll();
             systemTypeList = daoFactory.getSystemTypeDao(connection).getAll();
-            systemCurrencies = daoFactory.getS_CDao(connection).getAll();
+            systemCurrencies = daoFactory.getSCDao(connection).getAll();
         } catch (SQLException e) {
             e.printStackTrace();
         }

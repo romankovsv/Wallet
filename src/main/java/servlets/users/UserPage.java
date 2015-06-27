@@ -21,10 +21,12 @@ import java.util.List;
  */
 @WebServlet(name = "UserPage", urlPatterns = "/user")
 public class UserPage extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         DaoFactory daoFactory = new MySqlDaoFactory();
         List<Wallet> list = new ArrayList<>();
@@ -32,10 +34,12 @@ public class UserPage extends HttpServlet {
 
         try (Connection connection = daoFactory.getConnection()) {
             WalletDao walletDao = daoFactory.getWalletDao(connection);
-            list = walletDao.getAll(user.getId());
+            list = walletDao.read(user.getId());
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+        System.out.println(list.toString());
 
         request.setAttribute("list", list);
         getServletContext().getRequestDispatcher("/userMainPage.jsp").forward(request, response);

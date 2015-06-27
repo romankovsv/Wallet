@@ -8,17 +8,17 @@ public class User {
 
     private int id;
     private String name;
-    private String date_of_birth;
-    private Date date_of_registration;
+    private String dateOfBirth;
+    private Date dateOfRegistration;
     private String sex;
     private String email;
     private String password;
 
     public User(){};
 
-    public User(String name, String date_of_birth, String sex, String email, String password) {
+    public User(String name, String dateOfBirth, String sex, String email, String password) {
         this.name = name;
-        this.date_of_birth = date_of_birth;
+        this.dateOfBirth = dateOfBirth;
         this.sex = sex;
         this.email = email;
         this.password = password;
@@ -40,20 +40,20 @@ public class User {
         this.name = name;
     }
 
-    public String getDate_of_birth() {
-        return date_of_birth;
+    public String getDateOfBirth() {
+        return dateOfBirth;
     }
 
-    public void setDate_of_birth(String date_of_birth) {
-        this.date_of_birth = date_of_birth;
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 
-    public Date getDate_of_registration() {
-        return date_of_registration;
+    public Date getDateOfRegistration() {
+        return dateOfRegistration;
     }
 
-    public void setDate_of_registration(Date date_of_registration) {
-        this.date_of_registration = date_of_registration;
+    public void setDateOfRegistration(Date dateOfRegistration) {
+        this.dateOfRegistration = dateOfRegistration;
     }
 
     public String getSex() {
