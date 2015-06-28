@@ -1,5 +1,8 @@
 package tables.wallets;
 
+import tables.currency.Currency;
+import tables.system.SystemType;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -35,18 +38,29 @@ public class MySqlWalletDao implements WalletDao {
         PreparedStatement statement = null;
         ResultSet resultSet = null;
         List<Wallet> list = new ArrayList<Wallet>();
-        String sql = "SELECT * FROM wallets WHERE users_id = " + id +"";
+
+        String sql =
+                "SELECT w.id, s.name AS 'system.name', c.name AS 'currency.name', w.sum " +
+                "FROM wallets w " +
+                "JOIN system s ON s.id = w.system_id " +
+                "JOIN currency c ON c.id = w.currency_id " +
+                "WHERE w.users_id = " + id + "";
 
         try {
             statement = connection.prepareStatement(sql);
             resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 Wallet wallet = new Wallet();
+                Currency currency = new Currency();
+                SystemType systemType = new SystemType();
                 wallet.setId(resultSet.getInt("id"));
-                wallet.setUserId(resultSet.getInt("users_id"));
-                wallet.setSystemId(resultSet.getInt("system_id"));
-                wallet.setCurrencyId(resultSet.getInt("currency_id"));
-                wallet.setSum(resultSet.getInt("sum"));
+                wallet.setSum(resultSet.getInt("w.sum"));
+
+                currency.setName(resultSet.getString("currency.name"));
+                        wallet.setCurrency(currency);
+
+                systemType.setName(resultSet.getString("system.name"));
+                wallet.setSystemType(systemType);
                 list.add(wallet);
             }
         } catch (SQLException e) {
@@ -82,11 +96,9 @@ public class MySqlWalletDao implements WalletDao {
 
     @Override
     public void delete(int id) {
-        String sql = "DELETE FROM wallets WHERE id = ?";
+        String sql = "DELETE FROM wallets WHERE id = " + id + "";
 
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
-            statement.setInt(1, id);
-
             int rowsDeleted = statement.executeUpdate();
             if (rowsDeleted > 0) {
                 System.out.println("A wallet was deleted successfully!");
@@ -127,6 +139,43 @@ public class MySqlWalletDao implements WalletDao {
         }
 
         return list;
+    }
+
+    @Override
+    public void exchange(int idFirst, int idSecond, int sum) {
+        PreparedStatement statement = null;
+        String sqlFrom = "UPDATE wallets SET sum = sum - " + sum + " WHERE id = " + idFirst + "";
+        String sqlTo = "UPDATE wallets SET sum = sum + " + sum + " WHERE id = " + idSecond + "";
+        int result;
+
+        try {
+            connection.setAutoCommit(false);
+            statement = connection.prepareStatement(sqlFrom);
+            result = statement.executeUpdate();
+            if (result == 1) {
+                statement = connection.prepareStatement(sqlTo);
+                result = statement.executeUpdate();
+                if (result == 1) {
+                    System.out.println("Exchange complete");
+                } else {
+                    connection.rollback();
+                    throw new SQLException();
+                }
+            } else {
+                connection.rollback();
+                throw new SQLException();
+            }
+            connection.commit();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                connection.setAutoCommit(true);
+                statement.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public MySqlWalletDao(Connection connection) { this.connection = connection; }

@@ -15,4 +15,6 @@ public interface WalletDao {
     void delete(int id);
     /** Вывод всех записей по Wallet */
     List<Wallet> getAll();
+    /** Обмен между кошельками по Wallet.id */
+    void exchange(int idFirst, int idSecond, int sum);
 }
