@@ -17,4 +17,6 @@ public interface WalletDao {
     List<Wallet> getAll();
     /** Обмен между кошельками по Wallet.id */
     void exchange(int idFirst, int idSecond, int sum);
+    /** Пополнение кошелька по Wallet.id */
+    void fillUp(int id, int sum);
 }

@@ -35,6 +35,11 @@
             <td>${wallet.sum}</td>
             <td>
                 <button>
+                    <a href="user/wallet/fill-up?id=${wallet.id}">Fill up</a>
+                </button>
+            </td>
+            <td>
+                <button>
                     <a href="user/delete-wallet?id=${wallet.id}">Delete</a>
                 </button>
             </td>

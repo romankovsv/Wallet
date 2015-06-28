@@ -178,5 +178,29 @@ public class MySqlWalletDao implements WalletDao {
         }
     }
 
+    @Override
+    public void fillUp(int id, int sum) {
+        PreparedStatement statement = null;
+        String sql = "UPDATE wallets SET sum = sum + " + sum + " WHERE id = " + id + "";
+        int result;
+
+        try {
+            statement = connection.prepareStatement(sql);
+            result = statement.executeUpdate();
+
+            if (result == 1) {
+                System.out.println("The sum is update");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                statement.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
     public MySqlWalletDao(Connection connection) { this.connection = connection; }
 }
