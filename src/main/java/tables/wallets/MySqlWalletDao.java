@@ -144,16 +144,20 @@ public class MySqlWalletDao implements WalletDao {
     @Override
     public void exchange(int idFirst, int idSecond, int sum) {
         PreparedStatement statement = null;
-        String sqlFrom = "UPDATE wallets SET sum = sum - " + sum + " WHERE id = " + idFirst + "";
-        String sqlTo = "UPDATE wallets SET sum = sum + " + sum + " WHERE id = " + idSecond + "";
+        String sqlFrom = "UPDATE wallets SET sum = sum - ? WHERE id = ?";
+        String sqlTo = "UPDATE wallets SET sum = sum + ? WHERE id = ?";
         int result;
 
         try {
             connection.setAutoCommit(false);
             statement = connection.prepareStatement(sqlFrom);
+            statement.setInt(1, sum);
+            statement.setInt(2, idFirst);
             result = statement.executeUpdate();
             if (result == 1) {
                 statement = connection.prepareStatement(sqlTo);
+                statement.setInt(1, sum);
+                statement.setInt(2, idSecond);
                 result = statement.executeUpdate();
                 if (result == 1) {
                     System.out.println("Exchange complete");
@@ -181,11 +185,13 @@ public class MySqlWalletDao implements WalletDao {
     @Override
     public void fillUp(int id, int sum) {
         PreparedStatement statement = null;
-        String sql = "UPDATE wallets SET sum = sum + " + sum + " WHERE id = " + id + "";
+        String sql = "UPDATE wallets SET sum = sum + ? WHERE id = ?";
         int result;
 
         try {
             statement = connection.prepareStatement(sql);
+            statement.setInt(1, sum);
+            statement.setInt(2, id);
             result = statement.executeUpdate();
 
             if (result == 1) {
