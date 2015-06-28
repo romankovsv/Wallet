@@ -8,9 +8,8 @@
 </head>
 <body>
 
-<h1>Registration.</h1>
-
-<div class="Block">
+<div class="Registration">
+    <h3>Registration.</h3>
     <form action="registration" method="post">
         <input type="text" name="name" required placeholder="Name"><br>
         <input type="text" name="date of birth" required placeholder="Date of birth"><br>

@@ -9,49 +9,48 @@
 </head>
 <body>
 
-<h1>Welcome, ${user.name}</h1>
-
-<p>
-    <button>
-        <a href="user/new-wallet">Add Wallet</a>
-    </button>
-    <button>
-        <a href="user/wallet/exchange">Exchange</a>
-    </button>
-</p>
-
-<table border="1">
-    <tr>
-        <th>№</th>
-        <th>Name</th>
-        <th>Currency</th>
-        <th>Sum</th>
-    </tr>
-    <c:forEach items="${list}" var="wallet">
+<div class="UserPage">
+    <h3>Welcome, ${user.name}</h3>
+    <p>
+        <button>
+            <a href="user/new-wallet">Add Wallet</a>
+        </button>
+        <button>
+            <a href="user/wallet/exchange">Exchange</a>
+        </button>
+    </p>
+    <table>
         <tr>
-            <td>${wallet.id}</td>
-            <td>${wallet.systemType.name}</td>
-            <td>${wallet.currency.name}</td>
-            <td>${wallet.sum}</td>
-            <td>
-                <button>
-                    <a href="user/wallet/fill-up?id=${wallet.id}">Fill up</a>
-                </button>
-            </td>
-            <td>
-                <button>
-                    <a href="user/delete-wallet?id=${wallet.id}">Delete</a>
-                </button>
-            </td>
+            <th>№</th>
+            <th>Name</th>
+            <th>Currency</th>
+            <th>Sum</th>
         </tr>
-    </c:forEach>
-</table>
-
-<p>
-<form action="logout" method="post">
-    <input type="submit" value="Logout">
-</form>
-</p>
+        <c:forEach items="${list}" var="wallet">
+            <tr>
+                <td>${wallet.id}</td>
+                <td>${wallet.systemType.name}</td>
+                <td>${wallet.currency.name}</td>
+                <td>${wallet.sum}</td>
+                <td>
+                    <button>
+                        <a href="user/wallet/fill-up?id=${wallet.id}">Fill up</a>
+                    </button>
+                </td>
+                <td>
+                    <button>
+                        <a href="user/delete-wallet?id=${wallet.id}">Delete</a>
+                    </button>
+                </td>
+            </tr>
+        </c:forEach>
+    </table>
+    <p>
+    <form action="logout" method="post">
+        <input type="submit" value="Logout">
+    </form>
+    </p>
+</div>
 
 </body>
 </html>

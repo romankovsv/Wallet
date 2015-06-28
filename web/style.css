@@ -5,25 +5,74 @@ a {
 .Block {
     width: 175px;
     background-color: #fff;
-    position: relative;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -100px;
+    margin-top: -100px;
     border: 2px solid #D4D4D4;
     box-shadow: 0 0 10px #0099FF;
     padding: 10px 10px;
     border-radius: 10px;
 }
 
-table{
-    border-collapse: collapse;
-    border: 2px solid black;
+.UserPage {
+    width: 415px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -200px;
+    border: 2px solid #D4D4D4;
+    box-shadow: 0 0 10px #0099FF;
+    padding: 10px 10px;
+    border-radius: 10px;
 }
 
-td{
+.NewWallet {
+    align-content: center;
+    width: 225px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -125px;
+    margin-top: -175px;
+    border: 2px solid #D4D4D4;
+    box-shadow: 0 0 10px #0099FF;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+.Registration {
+    width: 175px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -100px;
+    margin-top: -125px;
+    border: 2px solid #D4D4D4;
+    box-shadow: 0 0 10px #0099FF;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+table {
+    border-collapse: collapse;
+}
+
+td {
     padding: 5px;
     border: 1px solid #ccc;
-    border-top-color: black;
     text-align: center;
 }
-th{
+
+th {
     padding: 10px;
-    border: 1px solid black;
+}
+
+h3 {
+    font-style: italic;
+    text-align: center;
 }

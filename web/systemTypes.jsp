@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<h1>SYSTEM TYPE</h1>
+<h3>SYSTEM TYPE</h3>
 
 <table border="1">
   <tr>

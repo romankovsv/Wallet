@@ -9,9 +9,8 @@
 </head>
 <body>
 
-
-<h1>Login, please</h1>
 <div class="Block">
+  <h3>Login, please</h3>
   <form action="login" method="post">
     <input type="text" name="email" required placeholder="Name"><br>
     <input type="password" name="password" required placeholder="Password"><br>

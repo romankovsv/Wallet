@@ -7,9 +7,8 @@
     </style>
 </head>
 
-<h1>Make exchange</h1>
-
 <div class="Block">
+    <h3>Make exchange</h3>
     <form action="/user/wallet/exchange" method="post">
         <input type="text" name="firstId" required placeholder="Enter № of wallet from"><br>
         <input type="text" name="secondId" required placeholder="Enter № of wallet to"><br>
