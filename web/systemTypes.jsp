@@ -22,7 +22,7 @@
       <td>${type.name}</td>
       <td>
         <button>
-          <a href="delete-type?id=${type.id}">Delete</a>
+          <a href="delete-system-type?id=${type.id}">Delete</a>
         </button>
       </td>
     </tr>

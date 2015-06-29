@@ -7,7 +7,8 @@
     </style>
 </head>
 
-<div class="Block">
+<body>
+<div class="GeneralBlock">
     <h3>Make exchange</h3>
     <form action="/user/wallet/exchange" method="post">
         <input type="text" name="firstId" required placeholder="Enter № of wallet from"><br>
@@ -18,6 +19,5 @@
         </p>
     </form>
 </div>
-
 </body>
 </html>

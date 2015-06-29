@@ -1,10 +1,10 @@
-package servlets.users;
+package servlets.history;
 
 import tables.factory.DaoFactory;
 import tables.factory.MySqlDaoFactory;
+import tables.transaction.History;
+import tables.transaction.HistoryDao;
 import tables.users.User;
-import tables.wallets.Wallet;
-import tables.wallets.WalletDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,29 +19,25 @@ import java.util.List;
 /**
  * Created by SpiritMoon
  */
-@WebServlet(name = "UserPage", urlPatterns = "/user")
-public class UserPage extends HttpServlet {
-    @Override
+@WebServlet(name = "Transaction", urlPatterns = "/user/history")
+public class history extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 
-    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         DaoFactory daoFactory = new MySqlDaoFactory();
-        List<Wallet> list = new ArrayList<>();
         User user = (User) request.getSession().getAttribute("user");
+        List<History> list = new ArrayList<>();
 
         try (Connection connection = daoFactory.getConnection()) {
-            WalletDao walletDao = daoFactory.getWalletDao(connection);
-            list = walletDao.readByUserId(user.getId());
+            HistoryDao historyDao = daoFactory.getTransactionDao(connection);
+            list = historyDao.read(user.getId());
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        System.out.println(list.toString());
-
         request.setAttribute("list", list);
-        getServletContext().getRequestDispatcher("/userMainPage.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/history.jsp").forward(request, response);
     }
 }

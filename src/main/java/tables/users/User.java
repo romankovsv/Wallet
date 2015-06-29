@@ -5,7 +5,6 @@ import java.sql.Date;
  * Created by SpiritMoon
  */
 public class User {
-
     private int id;
     private String name;
     private String dateOfBirth;
@@ -14,7 +13,9 @@ public class User {
     private String email;
     private String password;
 
-    public User(){};
+    public User() {
+
+    }
 
     public User(String name, String dateOfBirth, String sex, String email, String password) {
         this.name = name;

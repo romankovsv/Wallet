@@ -5,6 +5,7 @@ package tables.factory;
 import tables.currency.CurrencyDao;
 import tables.system.SystemTypeDao;
 import tables.system_currency.SystemCurrencyDao;
+import tables.transaction.HistoryDao;
 import tables.users.UserDao;
 import tables.wallets.WalletDao;
 
@@ -29,4 +30,7 @@ public interface DaoFactory {
 
     /** Возвращает объект для работы с состоянием system_currency */
     SystemCurrencyDao getSCDao(Connection connection);
+
+    /** Возвращает объект для работы с состоянием history */
+    HistoryDao getTransactionDao(Connection connection);
 }

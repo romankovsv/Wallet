@@ -13,7 +13,7 @@
 <h1>USERS</h1>
 
 <table border="1">
-    <tr bordercolot="solid black">
+    <tr>
         <th>ID</th>
         <th>Name</th>
         <th>Date of birth</th>

@@ -1,24 +1,18 @@
-a {
-    text-decoration : none;
-}
-
-.Block {
+.GeneralBlock {
     width: 175px;
-    background-color: #fff;
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-left: -100px;
-    margin-top: -100px;
+    margin-left: -90px;
+    margin-top: -90px;
     border: 2px solid #D4D4D4;
     box-shadow: 0 0 10px #0099FF;
-    padding: 10px 10px;
+    padding: 10px;
     border-radius: 10px;
 }
 
 .UserPage {
-    width: 415px;
-    background-color: #fff;
+    width: 445px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -26,14 +20,13 @@ a {
     margin-top: -200px;
     border: 2px solid #D4D4D4;
     box-shadow: 0 0 10px #0099FF;
-    padding: 10px 10px;
+    padding: 10px;
     border-radius: 10px;
 }
 
 .NewWallet {
     align-content: center;
-    width: 225px;
-    background-color: #fff;
+    width: 280px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -41,13 +34,12 @@ a {
     margin-top: -175px;
     border: 2px solid #D4D4D4;
     box-shadow: 0 0 10px #0099FF;
-    padding: 10px 10px;
+    padding: 10px;
     border-radius: 10px;
 }
 
 .Registration {
     width: 175px;
-    background-color: #fff;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -55,21 +47,30 @@ a {
     margin-top: -125px;
     border: 2px solid #D4D4D4;
     box-shadow: 0 0 10px #0099FF;
-    padding: 10px 10px;
+    padding: 10px;
     border-radius: 10px;
 }
+
+.History {
+    width: 235px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -100px;
+    margin-top: -125px;
+    border: 2px solid #D4D4D4;
+    box-shadow: 0 0 10px #0099FF;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration : none;
+}
+
 table {
     border-collapse: collapse;
-}
-
-td {
-    padding: 5px;
-    border: 1px solid #ccc;
     text-align: center;
-}
-
-th {
-    padding: 10px;
 }
 
 h3 {

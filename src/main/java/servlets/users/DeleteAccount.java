@@ -1,7 +1,9 @@
-package servlets.wallet;
+package servlets.users;
 
 import tables.factory.DaoFactory;
 import tables.factory.MySqlDaoFactory;
+import tables.users.User;
+import tables.users.UserDao;
 import tables.wallets.WalletDao;
 
 import javax.servlet.ServletException;
@@ -15,24 +17,24 @@ import java.sql.SQLException;
 /**
  * Created by SpiritMoon
  */
-@WebServlet(name = "FillUp", urlPatterns = "/user/wallet/fill-up")
-public class FillUp extends HttpServlet {
+@WebServlet(name = "DeleteAccount" , urlPatterns = "/user/delete-account")
+public class DeleteAccount extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         DaoFactory daoFactory = new MySqlDaoFactory();
-        int sum = Integer.parseInt(request.getParameter("sum"));
-        int id = Integer.parseInt(request.getParameter("id"));
+        User user = (User) request.getSession().getAttribute("user");
 
         try (Connection connection = daoFactory.getConnection()) {
             WalletDao walletDao = daoFactory.getWalletDao(connection);
-            walletDao.fillUp(id, sum);
+            UserDao userDao = daoFactory.getUserDao(connection);
+            walletDao.deleteUserWallets(user.getId());
+            userDao.delete(user.getId());
+            response.sendRedirect("/");
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-        response.sendRedirect("/user");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        getServletContext().getRequestDispatcher("/fillUp.jsp?id=" + request.getParameter("id") + "").forward(request, response);
+
     }
 }

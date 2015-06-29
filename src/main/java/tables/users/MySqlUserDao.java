@@ -59,8 +59,12 @@ public class MySqlUserDao implements UserDao {
             e.printStackTrace();
         } finally {
             try {
-                statement.close();
-                resultSet.close();
+                if (statement != null) {
+                    statement.close();
+                }
+                if (resultSet != null) {
+                    resultSet.close();
+                }
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -70,16 +74,16 @@ public class MySqlUserDao implements UserDao {
     }
 
     @Override
-    public void update(int id) {
+    public void update(int id, String name, String dateOfBirth, String sex, String email, String password) {
         String sql = "UPDATE user SET name = ?, date_of_birth = ?, sex = ?, email = ?, " +
-                "password = ?, WHERE id = ?";
+                "password = ? WHERE id = ?";
 
         try (PreparedStatement statement = connection.prepareStatement(sql)){
-            statement.setString(1, "New name");
-            statement.setString(2, "New date");
-            statement.setString(3, "New sex");
-            statement.setString(4, "New email");
-            statement.setString(5, "New password");
+            statement.setString(1, name);
+            statement.setString(2, dateOfBirth);
+            statement.setString(3, sex);
+            statement.setString(4, email);
+            statement.setString(5, password);
             statement.setInt(6, id);
 
             int rowsUpdated = statement.executeUpdate();
@@ -109,7 +113,7 @@ public class MySqlUserDao implements UserDao {
 
     @Override
     public List<User> getAll() {
-        List<User> list = new ArrayList<User>();
+        List<User> list = new ArrayList<>();
         String sql = "SELECT * FROM user";
 
         try (PreparedStatement statement = connection.prepareStatement(sql);
@@ -157,8 +161,12 @@ public class MySqlUserDao implements UserDao {
             e.printStackTrace();
         } finally {
             try {
-                statement.close();
-                resultSet.close();
+                if (statement != null) {
+                    statement.close();
+                }
+                if (resultSet != null) {
+                    resultSet.close();
+                }
             } catch (SQLException e) {
                 e.printStackTrace();
             }

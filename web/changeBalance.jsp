@@ -8,9 +8,9 @@
 </head>
 <body>
 
-<div class="Block">
+<div class="GeneralBlock">
     <h3>Enter the sum</h3>
-    <form action="/user/wallet/fill-up?id=${param.id}" method="post">
+    <form action="/user/wallet/change-balance?id=${param.id}" method="post">
         <input type="text" name="sum" required placeholder="Enter the sum">
         <p>
             <input type="submit" name="fill up" value="Fill up!">

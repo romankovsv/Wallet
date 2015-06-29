@@ -57,11 +57,11 @@ public class MySqlSystemTypeDao implements SystemTypeDao {
     }
 
     @Override
-    public void update(int id) {
+    public void update(int id, String name) {
         String sql = "UPDATE system SET name = ? WHERE id = ?";
 
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
-            statement.setString(1, "New Name");
+            statement.setString(1, name);
             statement.setInt(2, id);
 
             int rowsUpdated = statement.executeUpdate();

@@ -45,8 +45,12 @@ public class MySqlCurrencyDao implements CurrencyDao {
             e.printStackTrace();
         } finally {
             try {
-                statement.close();
-                resultSet.close();
+                if (statement != null) {
+                    statement.close();
+                }
+                if (resultSet != null) {
+                    resultSet.close();
+                }
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -56,11 +60,11 @@ public class MySqlCurrencyDao implements CurrencyDao {
     }
 
     @Override
-    public void update(int id) {
+    public void update(int id, String name) {
         String sql = "UPDATE currency SET name = ? WHERE id = ?";
 
         try (PreparedStatement statement = connection.prepareStatement(sql)){
-            statement.setString(1, "New Name");
+            statement.setString(1, name);
             statement.setInt(2, id);
 
             int rowsUpdated = statement.executeUpdate();
@@ -82,7 +86,7 @@ public class MySqlCurrencyDao implements CurrencyDao {
             int rowsDeleted = statement.executeUpdate();
             if (rowsDeleted > 0) {
                 System.out.println("A tables.currency was deleted successfully!");
-            };
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -90,7 +94,7 @@ public class MySqlCurrencyDao implements CurrencyDao {
 
     @Override
     public List<Currency> getAll() {
-        List<Currency> list = new ArrayList<Currency>();
+        List<Currency> list = new ArrayList<>();
         String sql = "SELECT * FROM currency";
 
         try (PreparedStatement statement = connection.prepareStatement(sql);

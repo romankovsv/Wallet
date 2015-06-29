@@ -18,8 +18,11 @@
         <button>
             <a href="user/wallet/exchange">Exchange</a>
         </button>
+        <button>
+            <a href="user/history">History</a>
+        </button>
     </p>
-    <table>
+    <table cellpadding="10">
         <tr>
             <th>№</th>
             <th>Name</th>
@@ -27,14 +30,14 @@
             <th>Sum</th>
         </tr>
         <c:forEach items="${list}" var="wallet">
-            <tr>
+            <tr style="border:2px solid #ccc">
                 <td>${wallet.id}</td>
                 <td>${wallet.systemType.name}</td>
                 <td>${wallet.currency.name}</td>
                 <td>${wallet.sum}</td>
                 <td>
                     <button>
-                        <a href="user/wallet/fill-up?id=${wallet.id}">Fill up</a>
+                        <a href="user/wallet/change-balance?id=${wallet.id}">Add/Get</a>
                     </button>
                 </td>
                 <td>
@@ -45,11 +48,13 @@
             </tr>
         </c:forEach>
     </table>
-    <p>
+    <br>
     <form action="logout" method="post">
-        <input type="submit" value="Logout">
+        <input type="submit" value="Logout" >
     </form>
-    </p>
+    <form action="/user/delete-account" method="post">
+        <input type="submit" value="Delete Account">
+    </form>
 </div>
 
 </body>

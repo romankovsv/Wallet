@@ -6,6 +6,8 @@ import tables.system.MySqlSystemTypeDao;
 import tables.system.SystemTypeDao;
 import tables.system_currency.MySqlSystemCurrencyDao;
 import tables.system_currency.SystemCurrencyDao;
+import tables.transaction.MySqlHistoryDao;
+import tables.transaction.HistoryDao;
 import tables.users.MySqlUserDao;
 import tables.users.UserDao;
 import tables.wallets.MySqlWalletDao;
@@ -45,6 +47,10 @@ public class MySqlDaoFactory implements DaoFactory {
 
     public SystemCurrencyDao getSCDao(Connection connection) {
         return new MySqlSystemCurrencyDao(connection);
+    }
+
+    public HistoryDao getTransactionDao(Connection connection) {
+        return new MySqlHistoryDao(connection);
     }
 
     public MySqlDaoFactory() {

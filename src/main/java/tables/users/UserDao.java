@@ -10,7 +10,7 @@ public interface UserDao {
     /** Извлечь объек User используя указанный id в качестве первичного ключа */
     User read(int id);
     /** Внести изменения в User */
-    void update(int id);
+    void update(int id, String name, String dateOfBirth, String sex, String email, String password);
     /** Удалить объект User */
     void delete(int id);
     /** Вывод всех записей по User */

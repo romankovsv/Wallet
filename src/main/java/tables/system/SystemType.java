@@ -8,10 +8,6 @@ public class SystemType {
 
     public SystemType() {}
 
-    public SystemType(String name) {
-        this.name = name;
-    }
-
     public int getId() {
         return id;
     }

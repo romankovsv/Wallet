@@ -62,8 +62,8 @@ public class MySqlSystemCurrencyDao implements SystemCurrencyDao {
         String sql = "UPDATE system_currency SET system_id = ?, currency_id = ? WHERE id = ?";
 
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
-            statement.setInt(1, id);
-            statement.setInt(2, id);
+            statement.setInt(1, system_id);
+            statement.setInt(2, currency_id);
             statement.setInt(3, id);
             statement.executeUpdate();
         } catch (SQLException e) {

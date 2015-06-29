@@ -30,7 +30,7 @@ public class Registration extends HttpServlet {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        response.sendRedirect("login.jsp");
+        response.sendRedirect("/");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

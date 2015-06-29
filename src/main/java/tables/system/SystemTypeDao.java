@@ -10,7 +10,7 @@ public interface SystemTypeDao {
     /** Извлечь объек System используя указанный id в качестве первичного ключа */
     SystemType read(int id);
     /** Внести изменения в System */
-    void update(int id);
+    void update(int id, String name);
     /** Удалить объект System */
     void delete(int id);
     /** Вывод всех записей по System */

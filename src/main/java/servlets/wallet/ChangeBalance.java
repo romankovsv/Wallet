@@ -18,27 +18,22 @@ import java.sql.SQLException;
 /**
  * Created by SpiritMoon
  */
-@WebServlet(name = "Exchange", urlPatterns = "/user/wallet/exchange")
-public class Exchange extends HttpServlet {
+@WebServlet(name = "ChangeBalance", urlPatterns = "/user/wallet/change-balance")
+public class ChangeBalance extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         DaoFactory daoFactory = new MySqlDaoFactory();
-        int fromId = Integer.parseInt(request.getParameter("firstId"));
-        int toId = Integer.parseInt(request.getParameter("secondId"));
         int sum = Integer.parseInt(request.getParameter("sum"));
+        int id = Integer.parseInt(request.getParameter("id"));
         History history = new History();
         User user = (User) request.getSession().getAttribute("user");
 
         try (Connection connection = daoFactory.getConnection()) {
             WalletDao walletDao = daoFactory.getWalletDao(connection);
-            walletDao.exchange(fromId, toId, sum);
-
-            int userIdTo = walletDao.readByWalletId(toId).getUserId();
+            walletDao.changeBalance(id, sum);
 
             HistoryDao historyDao = daoFactory.getTransactionDao(connection);
-            history.setUserIdFrom(user.getId());
-            history.setUserIdTo(userIdTo);
-            history.setWalletIdFrom(fromId);
-            history.setWalletIdTo(toId);
+            history.setUserIdTo(user.getId());
+            history.setWalletIdTo(id);
             history.setSum(sum);
             historyDao.create(history);
         } catch (SQLException e) {
@@ -49,6 +44,6 @@ public class Exchange extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        getServletContext().getRequestDispatcher("/exchange.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/changeBalance.jsp?id=" + request.getParameter("id") + "").forward(request, response);
     }
 }

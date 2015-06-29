@@ -11,13 +11,17 @@
 
 <div class="NewWallet">
     <h3>New Wallet</h3>
-    <table>
+    <table cellpadding="10">
+        <tr>
+            <td>Name</td>
+            <td>Currency</td>
+        </tr>
         <c:forEach items="${type}" var="type">
             <c:forEach items="${sc}" var="sc">
                 <c:forEach items="${currency}" var="currency">
                     <c:if test="${type.id == sc.systemId}">
                         <c:if test="${currency.id == sc.currencyId}">
-                            <tr>
+                            <tr style="border: 2px solid #ccc">
                                 <td>${type.name}</td>
                                 <td>${currency.name}</td>
                                 <td>
