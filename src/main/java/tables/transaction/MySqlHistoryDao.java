@@ -1,5 +1,7 @@
 package tables.transaction;
 
+import org.apache.log4j.Logger;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,6 +9,7 @@ import java.util.List;
  * Created by SpiritMoon
  */
 public class MySqlHistoryDao implements HistoryDao {
+    private static final Logger log = Logger.getLogger(MySqlHistoryDao.class);
     private Connection connection;
 
     @Override
@@ -26,10 +29,10 @@ public class MySqlHistoryDao implements HistoryDao {
 
             int rowsInsert = statement.executeUpdate();
             if (rowsInsert > 0) {
-                System.out.println("A new history was created successfully!");
+                log.info("A new history was created successfully!");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
     }
 
@@ -58,13 +61,17 @@ public class MySqlHistoryDao implements HistoryDao {
                 list.add(history);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         } finally {
             try {
-                statement.close();
-                resultSet.close();
+                if (statement != null) {
+                    statement.close();
+                }
+                if (resultSet != null) {
+                    resultSet.close();
+                }
             } catch (SQLException e) {
-                e.printStackTrace();
+                log.error(e);
             }
         }
 
@@ -85,10 +92,10 @@ public class MySqlHistoryDao implements HistoryDao {
 
             int rowsDeleted = statement.executeUpdate();
             if (rowsDeleted > 0) {
-                System.out.println("A history was deleted successfully!");
+                log.info("A history was deleted successfully!");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
     }
 
@@ -111,7 +118,7 @@ public class MySqlHistoryDao implements HistoryDao {
                 list.add(history);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
 
         return list;

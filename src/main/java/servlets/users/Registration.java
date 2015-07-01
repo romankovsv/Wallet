@@ -1,5 +1,6 @@
 package servlets.users;
 
+import org.apache.log4j.Logger;
 import tables.factory.DaoFactory;
 import tables.factory.MySqlDaoFactory;
 import tables.users.User;
@@ -18,6 +19,8 @@ import java.sql.SQLException;
  */
 @WebServlet(name = "Registration", urlPatterns = "/registration")
 public class Registration extends HttpServlet {
+    private static final Logger log = Logger.getLogger(Registration.class);
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         DaoFactory daoFactory = new MySqlDaoFactory();
 
@@ -28,7 +31,7 @@ public class Registration extends HttpServlet {
                     request.getParameter("password"));
             userDao.create(user);
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
         response.sendRedirect("/");
     }

@@ -10,7 +10,7 @@
 <body>
 
 <div class="History">
-  <table cellpadding="1">
+  <table>
     <tr>
       <th>From</th>
       <th>To</th>

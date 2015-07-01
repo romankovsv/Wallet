@@ -11,9 +11,10 @@
 <div class="GeneralBlock">
     <h3>Make exchange</h3>
     <form action="/user/wallet/exchange" method="post">
-        <input type="text" name="firstId" required placeholder="Enter № of wallet from"><br>
-        <input type="text" name="secondId" required placeholder="Enter № of wallet to"><br>
-        <input type="text" name="sum" required placeholder="Sum">
+        <input type="number" name="firstId" required placeholder="Enter № of wallet from"><br>
+        <input type="number" name="secondId" required placeholder="Enter № of wallet to"><br>
+        <input type="number" name="sum" required placeholder="Sum">
+        ${error}
         <p>
             <input type="submit" name="exchange" value="Exchange">
         </p>

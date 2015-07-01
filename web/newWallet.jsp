@@ -11,7 +11,7 @@
 
 <div class="NewWallet">
     <h3>New Wallet</h3>
-    <table cellpadding="10">
+    <table class="Table">
         <tr>
             <td>Name</td>
             <td>Currency</td>

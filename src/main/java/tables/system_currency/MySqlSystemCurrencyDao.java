@@ -1,5 +1,6 @@
 package tables.system_currency;
 
+import org.apache.log4j.Logger;
 import tables.currency.Currency;
 import tables.system.SystemType;
 
@@ -13,6 +14,7 @@ import java.util.List;
  * Created by SpiritMoon
  */
 public class MySqlSystemCurrencyDao implements SystemCurrencyDao {
+    public static final Logger log = Logger.getLogger(MySqlSystemCurrencyDao.class);
     private Connection connection;
 
     @Override
@@ -24,7 +26,7 @@ public class MySqlSystemCurrencyDao implements SystemCurrencyDao {
             statement.setInt(2, currency.getId());
             statement.executeUpdate();
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
     }
 
@@ -35,7 +37,7 @@ public class MySqlSystemCurrencyDao implements SystemCurrencyDao {
         SystemCurrency systemCurrency = new SystemCurrency();
 
         try {
-            String sql = "SELEC * FROM system_currency WHERE id = ?";
+            String sql = "SELECT * FROM system_currency WHERE id = ?";
             statement = connection.prepareStatement(sql);
             statement.setInt(1, id);
             resultSet = statement.executeQuery();
@@ -47,10 +49,14 @@ public class MySqlSystemCurrencyDao implements SystemCurrencyDao {
             e.printStackTrace();
         } finally {
             try {
-                statement.close();
-                resultSet.close();
+                if (statement != null) {
+                    statement.close();
+                }
+                if (resultSet != null) {
+                    resultSet.close();
+                }
             } catch (SQLException e) {
-                e.printStackTrace();
+                log.error(e);
             }
         }
 
@@ -67,7 +73,7 @@ public class MySqlSystemCurrencyDao implements SystemCurrencyDao {
             statement.setInt(3, id);
             statement.executeUpdate();
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
     }
 
@@ -79,13 +85,13 @@ public class MySqlSystemCurrencyDao implements SystemCurrencyDao {
             statement.setInt(1, id);
             statement.executeUpdate();
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
     }
 
     @Override
     public List<SystemCurrency> getAll() {
-        List<SystemCurrency> list = new ArrayList<SystemCurrency>();
+        List<SystemCurrency> list = new ArrayList<>();
         String sql = "SELECT * FROM system_currency";
 
         try (PreparedStatement statement = connection.prepareStatement(sql);
@@ -98,7 +104,7 @@ public class MySqlSystemCurrencyDao implements SystemCurrencyDao {
                 list.add(systemCurrency);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
 
         return list;

@@ -1,5 +1,6 @@
 package servlets.security;
 
+import org.apache.log4j.Logger;
 import tables.factory.DaoFactory;
 import tables.factory.MySqlDaoFactory;
 import tables.users.User;
@@ -19,6 +20,8 @@ import java.sql.SQLException;
  */
 @WebServlet(name = "Login", urlPatterns = "/login")
 public class Login extends HttpServlet {
+    private static final Logger log = Logger.getLogger(Login.class);
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         DaoFactory daoFactory = new MySqlDaoFactory();
 
@@ -33,7 +36,7 @@ public class Login extends HttpServlet {
                 getServletContext().getRequestDispatcher("/").forward(request, response);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
     }
 

@@ -22,7 +22,7 @@
             <a href="user/history">History</a>
         </button>
     </p>
-    <table cellpadding="10">
+    <table>
         <tr>
             <th>№</th>
             <th>Name</th>
@@ -37,7 +37,7 @@
                 <td>${wallet.sum}</td>
                 <td>
                     <button>
-                        <a href="user/wallet/change-balance?id=${wallet.id}">Add/Get</a>
+                        <a href="user/wallet/change-balance?id=${wallet.id}&sum=${wallet.sum}">Add/Get</a>
                     </button>
                 </td>
                 <td>

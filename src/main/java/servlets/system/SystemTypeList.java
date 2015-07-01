@@ -1,5 +1,6 @@
 package servlets.system;
 
+import org.apache.log4j.Logger;
 import tables.factory.DaoFactory;
 import tables.factory.MySqlDaoFactory;
 import tables.system.SystemType;
@@ -21,6 +22,8 @@ import java.util.List;
  */
 @WebServlet(name = "SystemTypeList", urlPatterns = "/system-type-list")
 public class SystemTypeList extends HttpServlet {
+    private static final Logger log = Logger.getLogger(SystemTypeList.class);
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
@@ -33,7 +36,7 @@ public class SystemTypeList extends HttpServlet {
             SystemTypeDao systemTypeDao = daoFactory.getSystemTypeDao(connection);
             list = systemTypeDao.getAll();
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
 
         request.setAttribute("list", list);

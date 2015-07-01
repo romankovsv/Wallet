@@ -1,5 +1,6 @@
 package tables.wallets;
 
+import org.apache.log4j.Logger;
 import tables.currency.Currency;
 import tables.system.SystemType;
 
@@ -13,6 +14,7 @@ import java.util.List;
  * Created by SpiritMoon
  */
 public class MySqlWalletDao implements WalletDao {
+    private static final Logger log = Logger.getLogger(MySqlWalletDao.class);
     private Connection connection;
 
     @Override
@@ -26,10 +28,10 @@ public class MySqlWalletDao implements WalletDao {
 
             int rowsInsert = statement.executeUpdate();
             if (rowsInsert > 0) {
-                System.out.println("A new wallet was created successfully!");
+                log.info("A new wallet was created successfully!");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+           log.error(e);
         }
     }
 
@@ -64,7 +66,7 @@ public class MySqlWalletDao implements WalletDao {
                 list.add(wallet);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         } finally {
             try {
                 if (statement != null) {
@@ -74,7 +76,7 @@ public class MySqlWalletDao implements WalletDao {
                     resultSet.close();
                 }
             } catch (SQLException e) {
-                e.printStackTrace();
+                log.error(e);
             }
         }
 
@@ -83,19 +85,7 @@ public class MySqlWalletDao implements WalletDao {
 
     @Override
     public void update(int id, int sum) {
-        String sql = "UPDATE wallets SET sum = ? WHERE id = ?";
 
-        try (PreparedStatement statement = connection.prepareStatement(sql)) {
-            statement.setInt(1, sum);
-            statement.setInt(2, id);
-
-            int rowsUpdated = statement.executeUpdate();
-            if (rowsUpdated > 0) {
-                System.out.println("An existing wallet was updated successfully!");
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
     }
 
     @Override
@@ -107,10 +97,10 @@ public class MySqlWalletDao implements WalletDao {
 
             int rowDeleted = statement.executeUpdate();
             if (rowDeleted > 0) {
-                System.out.println("A wallet was deleted successfully!");
+                log.info("A wallet was deleted successfully!");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
     }
 
@@ -123,10 +113,10 @@ public class MySqlWalletDao implements WalletDao {
 
             int rowsDelete = statement.executeUpdate();
             if (rowsDelete > 0) {
-                System.out.println("All wallets were deleted successfully!");
+                log.info("All wallets were deleted successfully!");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
     }
 
@@ -150,7 +140,7 @@ public class MySqlWalletDao implements WalletDao {
                 list.add(wallet);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         } finally {
             try {
                 if (statement != null) {
@@ -186,7 +176,7 @@ public class MySqlWalletDao implements WalletDao {
                 statement.setInt(2, idSecond);
                 result = statement.executeUpdate();
                 if (result == 1) {
-                    System.out.println("Exchange complete");
+                    log.info("Exchange complete");
                 } else {
                     connection.rollback();
                     throw new SQLException();
@@ -197,7 +187,7 @@ public class MySqlWalletDao implements WalletDao {
             }
             connection.commit();
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         } finally {
             try {
                 connection.setAutoCommit(true);
@@ -223,7 +213,7 @@ public class MySqlWalletDao implements WalletDao {
             result = statement.executeUpdate();
 
             if (result == 1) {
-                System.out.println("The sum is update");
+                log.info("The sum is update");
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -233,7 +223,7 @@ public class MySqlWalletDao implements WalletDao {
                     statement.close();
                 }
             } catch (SQLException e) {
-                e.printStackTrace();
+                log.error(e);
             }
         }
     }
@@ -256,7 +246,7 @@ public class MySqlWalletDao implements WalletDao {
                 wallet.setSum(resultSet.getInt("sum"));
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         } finally {
             try {
                 if (statement != null) {
@@ -266,7 +256,7 @@ public class MySqlWalletDao implements WalletDao {
                     resultSet.close();
                 }
             } catch (SQLException e) {
-                e.printStackTrace();
+                log.error(e);
             }
         }
 

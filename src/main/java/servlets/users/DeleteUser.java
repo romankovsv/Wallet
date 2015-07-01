@@ -1,5 +1,6 @@
 package servlets.users;
 
+import org.apache.log4j.Logger;
 import tables.factory.DaoFactory;
 import tables.factory.MySqlDaoFactory;
 import tables.users.UserDao;
@@ -17,6 +18,8 @@ import java.sql.SQLException;
  */
 @WebServlet(name = "DeleteUser", urlPatterns = "/delete-user")
 public class DeleteUser extends HttpServlet {
+    private static final Logger log = Logger.getLogger(DeleteUser.class);
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
@@ -30,7 +33,7 @@ public class DeleteUser extends HttpServlet {
             userDao.delete(id);
             response.sendRedirect("/users");
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
     }
 }

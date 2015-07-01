@@ -1,5 +1,6 @@
 package servlets.currency;
 
+import org.apache.log4j.Logger;
 import tables.currency.Currency;
 import tables.currency.CurrencyDao;
 import tables.factory.DaoFactory;
@@ -20,6 +21,8 @@ import java.util.List;
  */
 @WebServlet(name = "CurrencyList", urlPatterns = "/currency-list")
 public class CurrencyList extends HttpServlet {
+    private static final Logger log = Logger.getLogger(CurrencyList.class);
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -34,7 +37,7 @@ public class CurrencyList extends HttpServlet {
             CurrencyDao currencyDao = daoFactory.getCurrencyDao(connection);
             list = currencyDao.getAll();
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
 
         request.setAttribute("list", list);

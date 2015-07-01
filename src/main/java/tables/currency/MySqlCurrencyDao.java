@@ -1,5 +1,7 @@
 package tables.currency;
 
+import org.apache.log4j.Logger;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,6 +12,7 @@ import java.util.List;
  * Created by SpiritMoon
  */
 public class MySqlCurrencyDao implements CurrencyDao {
+    private static final Logger log = Logger.getLogger(MySqlCurrencyDao.class);
     private Connection connection;
 
     @Override
@@ -21,10 +24,10 @@ public class MySqlCurrencyDao implements CurrencyDao {
 
             int rowsInsert = statement.executeUpdate();
             if (rowsInsert > 0) {
-                System.out.println("A new tables.currency was created successfully!");
+                log.info("A new currency was created successfully!");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
     }
 
@@ -42,7 +45,7 @@ public class MySqlCurrencyDao implements CurrencyDao {
             currency.setId(resultSet.getInt("id"));
             currency.setName(resultSet.getString("name"));
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         } finally {
             try {
                 if (statement != null) {
@@ -52,7 +55,7 @@ public class MySqlCurrencyDao implements CurrencyDao {
                     resultSet.close();
                 }
             } catch (SQLException e) {
-                e.printStackTrace();
+                log.error(e);
             }
         }
 
@@ -69,10 +72,10 @@ public class MySqlCurrencyDao implements CurrencyDao {
 
             int rowsUpdated = statement.executeUpdate();
             if (rowsUpdated > 0) {
-                System.out.println("An existing tables.currency was updated successfully!");
+                log.info("An existing tables.currency was updated successfully!");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
     }
 
@@ -85,10 +88,10 @@ public class MySqlCurrencyDao implements CurrencyDao {
 
             int rowsDeleted = statement.executeUpdate();
             if (rowsDeleted > 0) {
-                System.out.println("A tables.currency was deleted successfully!");
+                log.info("A tables.currency was deleted successfully!");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
     }
 
@@ -106,7 +109,7 @@ public class MySqlCurrencyDao implements CurrencyDao {
                 list.add(currency);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
 
         return list;

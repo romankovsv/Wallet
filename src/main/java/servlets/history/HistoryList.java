@@ -1,8 +1,8 @@
 package servlets.history;
 
+import org.apache.log4j.Logger;
 import tables.factory.DaoFactory;
 import tables.factory.MySqlDaoFactory;
-import tables.transaction.History;
 import tables.transaction.HistoryDao;
 import tables.users.User;
 
@@ -20,7 +20,9 @@ import java.util.List;
  * Created by SpiritMoon
  */
 @WebServlet(name = "Transaction", urlPatterns = "/user/history")
-public class history extends HttpServlet {
+public class HistoryList extends HttpServlet {
+    private static final Logger log = Logger.getLogger(HistoryList.class);
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
@@ -28,7 +30,7 @@ public class history extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         DaoFactory daoFactory = new MySqlDaoFactory();
         User user = (User) request.getSession().getAttribute("user");
-        List<History> list = new ArrayList<>();
+        List<tables.transaction.History> list = new ArrayList<>();
 
         try (Connection connection = daoFactory.getConnection()) {
             HistoryDao historyDao = daoFactory.getTransactionDao(connection);

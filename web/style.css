@@ -12,11 +12,11 @@
 }
 
 .UserPage {
-    width: 445px;
+    width: 350px;
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-left: -200px;
+    margin-left: -175px;
     margin-top: -200px;
     border: 2px solid #D4D4D4;
     box-shadow: 0 0 10px #0099FF;
@@ -26,11 +26,11 @@
 
 .NewWallet {
     align-content: center;
-    width: 280px;
+    width: 225px;
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-left: -125px;
+    margin-left: -110px;
     margin-top: -175px;
     border: 2px solid #D4D4D4;
     box-shadow: 0 0 10px #0099FF;
@@ -52,16 +52,18 @@
 }
 
 .History {
-    width: 235px;
-    position: absolute;
+    height: 300px;
+    width: 250px;
+    position: fixed;
     left: 50%;
     top: 50%;
-    margin-left: -100px;
-    margin-top: -125px;
+    margin-left: -125px;
+    margin-top: -150px;
     border: 2px solid #D4D4D4;
     box-shadow: 0 0 10px #0099FF;
     padding: 10px;
     border-radius: 10px;
+    overflow-y: scroll;
 }
 
 a {

@@ -1,5 +1,6 @@
 package servlets.wallet;
 
+import org.apache.log4j.Logger;
 import tables.factory.DaoFactory;
 import tables.factory.MySqlDaoFactory;
 import tables.users.User;
@@ -18,6 +19,8 @@ import java.sql.SQLException;
  */
 @WebServlet(name = "CreateWallet", urlPatterns = "/user/new-wallet/create")
 public class CreateWallet extends HttpServlet {
+    private static final Logger log = Logger.getLogger(CreateWallet.class);
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
@@ -32,7 +35,7 @@ public class CreateWallet extends HttpServlet {
             WalletDao walletDao = daoFactory.getWalletDao(connection);
             walletDao.create(user.getId(), walletId, currencyId);
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
 
         response.sendRedirect("/user");

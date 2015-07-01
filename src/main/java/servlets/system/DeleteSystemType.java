@@ -1,5 +1,6 @@
 package servlets.system;
 
+import org.apache.log4j.Logger;
 import tables.factory.DaoFactory;
 import tables.factory.MySqlDaoFactory;
 import tables.system.SystemType;
@@ -15,12 +16,13 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
 /**
  * Created by SpiritMoon
  */
 @WebServlet(name = "DeleteSystemType", urlPatterns = "/delete-system-type")
 public class DeleteSystemType extends HttpServlet {
+    private static final Logger log = Logger.getLogger(DeleteSystemType.class);
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
@@ -33,7 +35,7 @@ public class DeleteSystemType extends HttpServlet {
             SystemTypeDao systemTypeDao = daoFactory.getSystemTypeDao(connection);
             list = systemTypeDao.getAll();
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
 
         request.setAttribute("list", list);

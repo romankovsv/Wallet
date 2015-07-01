@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS wallets (
   users_id INT NOT NULL ,
   system_id INT NOT NULL ,
   currency_id INT NOT NULL ,
-  sum INT DEFAULT 0 ,
+  sum INT NOT NULL DEFAULT 0,
   PRIMARY KEY (id)
 );
 

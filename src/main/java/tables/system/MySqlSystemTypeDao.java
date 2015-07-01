@@ -1,5 +1,7 @@
 package tables.system;
 
+import org.apache.log4j.Logger;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,6 +12,7 @@ import java.util.List;
  * Created by SpiritMoon
  */
 public class MySqlSystemTypeDao implements SystemTypeDao {
+    private static final Logger log = Logger.getLogger(MySqlSystemTypeDao.class);
     private Connection connection;
 
     @Override
@@ -21,10 +24,10 @@ public class MySqlSystemTypeDao implements SystemTypeDao {
 
             int rowsInsert = statement.executeUpdate();
             if (rowsInsert > 0) {
-                System.out.println("A new SystemType was created successfully!");
+                log.info("A new SystemType was created successfully!");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
     }
 
@@ -35,7 +38,7 @@ public class MySqlSystemTypeDao implements SystemTypeDao {
         SystemType systemType = new SystemType();
 
         try {
-            String sql = "SELEC * FROM system WHERE id = ?";
+            String sql = "SELECT * FROM system WHERE id = ?";
             statement = connection.prepareStatement(sql);
             statement.setInt(1, id);
             resultSet = statement.executeQuery();
@@ -43,13 +46,17 @@ public class MySqlSystemTypeDao implements SystemTypeDao {
             systemType.setId(resultSet.getInt("id"));
             systemType.setName(resultSet.getString("name"));
         } catch (SQLException e ) {
-            e.printStackTrace();
+            log.error(e);
         } finally {
             try {
-                statement.close();
-                resultSet.close();
+                if (statement != null) {
+                    statement.close();
+                }
+                if (resultSet != null) {
+                    resultSet.close();
+                }
             } catch (SQLException e) {
-                e.printStackTrace();
+                log.error(e);
             }
         }
 
@@ -66,10 +73,10 @@ public class MySqlSystemTypeDao implements SystemTypeDao {
 
             int rowsUpdated = statement.executeUpdate();
             if (rowsUpdated > 0) {
-                System.out.println("An existing SystemType was updated successfully!");
+                log.info("An existing SystemType was updated successfully!");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
     }
 
@@ -82,16 +89,16 @@ public class MySqlSystemTypeDao implements SystemTypeDao {
 
             int rowsDeleted = statement.executeUpdate();
             if (rowsDeleted > 0) {
-                System.out.println("A SystemType was deleted successfully!");
+                log.info("A SystemType was deleted successfully!");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
     }
 
     @Override
     public List<SystemType> getAll() {
-        List<SystemType> list = new ArrayList<SystemType>();
+        List<SystemType> list = new ArrayList<>();
         String sql = "SELECT * FROM system;";
 
         try (PreparedStatement statement = connection.prepareStatement(sql);
@@ -103,7 +110,7 @@ public class MySqlSystemTypeDao implements SystemTypeDao {
                 list.add(systemType);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
 
         return list;

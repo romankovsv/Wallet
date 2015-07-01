@@ -1,5 +1,6 @@
 package servlets.currency;
 
+import org.apache.log4j.Logger;
 import tables.currency.CurrencyDao;
 import tables.factory.DaoFactory;
 import tables.factory.MySqlDaoFactory;
@@ -17,6 +18,8 @@ import java.sql.SQLException;
  */
 @WebServlet(name = "DeleteCurrency", urlPatterns = "/delete-currency")
 public class DeleteCurrency extends HttpServlet {
+    private static final Logger log = Logger.getLogger(DeleteCurrency.class);
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
@@ -30,7 +33,7 @@ public class DeleteCurrency extends HttpServlet {
             currencyDao.delete(id);
             getServletContext().getRequestDispatcher("/currency-list").forward(request, response);
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
     }
 }

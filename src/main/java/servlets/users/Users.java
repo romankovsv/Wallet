@@ -1,5 +1,6 @@
 package servlets.users;
 
+import org.apache.log4j.Logger;
 import tables.factory.DaoFactory;
 import tables.factory.MySqlDaoFactory;
 import tables.users.User;
@@ -19,6 +20,8 @@ import java.util.List;
  */
 @WebServlet(name = "Users", urlPatterns = "/users")
 public class Users extends HttpServlet {
+    private static final Logger log = Logger.getLogger(Users.class);
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -33,7 +36,7 @@ public class Users extends HttpServlet {
             UserDao userDao = daoFactory.getUserDao(connection);
             list = userDao.getAll();
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
 
         request.setAttribute("list", list);

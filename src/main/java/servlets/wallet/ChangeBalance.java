@@ -1,5 +1,6 @@
 package servlets.wallet;
 
+import org.apache.log4j.Logger;
 import tables.factory.DaoFactory;
 import tables.factory.MySqlDaoFactory;
 import tables.transaction.History;
@@ -20,30 +21,39 @@ import java.sql.SQLException;
  */
 @WebServlet(name = "ChangeBalance", urlPatterns = "/user/wallet/change-balance")
 public class ChangeBalance extends HttpServlet {
+    private static final Logger log = Logger.getLogger(ChangeBalance.class);
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         DaoFactory daoFactory = new MySqlDaoFactory();
         int sum = Integer.parseInt(request.getParameter("sum"));
         int id = Integer.parseInt(request.getParameter("id"));
+        int operation = Integer.parseInt(request.getParameter("operation"));
         History history = new History();
         User user = (User) request.getSession().getAttribute("user");
 
-        try (Connection connection = daoFactory.getConnection()) {
-            WalletDao walletDao = daoFactory.getWalletDao(connection);
-            walletDao.changeBalance(id, sum);
+        if (sum + operation < 0) {
+            try (Connection connection = daoFactory.getConnection()) {
+                WalletDao walletDao = daoFactory.getWalletDao(connection);
+                walletDao.changeBalance(id, operation);
 
-            HistoryDao historyDao = daoFactory.getTransactionDao(connection);
-            history.setUserIdTo(user.getId());
-            history.setWalletIdTo(id);
-            history.setSum(sum);
-            historyDao.create(history);
-        } catch (SQLException e) {
-            e.printStackTrace();
+                HistoryDao historyDao = daoFactory.getTransactionDao(connection);
+                history.setUserIdTo(user.getId());
+                history.setWalletIdTo(id);
+                history.setSum(operation);
+                historyDao.create(history);
+            } catch (SQLException e) {
+                log.error(e);
+            }
+            response.sendRedirect("/user");
+        } else {
+            request.setAttribute("error", "<font color = red>Not enough money</font>");
+            getServletContext().getRequestDispatcher("/changeBalance.jsp?id=" + id
+                    + "&sum=" + sum).forward(request, response);
         }
-
-        response.sendRedirect("/user");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        getServletContext().getRequestDispatcher("/changeBalance.jsp?id=" + request.getParameter("id") + "").forward(request, response);
+        getServletContext().getRequestDispatcher("/changeBalance.jsp?id=" + request.getParameter("id")
+                + "&sum=" + request.getParameter("sum")).forward(request, response);
     }
 }

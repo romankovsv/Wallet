@@ -1,5 +1,7 @@
 package tables.users;
 
+import org.apache.log4j.Logger;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -11,6 +13,7 @@ import java.util.List;
  * Created by SpiritMoon
  */
 public class MySqlUserDao implements UserDao {
+    private static final Logger log = Logger.getLogger(MySqlUserDao.class);
     private Connection connection;
 
     @Override
@@ -29,10 +32,10 @@ public class MySqlUserDao implements UserDao {
 
             int rowsInsert = statement.executeUpdate();
             if (rowsInsert > 0) {
-                System.out.println("A new user was created successfully!");
+                log.info("A new user was created successfully!");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
     }
 
@@ -56,7 +59,7 @@ public class MySqlUserDao implements UserDao {
             user.setEmail(resultSet.getString("email"));
             user.setPassword(resultSet.getString("password"));
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         } finally {
             try {
                 if (statement != null) {
@@ -66,7 +69,7 @@ public class MySqlUserDao implements UserDao {
                     resultSet.close();
                 }
             } catch (SQLException e) {
-                e.printStackTrace();
+                log.error(e);
             }
         }
 
@@ -88,10 +91,10 @@ public class MySqlUserDao implements UserDao {
 
             int rowsUpdated = statement.executeUpdate();
             if (rowsUpdated > 0) {
-                System.out.println("An existing user was updated successfully!");
+                log.info("An existing user was updated successfully!");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
     }
 
@@ -104,10 +107,10 @@ public class MySqlUserDao implements UserDao {
 
             int rowsDeleted = statement.executeUpdate();
             if (rowsDeleted > 0) {
-                System.out.println("A user was deleted successfully!");
+                log.info("A user was deleted successfully!");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
     }
 
@@ -130,7 +133,7 @@ public class MySqlUserDao implements UserDao {
                 list.add(user);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         }
 
         return list;
@@ -158,7 +161,7 @@ public class MySqlUserDao implements UserDao {
                 user.setPassword(resultSet.getString("password"));
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e);
         } finally {
             try {
                 if (statement != null) {
@@ -168,7 +171,7 @@ public class MySqlUserDao implements UserDao {
                     resultSet.close();
                 }
             } catch (SQLException e) {
-                e.printStackTrace();
+                log.error(e);
             }
         }
 
