@@ -1,6 +1,6 @@
 package servlets.security;
 
-import tables.users.User;
+import database.users.User;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;

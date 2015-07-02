@@ -1,12 +1,12 @@
 package servlets.wallet;
 
 import org.apache.log4j.Logger;
-import tables.factory.DaoFactory;
-import tables.factory.MySqlDaoFactory;
-import tables.transaction.History;
-import tables.transaction.HistoryDao;
-import tables.users.User;
-import tables.wallets.WalletDao;
+import database.factory.DaoFactory;
+import database.factory.MySqlDaoFactory;
+import database.transaction.History;
+import database.transaction.HistoryDao;
+import database.users.User;
+import database.wallets.WalletDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -32,7 +32,7 @@ public class ChangeBalance extends HttpServlet {
         User user = (User) request.getSession().getAttribute("user");
 
 
-        if (sum + operation > 0 || operation > 0) {
+        if (sum + operation >= 0 || operation > 0) {
             try (Connection connection = daoFactory.getConnection()) {
                 WalletDao walletDao = daoFactory.getWalletDao(connection);
                 walletDao.changeBalance(id, operation);

@@ -1,10 +1,10 @@
 package servlets.system;
 
 import org.apache.log4j.Logger;
-import tables.factory.DaoFactory;
-import tables.factory.MySqlDaoFactory;
-import tables.system.SystemType;
-import tables.system.SystemTypeDao;
+import database.factory.DaoFactory;
+import database.factory.MySqlDaoFactory;
+import database.system.SystemType;
+import database.system.SystemTypeDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

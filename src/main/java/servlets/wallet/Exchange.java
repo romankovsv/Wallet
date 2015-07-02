@@ -1,13 +1,13 @@
 package servlets.wallet;
 
 import org.apache.log4j.Logger;
-import tables.factory.DaoFactory;
-import tables.factory.MySqlDaoFactory;
-import tables.transaction.History;
-import tables.transaction.HistoryDao;
-import tables.users.User;
-import tables.wallets.Wallet;
-import tables.wallets.WalletDao;
+import database.factory.DaoFactory;
+import database.factory.MySqlDaoFactory;
+import database.transaction.History;
+import database.transaction.HistoryDao;
+import database.users.User;
+import database.wallets.Wallet;
+import database.wallets.WalletDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

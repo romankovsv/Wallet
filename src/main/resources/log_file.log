@@ -4,3 +4,9 @@
 02-07-2015 14:20:38 INFO  MySqlWalletDao:100 - A wallet was deleted successfully!
 02-07-2015 14:20:41 INFO  MySqlWalletDao:100 - A wallet was deleted successfully!
 02-07-2015 14:20:43 INFO  MySqlUserDao:110 - A user was deleted successfully!
+02-07-2015 16:57:30 INFO  MySqlWalletDao:216 - The sum is update
+02-07-2015 16:57:30 INFO  MySqlHistoryDao:32 - A new history was created successfully!
+02-07-2015 16:57:44 INFO  MySqlWalletDao:216 - The sum is update
+02-07-2015 16:57:44 INFO  MySqlHistoryDao:32 - A new history was created successfully!
+02-07-2015 20:14:55 INFO  MySqlWalletDao:216 - The sum is update
+02-07-2015 20:14:55 INFO  MySqlHistoryDao:32 - A new history was created successfully!

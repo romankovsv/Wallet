@@ -1,11 +1,11 @@
 package servlets.wallet;
 
 import org.apache.log4j.Logger;
-import tables.currency.Currency;
-import tables.factory.DaoFactory;
-import tables.factory.MySqlDaoFactory;
-import tables.system.SystemType;
-import tables.system_currency.SystemCurrency;
+import database.currency.Currency;
+import database.factory.DaoFactory;
+import database.factory.MySqlDaoFactory;
+import database.system.SystemType;
+import database.system_currency.SystemCurrency;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

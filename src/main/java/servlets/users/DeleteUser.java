@@ -1,9 +1,9 @@
 package servlets.users;
 
 import org.apache.log4j.Logger;
-import tables.factory.DaoFactory;
-import tables.factory.MySqlDaoFactory;
-import tables.users.UserDao;
+import database.factory.DaoFactory;
+import database.factory.MySqlDaoFactory;
+import database.users.UserDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

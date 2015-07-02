@@ -1,10 +1,10 @@
 package servlets.currency;
 
 import org.apache.log4j.Logger;
-import tables.currency.Currency;
-import tables.currency.CurrencyDao;
-import tables.factory.DaoFactory;
-import tables.factory.MySqlDaoFactory;
+import database.currency.Currency;
+import database.currency.CurrencyDao;
+import database.factory.DaoFactory;
+import database.factory.MySqlDaoFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
