@@ -1,0 +1,6 @@
+02-07-2015 14:19:15 INFO  MySqlUserDao:35 - A new user was created successfully!
+02-07-2015 14:20:30 INFO  MySqlWalletDao:31 - A new wallet was created successfully!
+02-07-2015 14:20:34 INFO  MySqlWalletDao:31 - A new wallet was created successfully!
+02-07-2015 14:20:38 INFO  MySqlWalletDao:100 - A wallet was deleted successfully!
+02-07-2015 14:20:41 INFO  MySqlWalletDao:100 - A wallet was deleted successfully!
+02-07-2015 14:20:43 INFO  MySqlUserDao:110 - A user was deleted successfully!

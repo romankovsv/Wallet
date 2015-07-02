@@ -31,7 +31,8 @@ public class ChangeBalance extends HttpServlet {
         History history = new History();
         User user = (User) request.getSession().getAttribute("user");
 
-        if (sum + operation < 0) {
+
+        if (sum + operation > 0 || operation > 0) {
             try (Connection connection = daoFactory.getConnection()) {
                 WalletDao walletDao = daoFactory.getWalletDao(connection);
                 walletDao.changeBalance(id, operation);

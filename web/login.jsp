@@ -12,7 +12,7 @@
 <div class="GeneralBlock">
   <h3>Login, please</h3>
   <form action="login" method="post">
-    <input type="text" name="email" required placeholder="Email"><br>
+    <input type="email" name="email" required placeholder="Email"><br>
     <input type="password" name="password" required placeholder="Password"><br>
     ${error}
     <p>
