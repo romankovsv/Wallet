@@ -33,7 +33,7 @@ public class DeleteWallet extends HttpServlet {
             walletDao.delete(id);
             response.sendRedirect("/user");
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error in operation", e);
         }
     }
 }

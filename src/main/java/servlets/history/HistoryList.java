@@ -36,7 +36,7 @@ public class HistoryList extends HttpServlet {
             HistoryDao historyDao = daoFactory.getTransactionDao(connection);
             list = historyDao.read(user.getId());
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error("Error in operation", e);
         }
 
         request.setAttribute("list", list);

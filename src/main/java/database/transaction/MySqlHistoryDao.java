@@ -32,7 +32,7 @@ public class MySqlHistoryDao implements HistoryDao {
                 log.info("A new history was created successfully!");
             }
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error when creating new history", e);
         }
     }
 
@@ -61,7 +61,7 @@ public class MySqlHistoryDao implements HistoryDao {
                 list.add(history);
             }
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error when getting user's history", e);
         } finally {
             try {
                 if (statement != null) {
@@ -71,7 +71,7 @@ public class MySqlHistoryDao implements HistoryDao {
                     resultSet.close();
                 }
             } catch (SQLException e) {
-                log.error(e);
+                log.error("Error when closing resources", e);
             }
         }
 
@@ -95,7 +95,7 @@ public class MySqlHistoryDao implements HistoryDao {
                 log.info("A history was deleted successfully!");
             }
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error when deleting history", e);
         }
     }
 
@@ -118,7 +118,7 @@ public class MySqlHistoryDao implements HistoryDao {
                 list.add(history);
             }
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error when getting all history", e);
         }
 
         return list;

@@ -17,7 +17,8 @@ public class MySqlUserDao implements UserDao {
     private Connection connection;
 
     @Override
-    public void create(User user) {
+    public boolean create(User user) {
+        boolean result = false;
         String sql =
                 "INSERT INTO user (name, date_of_birth, date_of_registration, sex, email, password) " +
                         "VALUES (?, ?, ?, ?, ?, ?)";
@@ -33,10 +34,13 @@ public class MySqlUserDao implements UserDao {
             int rowsInsert = statement.executeUpdate();
             if (rowsInsert > 0) {
                 log.info("A new user was created successfully!");
+                result = true;
             }
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error when creating new user", e);
         }
+
+        return result;
     }
 
     @Override
@@ -59,7 +63,7 @@ public class MySqlUserDao implements UserDao {
             user.setEmail(resultSet.getString("email"));
             user.setPassword(resultSet.getString("password"));
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error when reading user's data", e);
         } finally {
             try {
                 if (statement != null) {
@@ -69,7 +73,7 @@ public class MySqlUserDao implements UserDao {
                     resultSet.close();
                 }
             } catch (SQLException e) {
-                log.error(e);
+                log.error("Error when closing resources", e);
             }
         }
 
@@ -77,9 +81,10 @@ public class MySqlUserDao implements UserDao {
     }
 
     @Override
-    public void update(int id, String name, String dateOfBirth, String sex, String email, String password) {
+    public boolean update(int id, String name, String dateOfBirth, String sex, String email, String password) {
         String sql = "UPDATE user SET name = ?, date_of_birth = ?, sex = ?, email = ?, " +
                 "password = ? WHERE id = ?";
+        boolean result = false;
 
         try (PreparedStatement statement = connection.prepareStatement(sql)){
             statement.setString(1, name);
@@ -92,10 +97,13 @@ public class MySqlUserDao implements UserDao {
             int rowsUpdated = statement.executeUpdate();
             if (rowsUpdated > 0) {
                 log.info("An existing user was updated successfully!");
+                result = true;
             }
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error when update user data", e);
         }
+
+        return result;
     }
 
     @Override
@@ -110,7 +118,7 @@ public class MySqlUserDao implements UserDao {
                 log.info("A user was deleted successfully!");
             }
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error when delete user", e);
         }
     }
 
@@ -133,7 +141,7 @@ public class MySqlUserDao implements UserDao {
                 list.add(user);
             }
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error when getting all users", e);
         }
 
         return list;
@@ -161,7 +169,7 @@ public class MySqlUserDao implements UserDao {
                 user.setPassword(resultSet.getString("password"));
             }
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Login error", e);
         } finally {
             try {
                 if (statement != null) {
@@ -171,7 +179,7 @@ public class MySqlUserDao implements UserDao {
                     resultSet.close();
                 }
             } catch (SQLException e) {
-                log.error(e);
+                log.error("Error when closing resources", e);
             }
         }
 

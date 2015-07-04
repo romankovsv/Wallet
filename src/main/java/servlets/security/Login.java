@@ -36,7 +36,7 @@ public class Login extends HttpServlet {
                 getServletContext().getRequestDispatcher("/").forward(request, response);
             }
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error in operation", e);
         }
     }
 

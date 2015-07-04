@@ -23,6 +23,10 @@ public class DeleteAccount extends HttpServlet {
     private static final Logger log = Logger.getLogger(DeleteAccount.class);
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         DaoFactory daoFactory = new MySqlDaoFactory();
         User user = (User) request.getSession().getAttribute("user");
 
@@ -33,11 +37,7 @@ public class DeleteAccount extends HttpServlet {
             userDao.delete(user.getId());
             response.sendRedirect("/");
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error in operation", e);
         }
-    }
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
     }
 }

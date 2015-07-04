@@ -37,7 +37,7 @@ public class CurrencyList extends HttpServlet {
             CurrencyDao currencyDao = daoFactory.getCurrencyDao(connection);
             list = currencyDao.getAll();
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error in operation", e);
         }
 
         request.setAttribute("list", list);

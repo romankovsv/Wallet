@@ -1,6 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://journaldev.com/jsp/tlds/mytags" prefix="mytags"%>
 <html>
 <head>
   <title>Login Page</title>
@@ -22,8 +21,6 @@
     </p>
   </form>
 </div>
-
-<mytags:formatNumber format="$# ###.00" number="1234.567" />
 
 </body>
 </html>

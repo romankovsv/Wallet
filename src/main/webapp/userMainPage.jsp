@@ -48,13 +48,17 @@
             </tr>
         </c:forEach>
     </table>
-    <br>
-    <form action="logout" method="post">
-        <input type="submit" value="Logout" >
-    </form>
-    <form action="/user/delete-account" method="post">
-        <input type="submit" value="Delete Account">
-    </form>
+    <p>
+        <button>
+            <a href="logout">Logout</a>
+        </button>
+        <button>
+            <a href="user/delete-account">Delete Account</a>
+        </button>
+        <button>
+            <a href="user/change-data">Change data</a>
+        </button>
+    </p>
 </div>
 
 </body>

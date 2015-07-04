@@ -39,7 +39,7 @@ public class NewWallet extends HttpServlet {
             systemTypeList = daoFactory.getSystemTypeDao(connection).getAll();
             systemCurrencies = daoFactory.getSCDao(connection).getAll();
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error in operation", e);
         }
 
         request.setAttribute("type", systemTypeList);

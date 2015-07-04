@@ -12,6 +12,7 @@ import database.users.MySqlUserDao;
 import database.users.UserDao;
 import database.wallets.MySqlWalletDao;
 import database.wallets.WalletDao;
+import org.apache.log4j.Logger;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -20,6 +21,8 @@ import java.sql.SQLException;
  * Created by SpiritMoon
  */
 public class MySqlDaoFactory implements DaoFactory {
+    private static final Logger log = Logger.getLogger(MySqlDaoFactory.class);
+
     private final static String URL = "jdbc:mysql://localhost:3306/exchange service"; // URL адресс
     private final static String USERNAME = "root"; // Имя пользователя
     private final static String PASSWORD = "root"; // Пароль
@@ -57,7 +60,7 @@ public class MySqlDaoFactory implements DaoFactory {
         try {
             Class.forName(DRIVER); // Регистрация драйвера
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            log.error("Error when registering MySQL driver", e);
         }
     }
 }

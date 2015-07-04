@@ -18,6 +18,7 @@
         <input type="text" name="password" required placeholder="Password">
         <p><input type="submit" name="create" value="Create"></p>
     </form>
+    ${error}
 </div>
 
 </body>

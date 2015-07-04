@@ -6,11 +6,11 @@ import java.util.List;
  */
 public interface UserDao {
     /** Сохранить объект User в базе данных */
-    void create(User user);
+    boolean create(User user);
     /** Извлечь объек User используя указанный id в качестве первичного ключа */
     User read(int id);
     /** Внести изменения в User */
-    void update(int id, String name, String dateOfBirth, String sex, String email, String password);
+    boolean update(int id, String name, String dateOfBirth, String sex, String email, String password);
     /** Удалить объект User */
     void delete(int id);
     /** Вывод всех записей по User */

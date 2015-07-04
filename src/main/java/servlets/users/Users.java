@@ -36,7 +36,7 @@ public class Users extends HttpServlet {
             UserDao userDao = daoFactory.getUserDao(connection);
             list = userDao.getAll();
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error in operation", e);
         }
 
         request.setAttribute("list", list);

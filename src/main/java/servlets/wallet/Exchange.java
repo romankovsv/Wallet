@@ -59,7 +59,7 @@ public class Exchange extends HttpServlet {
                 }
             }
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error in operation", e);
         }
 
         if (!complete) {

@@ -36,7 +36,7 @@ public class SystemTypeList extends HttpServlet {
             SystemTypeDao systemTypeDao = daoFactory.getSystemTypeDao(connection);
             list = systemTypeDao.getAll();
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error in operation", e);
         }
 
         request.setAttribute("list", list);

@@ -29,11 +29,15 @@ public class Registration extends HttpServlet {
             User user = new User(request.getParameter("name"), request.getParameter("date of birth"),
                     request.getParameter("sex"), request.getParameter("email"),
                     request.getParameter("password"));
-            userDao.create(user);
+            if (userDao.create(user)) {
+                response.sendRedirect("/");
+            } else {
+                request.setAttribute("error", "<font color = red>The current user is exist</font>");
+                getServletContext().getRequestDispatcher("/registration.jsp").forward(request, response);
+            }
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error in operation", e);
         }
-        response.sendRedirect("/");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

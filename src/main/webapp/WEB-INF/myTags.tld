@@ -7,10 +7,10 @@
     <description>Number Formatter Custom Tag</description>
     <tlib-version>2.1</tlib-version>
     <short-name>mytags</short-name>
-    <uri>http://journaldev.com/jsp/tlds/mytags</uri>
+    <uri>http://andrew/mytags</uri>
     <tag>
         <name>formatNumber</name>
-        <tag-class>tag.NumberFormatterTag</tag-class>
+        <tag-class>tag.UserData</tag-class>
         <body-content>empty</body-content>
         <attribute>
             <name>format</name>

@@ -24,10 +24,10 @@ public class MySqlSystemTypeDao implements SystemTypeDao {
 
             int rowsInsert = statement.executeUpdate();
             if (rowsInsert > 0) {
-                log.info("A new SystemType was created successfully!");
+                log.info("A new system type was created successfully!");
             }
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error when creating new system type", e);
         }
     }
 
@@ -46,7 +46,7 @@ public class MySqlSystemTypeDao implements SystemTypeDao {
             systemType.setId(resultSet.getInt("id"));
             systemType.setName(resultSet.getString("name"));
         } catch (SQLException e ) {
-            log.error(e);
+            log.error("Error when reading system type data", e);
         } finally {
             try {
                 if (statement != null) {
@@ -56,7 +56,7 @@ public class MySqlSystemTypeDao implements SystemTypeDao {
                     resultSet.close();
                 }
             } catch (SQLException e) {
-                log.error(e);
+                log.error("Error when closing resources", e);
             }
         }
 
@@ -73,10 +73,10 @@ public class MySqlSystemTypeDao implements SystemTypeDao {
 
             int rowsUpdated = statement.executeUpdate();
             if (rowsUpdated > 0) {
-                log.info("An existing SystemType was updated successfully!");
+                log.info("An existing system type was updated successfully!");
             }
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error when update system type", e);
         }
     }
 
@@ -89,10 +89,10 @@ public class MySqlSystemTypeDao implements SystemTypeDao {
 
             int rowsDeleted = statement.executeUpdate();
             if (rowsDeleted > 0) {
-                log.info("A SystemType was deleted successfully!");
+                log.info("A system type was deleted successfully!");
             }
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error when delete system type", e);
         }
     }
 
@@ -110,7 +110,7 @@ public class MySqlSystemTypeDao implements SystemTypeDao {
                 list.add(systemType);
             }
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error when getting all system type's", e);
         }
 
         return list;

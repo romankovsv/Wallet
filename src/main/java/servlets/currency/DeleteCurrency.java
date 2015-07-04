@@ -33,7 +33,7 @@ public class DeleteCurrency extends HttpServlet {
             currencyDao.delete(id);
             getServletContext().getRequestDispatcher("/currency-list").forward(request, response);
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error in operation", e);
         }
     }
 }

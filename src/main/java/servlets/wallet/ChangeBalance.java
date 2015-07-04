@@ -1,5 +1,6 @@
 package servlets.wallet;
 
+import exception.Check;
 import org.apache.log4j.Logger;
 import database.factory.DaoFactory;
 import database.factory.MySqlDaoFactory;
@@ -9,6 +10,7 @@ import database.users.User;
 import database.wallets.WalletDao;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -31,7 +33,6 @@ public class ChangeBalance extends HttpServlet {
         History history = new History();
         User user = (User) request.getSession().getAttribute("user");
 
-
         if (sum + operation >= 0 || operation > 0) {
             try (Connection connection = daoFactory.getConnection()) {
                 WalletDao walletDao = daoFactory.getWalletDao(connection);
@@ -43,13 +44,14 @@ public class ChangeBalance extends HttpServlet {
                 history.setSum(operation);
                 historyDao.create(history);
             } catch (SQLException e) {
-                log.error(e);
+                log.error("Error in operation", e);
             }
             response.sendRedirect("/user");
         } else {
             request.setAttribute("error", "<font color = red>Not enough money</font>");
             getServletContext().getRequestDispatcher("/changeBalance.jsp?id=" + id
                     + "&sum=" + sum).forward(request, response);
+            log.error(new Check("Not enough money"));
         }
     }
 

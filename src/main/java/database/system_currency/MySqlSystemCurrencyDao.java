@@ -26,7 +26,7 @@ public class MySqlSystemCurrencyDao implements SystemCurrencyDao {
             statement.setInt(2, currency.getId());
             statement.executeUpdate();
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error when creating new system-currency dependency", e);
         }
     }
 
@@ -46,7 +46,7 @@ public class MySqlSystemCurrencyDao implements SystemCurrencyDao {
             systemCurrency.setCurrencyId(resultSet.getInt("system_id"));
             systemCurrency.setCurrencyId(resultSet.getInt("currency_id"));
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error("Error when reading system-currency dependency", e);
         } finally {
             try {
                 if (statement != null) {
@@ -56,7 +56,7 @@ public class MySqlSystemCurrencyDao implements SystemCurrencyDao {
                     resultSet.close();
                 }
             } catch (SQLException e) {
-                log.error(e);
+                log.error("Error when closing resources", e);
             }
         }
 
@@ -73,7 +73,7 @@ public class MySqlSystemCurrencyDao implements SystemCurrencyDao {
             statement.setInt(3, id);
             statement.executeUpdate();
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error when updating system-currency dependency", e);
         }
     }
 
@@ -85,7 +85,7 @@ public class MySqlSystemCurrencyDao implements SystemCurrencyDao {
             statement.setInt(1, id);
             statement.executeUpdate();
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error when deleting system-currency dependency", e);
         }
     }
 
@@ -104,7 +104,7 @@ public class MySqlSystemCurrencyDao implements SystemCurrencyDao {
                 list.add(systemCurrency);
             }
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error when getting all system-currency dependency", e);
         }
 
         return list;

@@ -33,7 +33,7 @@ public class DeleteUser extends HttpServlet {
             userDao.delete(id);
             response.sendRedirect("/users");
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error in operation", e);
         }
     }
 }

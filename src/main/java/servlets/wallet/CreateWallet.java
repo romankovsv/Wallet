@@ -35,7 +35,7 @@ public class CreateWallet extends HttpServlet {
             WalletDao walletDao = daoFactory.getWalletDao(connection);
             walletDao.create(user.getId(), walletId, currencyId);
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error in operation", e);
         }
 
         response.sendRedirect("/user");

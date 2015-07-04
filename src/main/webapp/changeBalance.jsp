@@ -15,7 +15,7 @@
         <input type="text" name="operation" required placeholder="Enter the sum">
         ${error}
         <p>
-            <input type="submit" name="fill up" value="Fill up!">
+            <input type="submit" name="change" value="Change">
         </p>
     </form>
 </div>

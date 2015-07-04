@@ -27,7 +27,7 @@ public class MySqlCurrencyDao implements CurrencyDao {
                 log.info("A new currency was created successfully!");
             }
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error when creating new user", e);
         }
     }
 
@@ -45,7 +45,7 @@ public class MySqlCurrencyDao implements CurrencyDao {
             currency.setId(resultSet.getInt("id"));
             currency.setName(resultSet.getString("name"));
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error when reading user data", e);
         } finally {
             try {
                 if (statement != null) {
@@ -55,7 +55,7 @@ public class MySqlCurrencyDao implements CurrencyDao {
                     resultSet.close();
                 }
             } catch (SQLException e) {
-                log.error(e);
+                log.error("Error when closing resources", e);
             }
         }
 
@@ -75,7 +75,7 @@ public class MySqlCurrencyDao implements CurrencyDao {
                 log.info("An existing database.currency was updated successfully!");
             }
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error when updating user data", e);
         }
     }
 
@@ -91,7 +91,7 @@ public class MySqlCurrencyDao implements CurrencyDao {
                 log.info("A database.currency was deleted successfully!");
             }
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error when deleting user", e);
         }
     }
 
@@ -109,7 +109,7 @@ public class MySqlCurrencyDao implements CurrencyDao {
                 list.add(currency);
             }
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error when getting all users", e);
         }
 
         return list;

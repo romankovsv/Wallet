@@ -31,7 +31,7 @@ public class MySqlWalletDao implements WalletDao {
                 log.info("A new wallet was created successfully!");
             }
         } catch (SQLException e) {
-           log.error(e);
+           log.error("Error when creating new wallet", e);
         }
     }
 
@@ -66,7 +66,7 @@ public class MySqlWalletDao implements WalletDao {
                 list.add(wallet);
             }
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error when reading user's wallets", e);
         } finally {
             try {
                 if (statement != null) {
@@ -76,7 +76,7 @@ public class MySqlWalletDao implements WalletDao {
                     resultSet.close();
                 }
             } catch (SQLException e) {
-                log.error(e);
+                log.error("Error when closing resources", e);
             }
         }
 
@@ -100,7 +100,7 @@ public class MySqlWalletDao implements WalletDao {
                 log.info("A wallet was deleted successfully!");
             }
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error when deleting current wallet", e);
         }
     }
 
@@ -116,7 +116,7 @@ public class MySqlWalletDao implements WalletDao {
                 log.info("All wallets were deleted successfully!");
             }
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error when deleting user's wallet", e);
         }
     }
 
@@ -140,7 +140,7 @@ public class MySqlWalletDao implements WalletDao {
                 list.add(wallet);
             }
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error when getting all wallets", e);
         } finally {
             try {
                 if (statement != null) {
@@ -150,7 +150,7 @@ public class MySqlWalletDao implements WalletDao {
                     resultSet.close();
                 }
             } catch (SQLException e) {
-                e.printStackTrace();
+                log.error("Error when closing resources", e);
             }
         }
 
@@ -187,7 +187,7 @@ public class MySqlWalletDao implements WalletDao {
             }
             connection.commit();
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error when making exchange", e);
         } finally {
             try {
                 connection.setAutoCommit(true);
@@ -195,7 +195,7 @@ public class MySqlWalletDao implements WalletDao {
                     statement.close();
                 }
             } catch (SQLException e) {
-                e.printStackTrace();
+                log.error("Error when closing resources", e);
             }
         }
     }
@@ -216,14 +216,14 @@ public class MySqlWalletDao implements WalletDao {
                 log.info("The sum is update");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error("Error when change balance", e);
         } finally {
             try {
                 if (statement != null) {
                     statement.close();
                 }
             } catch (SQLException e) {
-                log.error(e);
+                log.error("Error when closing resources", e);
             }
         }
     }
@@ -246,7 +246,7 @@ public class MySqlWalletDao implements WalletDao {
                 wallet.setSum(resultSet.getInt("sum"));
             }
         } catch (SQLException e) {
-            log.error(e);
+            log.error("Error when reading wallet's data by wallet's id", e);
         } finally {
             try {
                 if (statement != null) {
@@ -256,7 +256,7 @@ public class MySqlWalletDao implements WalletDao {
                     resultSet.close();
                 }
             } catch (SQLException e) {
-                log.error(e);
+                log.error("Error when closing resources", e);
             }
         }
 
