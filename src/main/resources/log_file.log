@@ -550,3 +550,6 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
 04-07-2015 17:45:11 INFO  MySqlUserDao:99 - An existing user was updated successfully!
+05-07-2015 21:12:11 INFO  MySqlWalletDao:100 - A wallet was deleted successfully!
+05-07-2015 21:12:17 INFO  MySqlWalletDao:216 - The sum is update
+05-07-2015 21:12:17 INFO  MySqlHistoryDao:32 - A new history was created successfully!
