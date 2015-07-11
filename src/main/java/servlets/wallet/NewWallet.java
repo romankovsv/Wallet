@@ -45,6 +45,6 @@ public class NewWallet extends HttpServlet {
         request.setAttribute("type", systemTypeList);
         request.setAttribute("currency", currencyList);
         request.setAttribute("sc", systemCurrencies);
-        getServletContext().getRequestDispatcher("/views/wallets/newWallet.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/newWallet.jsp").forward(request, response);
     }
 }

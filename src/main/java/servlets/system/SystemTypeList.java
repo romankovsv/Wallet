@@ -40,6 +40,6 @@ public class SystemTypeList extends HttpServlet {
         }
 
         request.setAttribute("list", list);
-        getServletContext().getRequestDispatcher("/views/system/systemTypes.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/systemTypes.jsp").forward(request, response);
     }
 }

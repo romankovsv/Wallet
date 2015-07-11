@@ -553,13 +553,3 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 05-07-2015 21:12:11 INFO  MySqlWalletDao:100 - A wallet was deleted successfully!
 05-07-2015 21:12:17 INFO  MySqlWalletDao:216 - The sum is update
 05-07-2015 21:12:17 INFO  MySqlHistoryDao:32 - A new history was created successfully!
-08-07-2015 20:18:25 INFO  MySqlWalletDao:31 - A new wallet was created successfully!
-08-07-2015 20:18:30 INFO  MySqlWalletDao:100 - A wallet was deleted successfully!
-10-07-2015 23:01:19 INFO  MySqlWalletDao:31 - A new wallet was created successfully!
-10-07-2015 23:01:25 INFO  MySqlWalletDao:100 - A wallet was deleted successfully!
-11-07-2015 00:46:03 INFO  MySqlWalletDao:216 - The sum is update
-11-07-2015 00:46:03 INFO  MySqlHistoryDao:32 - A new history was created successfully!
-11-07-2015 00:46:12 INFO  MySqlWalletDao:31 - A new wallet was created successfully!
-11-07-2015 00:46:15 INFO  MySqlWalletDao:100 - A wallet was deleted successfully!
-11-07-2015 00:47:49 INFO  MySqlWalletDao:179 - Exchange complete
-11-07-2015 00:47:49 INFO  MySqlHistoryDao:32 - A new history was created successfully!

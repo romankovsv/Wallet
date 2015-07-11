@@ -1,6 +1,6 @@
 package servlets.wallet;
 
-import exception.OutOfSumException;
+import exception.Check;
 import org.apache.log4j.Logger;
 import database.factory.DaoFactory;
 import database.factory.MySqlDaoFactory;
@@ -10,6 +10,7 @@ import database.users.User;
 import database.wallets.WalletDao;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -48,14 +49,14 @@ public class ChangeBalance extends HttpServlet {
             response.sendRedirect("/user");
         } else {
             request.setAttribute("error", "<font color = red>Not enough money</font>");
-            getServletContext().getRequestDispatcher("/views/wallets/changeBalance.jsp?id=" + id
+            getServletContext().getRequestDispatcher("/changeBalance.jsp?id=" + id
                     + "&sum=" + sum).forward(request, response);
-            log.error(new OutOfSumException("Not enough money"));
+            log.error(new Check("Not enough money"));
         }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        getServletContext().getRequestDispatcher("/views/wallets/changeBalance.jsp?id=" + request.getParameter("id")
+        getServletContext().getRequestDispatcher("/changeBalance.jsp?id=" + request.getParameter("id")
                 + "&sum=" + request.getParameter("sum")).forward(request, response);
     }
 }

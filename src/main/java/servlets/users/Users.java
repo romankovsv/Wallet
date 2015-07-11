@@ -40,7 +40,7 @@ public class Users extends HttpServlet {
         }
 
         request.setAttribute("list", list);
-        getServletContext().getRequestDispatcher("/views/user/users.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/users.jsp").forward(request, response);
     }
 }
 

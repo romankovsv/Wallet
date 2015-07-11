@@ -64,11 +64,11 @@ public class Exchange extends HttpServlet {
 
         if (!complete) {
             request.setAttribute("error", "<font color = red>Wrong data</font>");
-            getServletContext().getRequestDispatcher("/views/wallets/exchange.jsp").forward(request, response);
+            getServletContext().getRequestDispatcher("/exchange.jsp").forward(request, response);
         }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        getServletContext().getRequestDispatcher("/views/wallets/exchange.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/exchange.jsp").forward(request, response);
     }
 }

@@ -43,6 +43,6 @@ public class UserPage extends HttpServlet {
         }
 
         request.setAttribute("list", list);
-        getServletContext().getRequestDispatcher("/views/user/userMainPage.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/userMainPage.jsp").forward(request, response);
     }
 }
