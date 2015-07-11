@@ -40,6 +40,6 @@ public class HistoryList extends HttpServlet {
         }
 
         request.setAttribute("list", list);
-        getServletContext().getRequestDispatcher("/history.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/views/user/history.jsp").forward(request, response);
     }
 }

@@ -553,3 +553,82 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 05-07-2015 21:12:11 INFO  MySqlWalletDao:100 - A wallet was deleted successfully!
 05-07-2015 21:12:17 INFO  MySqlWalletDao:216 - The sum is update
 05-07-2015 21:12:17 INFO  MySqlHistoryDao:32 - A new history was created successfully!
+11-07-2015 13:27:25 INFO  MySqlWalletDao:31 - A new wallet was created successfully!
+11-07-2015 13:27:27 INFO  MySqlWalletDao:100 - A wallet was deleted successfully!
+11-07-2015 13:34:46 INFO  MySqlWalletDao:31 - A new wallet was created successfully!
+11-07-2015 13:34:49 INFO  MySqlWalletDao:100 - A wallet was deleted successfully!
+11-07-2015 13:37:09 INFO  MySqlWalletDao:216 - The sum is update
+11-07-2015 13:37:10 INFO  MySqlHistoryDao:32 - A new history was created successfully!
+11-07-2015 13:37:16 ERROR ChangeBalance:53 - exception.OutOfSumException: Not enough money
+11-07-2015 13:37:21 INFO  MySqlWalletDao:216 - The sum is update
+11-07-2015 13:37:21 INFO  MySqlHistoryDao:32 - A new history was created successfully!
+11-07-2015 13:37:26 INFO  MySqlWalletDao:31 - A new wallet was created successfully!
+11-07-2015 13:37:27 INFO  MySqlWalletDao:100 - A wallet was deleted successfully!
+11-07-2015 13:38:05 INFO  MySqlWalletDao:179 - Exchange complete
+11-07-2015 13:38:05 INFO  MySqlHistoryDao:32 - A new history was created successfully!
+11-07-2015 13:39:13 INFO  MySqlUserDao:99 - An existing user was updated successfully!
+11-07-2015 13:47:21 INFO  MySqlUserDao:36 - A new user was created successfully!
+11-07-2015 13:47:37 INFO  MySqlUserDao:118 - A user was deleted successfully!
+11-07-2015 13:47:55 INFO  MySqlUserDao:36 - A new user was created successfully!
+11-07-2015 13:48:10 INFO  MySqlWalletDao:31 - A new wallet was created successfully!
+11-07-2015 13:48:12 INFO  MySqlWalletDao:31 - A new wallet was created successfully!
+11-07-2015 13:48:25 INFO  MySqlWalletDao:216 - The sum is update
+11-07-2015 13:48:25 INFO  MySqlHistoryDao:32 - A new history was created successfully!
+11-07-2015 13:48:28 ERROR ChangeBalance:53 - exception.OutOfSumException: Not enough money
+11-07-2015 13:48:30 INFO  MySqlWalletDao:216 - The sum is update
+11-07-2015 13:48:30 INFO  MySqlHistoryDao:32 - A new history was created successfully!
+11-07-2015 13:48:44 INFO  MySqlWalletDao:179 - Exchange complete
+11-07-2015 13:48:44 INFO  MySqlHistoryDao:32 - A new history was created successfully!
+11-07-2015 13:48:46 INFO  MySqlWalletDao:100 - A wallet was deleted successfully!
+11-07-2015 13:48:59 ERROR MySqlUserDao:103 - Error when update user data
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'boss@gmail.com' for key 'unique_email'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2145)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2081)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2066)
+	at database.users.MySqlUserDao.update(MySqlUserDao.java:97)
+	at servlets.users.Edit.doPost(Edit.java:30)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at servlets.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:617)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:668)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1521)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1478)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+11-07-2015 13:49:03 INFO  MySqlUserDao:99 - An existing user was updated successfully!
+11-07-2015 13:49:05 INFO  MySqlWalletDao:100 - A wallet was deleted successfully!
+11-07-2015 13:49:07 INFO  MySqlUserDao:118 - A user was deleted successfully!
+11-07-2015 13:52:50 INFO  MySqlUserDao:36 - A new user was created successfully!
+11-07-2015 13:53:17 INFO  MySqlUserDao:118 - A user was deleted successfully!
+11-07-2015 13:55:11 INFO  MySqlUserDao:99 - An existing user was updated successfully!

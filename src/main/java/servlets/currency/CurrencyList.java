@@ -41,6 +41,6 @@ public class CurrencyList extends HttpServlet {
         }
 
         request.setAttribute("list", list);
-        getServletContext().getRequestDispatcher("/сurrency.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/views/currency/currency.jsp").forward(request, response);
     }
 }

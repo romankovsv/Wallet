@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -10,7 +11,7 @@
 
 <div class="Registration">
     <h3>Registration.</h3>
-    <form action="registration" method="post">
+    <form action="<c:url value="/registration"/>" method="post">
         <input type="text" name="name" required placeholder="Name"><br>
         <input type="text" name="date of birth" required placeholder="Date of birth"><br>
         <input type="text" name="sex" required placeholder="Sex"><br>

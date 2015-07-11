@@ -20,7 +20,14 @@
     </tr>
     <c:forEach items="${list}" var="history">
       <tr style="border:2px solid #ccc">
-        <td>${history.walletIdFrom}</td>
+        <c:choose>
+          <c:when test="${history.walletIdFrom != 0}">
+            <td>${history.walletIdFrom}</td>
+          </c:when>
+          <c:otherwise>
+            <td>Add</td>
+          </c:otherwise>
+        </c:choose>
         <td>${history.walletIdTo}</td>
         <td>${history.date}</td>
         <td>${history.time}</td>

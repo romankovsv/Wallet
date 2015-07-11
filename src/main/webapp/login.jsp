@@ -17,7 +17,7 @@
     ${error}
     <p>
       <input type="submit" name="enter" value="Enter">
-      <input type="button" name="registration" value="Registration" onclick="parent.location='/registration.jsp'" />
+      <input type="button" name="registration" value="Registration" onclick="parent.location='views/user/registration.jsp'" />
     </p>
   </form>
 </div>

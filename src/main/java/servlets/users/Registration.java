@@ -33,7 +33,7 @@ public class Registration extends HttpServlet {
                 response.sendRedirect("/");
             } else {
                 request.setAttribute("error", "<font color = red>The current user is exist</font>");
-                getServletContext().getRequestDispatcher("/registration.jsp").forward(request, response);
+                getServletContext().getRequestDispatcher("/views/user/registration.jsp").forward(request, response);
             }
         } catch (SQLException e) {
             log.error("Error in operation", e);

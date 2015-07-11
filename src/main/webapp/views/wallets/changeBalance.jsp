@@ -11,7 +11,7 @@
 
 <div class="GeneralBlock">
     <h3>Enter the sum</h3>
-    <form action="/user/wallet/change-balance?id=${param.id}&sum=${param.sum}" method="post">
+    <form action="<c:url value="/user/wallet/change-balance?id=${param.id}&sum=${param.sum}"/>" method="post">
         <input type="text" name="operation" required placeholder="Enter the sum">
         ${error}
         <p>
