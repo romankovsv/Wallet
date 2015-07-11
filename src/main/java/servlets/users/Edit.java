@@ -18,8 +18,8 @@ import java.sql.SQLException;
  * Created by SpiritMoon
  */
 @WebServlet(name = "ChangeData", urlPatterns = "/user/change-data")
-public class ChangeData extends HttpServlet {
-    public static final Logger log = Logger.getLogger(ChangeData.class);
+public class Edit extends HttpServlet {
+    public static final Logger log = Logger.getLogger(Edit.class);
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         DaoFactory daoFactory = new MySqlDaoFactory();
@@ -35,7 +35,7 @@ public class ChangeData extends HttpServlet {
                 response.sendRedirect("/user");
             } else {
                 request.setAttribute("error", "<font color = red>Current user is exist</font>");
-                getServletContext().getRequestDispatcher("/changeData.jsp").forward(request, response);
+                getServletContext().getRequestDispatcher("/views/user/edit.jsp").forward(request, response);
             }
         } catch (SQLException e) {
             log.error("Error during operation", e);
@@ -49,6 +49,6 @@ public class ChangeData extends HttpServlet {
         request.setAttribute("sex", user.getSex());
         request.setAttribute("email", user.getEmail());
         request.setAttribute("password", user.getPassword());
-        getServletContext().getRequestDispatcher("/changeData.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/views/user/edit.jsp").forward(request, response);
     }
 }

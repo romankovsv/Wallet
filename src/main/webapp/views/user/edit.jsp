@@ -3,7 +3,7 @@
 <head>
   <title>Change data</title>
   <style>
-    <%@include file="css/style.css"%>
+    <%@include file="../../css/style.css"%>
   </style>
 </head>
 <body>
