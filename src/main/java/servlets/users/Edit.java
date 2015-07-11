@@ -17,7 +17,7 @@ import java.sql.SQLException;
 /**
  * Created by SpiritMoon
  */
-@WebServlet(name = "ChangeData", urlPatterns = "/user/change-data")
+@WebServlet(name = "Edit", urlPatterns = "/user/edit")
 public class Edit extends HttpServlet {
     public static final Logger log = Logger.getLogger(Edit.class);
 
@@ -43,12 +43,6 @@ public class Edit extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        User user = (User) request.getSession().getAttribute("user");
-        request.setAttribute("name", user.getName());
-        request.setAttribute("date", user.getDateOfBirth());
-        request.setAttribute("sex", user.getSex());
-        request.setAttribute("email", user.getEmail());
-        request.setAttribute("password", user.getPassword());
         getServletContext().getRequestDispatcher("/views/user/edit.jsp").forward(request, response);
     }
 }

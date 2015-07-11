@@ -42,7 +42,7 @@
             <a href="user/delete-account">Delete Account</a>
         </button>
         <button>
-            <a href="user/change-data">Change data</a>
+            <a href="user/edit">Edit</a>
         </button>
     </p>
 </div>
