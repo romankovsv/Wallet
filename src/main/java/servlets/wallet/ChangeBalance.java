@@ -1,6 +1,6 @@
 package servlets.wallet;
 
-import exception.OutOfSumException;
+import exception.MyException;
 import org.apache.log4j.Logger;
 import database.factory.DaoFactory;
 import database.factory.MySqlDaoFactory;
@@ -24,6 +24,12 @@ import java.sql.SQLException;
 public class ChangeBalance extends HttpServlet {
     private static final Logger log = Logger.getLogger(ChangeBalance.class);
 
+    static void check(int sum, int operation) {
+        if (sum + operation < 0 || operation < 0) {
+            throw new MyException("Not enough money");
+        }
+    }
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         DaoFactory daoFactory = new MySqlDaoFactory();
         int sum = Integer.parseInt(request.getParameter("sum"));
@@ -32,25 +38,25 @@ public class ChangeBalance extends HttpServlet {
         History history = new History();
         User user = (User) request.getSession().getAttribute("user");
 
-        if (sum + operation >= 0 || operation > 0) {
-            try (Connection connection = daoFactory.getConnection()) {
-                WalletDao walletDao = daoFactory.getWalletDao(connection);
-                walletDao.changeBalance(id, operation);
+        try (Connection connection = daoFactory.getConnection()) {
+            check(sum, operation);
+            WalletDao walletDao = daoFactory.getWalletDao(connection);
+            walletDao.changeBalance(id, operation);
 
-                HistoryDao historyDao = daoFactory.getTransactionDao(connection);
-                history.setUserIdTo(user.getId());
-                history.setWalletIdTo(id);
-                history.setSum(operation);
-                historyDao.create(history);
-            } catch (SQLException e) {
-                log.error("Error in operation", e);
-            }
+            HistoryDao historyDao = daoFactory.getTransactionDao(connection);
+            history.setUserIdTo(user.getId());
+            history.setWalletIdTo(id);
+            history.setSum(operation);
+            historyDao.create(history);
+
             response.sendRedirect("/user");
-        } else {
+        } catch (SQLException e) {
+            log.error("Error in operation", e);
+        } catch (MyException e) {
             request.setAttribute("error", "<font color = red>Not enough money</font>");
             getServletContext().getRequestDispatcher("/views/wallets/changeBalance.jsp?id=" + id
                     + "&sum=" + sum).forward(request, response);
-            log.error(new OutOfSumException("Not enough money"));
+            log.info("Not enough money");
         }
     }
 

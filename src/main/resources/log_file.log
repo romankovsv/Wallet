@@ -632,3 +632,13 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 11-07-2015 13:52:50 INFO  MySqlUserDao:36 - A new user was created successfully!
 11-07-2015 13:53:17 INFO  MySqlUserDao:118 - A user was deleted successfully!
 11-07-2015 13:55:11 INFO  MySqlUserDao:99 - An existing user was updated successfully!
+12-07-2015 15:41:24 INFO  MySqlWalletDao:216 - The sum is update
+12-07-2015 15:41:25 INFO  MySqlHistoryDao:32 - A new history was created successfully!
+12-07-2015 15:41:31 INFO  MySqlWalletDao:31 - A new wallet was created successfully!
+12-07-2015 15:41:36 INFO  MySqlWalletDao:100 - A wallet was deleted successfully!
+13-07-2015 00:23:12 INFO  ChangeBalance:53 - Not enough money
+13-07-2015 00:25:17 INFO  MySqlWalletDao:216 - The sum is update
+13-07-2015 00:25:17 INFO  MySqlHistoryDao:32 - A new history was created successfully!
+13-07-2015 00:36:37 INFO  ChangeBalance:59 - Not enough money
+13-07-2015 00:37:31 INFO  MySqlWalletDao:216 - The sum is update
+13-07-2015 00:37:31 INFO  MySqlHistoryDao:32 - A new history was created successfully!
