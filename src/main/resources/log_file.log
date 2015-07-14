@@ -642,3 +642,9 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 13-07-2015 00:36:37 INFO  ChangeBalance:59 - Not enough money
 13-07-2015 00:37:31 INFO  MySqlWalletDao:216 - The sum is update
 13-07-2015 00:37:31 INFO  MySqlHistoryDao:32 - A new history was created successfully!
+14-07-2015 18:22:56 INFO  MySqlWalletDao:216 - The sum is update
+14-07-2015 18:22:56 INFO  MySqlHistoryDao:32 - A new history was created successfully!
+14-07-2015 18:23:38 INFO  MySqlWalletDao:31 - A new wallet was created successfully!
+14-07-2015 18:23:40 INFO  MySqlWalletDao:100 - A wallet was deleted successfully!
+14-07-2015 18:24:03 INFO  MySqlWalletDao:179 - Exchange complete
+14-07-2015 18:24:03 INFO  MySqlHistoryDao:32 - A new history was created successfully!
