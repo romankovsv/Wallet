@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<div class="History">
+<div class="Position History">
   <table>
     <tr>
       <th>From</th>

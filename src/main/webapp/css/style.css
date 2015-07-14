@@ -1,112 +1,49 @@
-<<<<<<< Updated upstream:src/main/webapp/css/style.css
-.GeneralBlock {
-    width: 175px;
+.Position {
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-left: -90px;
-    margin-top: -90px;
-=======
-.General,
-.Registration,
-.UserPage,
-.History,
-.NewWallet {
-    position: absolute;
-    left: 50%;
-    top: 50%;
->>>>>>> Stashed changes:src/main/webapp/css/general.css
     border: 2px solid #D4D4D4;
     box-shadow: 0 0 10px #0099FF;
     padding: 10px;
     border-radius: 10px;
 }
 
-<<<<<<< Updated upstream:src/main/webapp/css/style.css
-.UserPage {
-    width: 350px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -175px;
-    margin-top: -175px;
-    border: 2px solid #D4D4D4;
-    box-shadow: 0 0 10px #0099FF;
-    padding: 10px;
-    border-radius: 10px;
-=======
 .General {
     width: 175px;
     margin-left: -90px;
     margin-top: -90px;
 }
+
 .UserPage {
     width: 350px;
     margin-left: -175px;
     margin-top: -175px;
->>>>>>> Stashed changes:src/main/webapp/css/general.css
 }
 
 .NewWallet {
     align-content: center;
     width: 225px;
-<<<<<<< Updated upstream:src/main/webapp/css/style.css
-    position: absolute;
-    left: 50%;
-    top: 50%;
     margin-left: -110px;
     margin-top: -175px;
-    border: 2px solid #D4D4D4;
-    box-shadow: 0 0 10px #0099FF;
-    padding: 10px;
-    border-radius: 10px;
-=======
-    margin-left: -110px;
-    margin-top: -175px;
->>>>>>> Stashed changes:src/main/webapp/css/general.css
 }
 
 .Registration {
     width: 175px;
-<<<<<<< Updated upstream:src/main/webapp/css/style.css
-    position: absolute;
-    left: 50%;
-    top: 50%;
     margin-left: -100px;
     margin-top: -125px;
-    border: 2px solid #D4D4D4;
-    box-shadow: 0 0 10px #0099FF;
-    padding: 10px;
-    border-radius: 10px;
-=======
-    margin-left: -100px;
-    margin-top: -125px;
->>>>>>> Stashed changes:src/main/webapp/css/general.css
 }
 
 .History {
     height: 300px;
     width: 250px;
     position: fixed;
-<<<<<<< Updated upstream:src/main/webapp/css/style.css
-    left: 50%;
-    top: 50%;
     margin-left: -125px;
     margin-top: -150px;
-    border: 2px solid #D4D4D4;
-    box-shadow: 0 0 10px #0099FF;
-    padding: 10px;
-    border-radius: 10px;
     overflow-y: scroll;
-=======
-    overflow-y: scroll;
-    margin-left: -125px;
-    margin-top: -150px;
->>>>>>> Stashed changes:src/main/webapp/css/general.css
 }
 
 a {
-    text-decoration : none;
+    text-decoration: none;
 }
 
 table {

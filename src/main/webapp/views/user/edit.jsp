@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<div class="Registration">
+<div class="Position Registration">
   <h3>Make changes.</h3>
 
   <form action="<c:url value="/user/edit"/>" method="post">

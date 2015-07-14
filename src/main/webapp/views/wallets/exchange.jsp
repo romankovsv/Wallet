@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<div class="GeneralBlock">
+<div class="Position General">
     <h3>Make exchange</h3>
     <form action="<c:url value="/user/wallet/exchange"/>" method="post">
         <input type="number" name="firstId" required placeholder="Enter № of wallet from"><br>

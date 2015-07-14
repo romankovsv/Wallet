@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<div class="UserPage">
+<div class="Position UserPage">
     <h3>Welcome, ${user.name}</h3>
     <p>
         <button>

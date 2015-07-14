@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<div class="NewWallet">
+<div class="Position NewWallet">
     <h3>New Wallet</h3>
     <table class="Table">
         <tr>

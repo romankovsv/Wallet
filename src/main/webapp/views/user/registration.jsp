@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<div class="Registration">
+<div class="Position Registration">
     <h3>Registration.</h3>
     <form action="<c:url value="/registration"/>" method="post">
         <input type="text" name="name" required placeholder="Name"><br>
