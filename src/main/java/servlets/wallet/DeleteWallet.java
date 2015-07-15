@@ -30,7 +30,7 @@ public class DeleteWallet extends HttpServlet {
         try (Connection connection = daoFactory.getConnection()) {
             WalletDao walletDao = daoFactory.getWalletDao(connection);
             int id = Integer.parseInt(request.getParameter("id"));
-            walletDao.delete(id);
+            walletDao.deleteById(id);
             response.sendRedirect("/user");
         } catch (SQLException e) {
             log.error("Error in operation", e);

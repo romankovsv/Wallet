@@ -4,8 +4,8 @@ import exception.MyException;
 import org.apache.log4j.Logger;
 import database.factory.DaoFactory;
 import database.factory.MySqlDaoFactory;
-import database.transaction.History;
-import database.transaction.HistoryDao;
+import database.history.History;
+import database.history.HistoryDao;
 import database.users.User;
 import database.wallets.WalletDao;
 
@@ -41,7 +41,7 @@ public class ChangeBalance extends HttpServlet {
         try (Connection connection = daoFactory.getConnection()) {
             check(sum, operation);
             WalletDao walletDao = daoFactory.getWalletDao(connection);
-            walletDao.changeBalance(id, operation);
+            walletDao.changeBalanceById(id, operation);
 
             HistoryDao historyDao = daoFactory.getTransactionDao(connection);
             history.setUserIdTo(user.getId());

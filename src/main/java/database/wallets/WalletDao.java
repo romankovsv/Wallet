@@ -6,21 +6,19 @@ import java.util.List;
  */
 public interface WalletDao {
     /** Сохранить объект Wallet в базе данных для указанного User.id */
-    void create(int userId, int systemId, int currencyId);
+    void createForUserById(int userId, int systemId, int currencyId);
     /** Извлечь все объекты Wallet для указанного User.id */
-    List<Wallet> readByUserId(int id);
-    /** Внести изменения в Wallet по Wallet.id */
-    void update(int id, int sum);
+    List<Wallet> readForUserById(int id);
     /** Удалить объект Wallet по Wallet.id */
-    void delete(int id);
+    void deleteById(int id);
     /** Удалить объект все Wallet по User.id */
-    void deleteUserWallets(int id);
+    void deleteUserWalletById(int id);
     /** Вывод всех записей по Wallet */
     List<Wallet> getAll();
     /** Обмен между кошельками по Wallet.id */
-    void exchange(int idFirst, int idSecond, int sum);
+    void exchangeById(int idFirst, int idSecond, int sum);
     /** Пополнение кошелька по Wallet.id */
-    void changeBalance(int id, int sum);
+    void changeBalanceById(int id, int sum);
     /** Извлечь все объекты Wallet для указанного Wallet.id */
-    Wallet readByWalletId(int id);
+    Wallet readWalletById(int id);
 }

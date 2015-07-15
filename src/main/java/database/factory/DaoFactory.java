@@ -5,7 +5,7 @@ package database.factory;
 import database.currency.CurrencyDao;
 import database.system.SystemTypeDao;
 import database.system_currency.SystemCurrencyDao;
-import database.transaction.HistoryDao;
+import database.history.HistoryDao;
 import database.users.UserDao;
 import database.wallets.WalletDao;
 

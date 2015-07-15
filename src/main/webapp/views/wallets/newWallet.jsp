@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java"  %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="ct" uri="MyCustomTags" %>
@@ -16,7 +16,7 @@
 <body>
 
 <div class="Position NewWallet">
-    <h3>New Wallet</h3>
+    <h3><fmt:message key="wallet.title" /></h3>
     <table class="Table">
         <ct:listOfWallets types="${type}" sc="${sc}" currency="${currency}" />
     </table>

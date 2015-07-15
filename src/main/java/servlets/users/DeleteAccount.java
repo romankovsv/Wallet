@@ -33,7 +33,7 @@ public class DeleteAccount extends HttpServlet {
         try (Connection connection = daoFactory.getConnection()) {
             WalletDao walletDao = daoFactory.getWalletDao(connection);
             UserDao userDao = daoFactory.getUserDao(connection);
-            walletDao.deleteUserWallets(user.getId());
+            walletDao.deleteUserWalletById(user.getId());
             userDao.delete(user.getId());
             response.sendRedirect("/");
         } catch (SQLException e) {

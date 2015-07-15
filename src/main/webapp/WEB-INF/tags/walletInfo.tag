@@ -7,14 +7,4 @@
     <td>${wallet.systemType.name}</td>
     <td>${wallet.currency.name}</td>
     <td>${wallet.sum}</td>
-    <td>
-        <button>
-            <a href="user/wallet/change-balance?id=${wallet.id}&sum=${wallet.sum}">Add/Get</a>
-        </button>
-    </td>
-    <td>
-        <button>
-            <a href="user/delete-wallet?id=${wallet.id}">Delete</a>
-        </button>
-    </td>
 </tr>

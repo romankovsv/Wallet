@@ -16,7 +16,7 @@ import java.sql.SQLException;
 /**
  * Created by SpiritMoon
  */
-@WebServlet(name = "DeleteCurrency", urlPatterns = "/delete-currency")
+@WebServlet(name = "DeleteCurrency", urlPatterns = "/deleteById-currency")
 public class DeleteCurrency extends HttpServlet {
     private static final Logger log = Logger.getLogger(DeleteCurrency.class);
 
@@ -30,7 +30,7 @@ public class DeleteCurrency extends HttpServlet {
         try (Connection connection = daoFactory.getConnection()) {
             CurrencyDao currencyDao = daoFactory.getCurrencyDao(connection);
             int id = Integer.parseInt(request.getParameter("id"));
-            currencyDao.delete(id);
+            currencyDao.deleteById(id);
             getServletContext().getRequestDispatcher("/views/currency/currency-list").forward(request, response);
         } catch (SQLException e) {
             log.error("Error in operation", e);

@@ -16,7 +16,7 @@ import java.sql.SQLException;
 /**
  * Created by SpiritMoon
  */
-@WebServlet(name = "DeleteUser", urlPatterns = "/delete-user")
+@WebServlet(name = "DeleteUser", urlPatterns = "/deleteById-user")
 public class DeleteUser extends HttpServlet {
     private static final Logger log = Logger.getLogger(DeleteUser.class);
 

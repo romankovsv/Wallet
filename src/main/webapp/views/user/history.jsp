@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java"  %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="session" />
@@ -17,11 +17,11 @@
 <div class="Position History">
   <table>
     <tr>
-      <th>From</th>
-      <th>To</th>
-      <th>Date</th>
-      <th>Time</th>
-      <th>Sum</th>
+      <th><fmt:message key="history.from" /></th>
+      <th><fmt:message key="history.to" /></th>
+      <th><fmt:message key="history.date" /></th>
+      <th><fmt:message key="history.time" /></th>
+      <th><fmt:message key="history.sum" /></th>
     </tr>
     <c:forEach items="${list}" var="history">
       <tr style="border:2px solid #ccc">

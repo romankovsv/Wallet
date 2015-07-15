@@ -33,7 +33,7 @@ public class CreateWallet extends HttpServlet {
 
         try (Connection connection = daoFactory.getConnection()) {
             WalletDao walletDao = daoFactory.getWalletDao(connection);
-            walletDao.create(user.getId(), walletId, currencyId);
+            walletDao.createForUserById(user.getId(), walletId, currencyId);
         } catch (SQLException e) {
             log.error("Error in operation", e);
         }

@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * Created by SpiritMoon
  */
-@WebServlet(name = "DeleteSystemType", urlPatterns = "/delete-system-type")
+@WebServlet(name = "DeleteSystemType", urlPatterns = "/deleteById-system-type")
 public class DeleteSystemType extends HttpServlet {
     private static final Logger log = Logger.getLogger(DeleteSystemType.class);
 

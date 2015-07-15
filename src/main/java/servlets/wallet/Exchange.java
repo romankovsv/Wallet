@@ -3,8 +3,8 @@ package servlets.wallet;
 import org.apache.log4j.Logger;
 import database.factory.DaoFactory;
 import database.factory.MySqlDaoFactory;
-import database.transaction.History;
-import database.transaction.HistoryDao;
+import database.history.History;
+import database.history.HistoryDao;
 import database.users.User;
 import database.wallets.Wallet;
 import database.wallets.WalletDao;
@@ -36,13 +36,13 @@ public class Exchange extends HttpServlet {
 
         try (Connection connection = daoFactory.getConnection()) {
             WalletDao walletDao = daoFactory.getWalletDao(connection);
-            for (Wallet walletFrom : walletDao.readByUserId(user.getId())) {
+            for (Wallet walletFrom : walletDao.readForUserById(user.getId())) {
                 if ((walletFrom.getId() == fromId) && (walletFrom.getSum() - sum >= 0)) {
                     for (Wallet walletTo : walletDao.getAll()) {
                         if (walletTo.getId() == toId) {
-                            walletDao.exchange(fromId, toId, sum);
+                            walletDao.exchangeById(fromId, toId, sum);
 
-                            int userIdTo = walletDao.readByWalletId(toId).getUserId();
+                            int userIdTo = walletDao.readWalletById(toId).getUserId();
 
                             HistoryDao historyDao = daoFactory.getTransactionDao(connection);
                             history.setUserIdFrom(user.getId());
@@ -64,7 +64,7 @@ public class Exchange extends HttpServlet {
 
         if (!complete) {
             request.setAttribute("error", "<font color = red>Wrong data</font>");
-            getServletContext().getRequestDispatcher("/views/wallets/exchange.jsp").forward(request, response);
+            getServletContext().getRequestDispatcher("/views/wallets/exchangeById.jsp").forward(request, response);
         }
     }
 

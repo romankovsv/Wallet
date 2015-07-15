@@ -18,7 +18,7 @@ public class MySqlWalletDao implements WalletDao {
     private Connection connection;
 
     @Override
-    public void create(int userId, int systemId, int currencyId) {
+    public void createForUserById(int userId, int systemId, int currencyId) {
         String sql = "INSERT INTO wallets (users_id, system_id, currency_id) VALUES (?, ?, ?)";
 
         try (PreparedStatement statement = connection.prepareStatement(sql)){
@@ -36,7 +36,7 @@ public class MySqlWalletDao implements WalletDao {
     }
 
     @Override
-    public List<Wallet> readByUserId(int id) {
+    public List<Wallet> readForUserById(int id) {
         PreparedStatement statement = null;
         ResultSet resultSet = null;
         List<Wallet> list = new ArrayList<>();
@@ -84,12 +84,7 @@ public class MySqlWalletDao implements WalletDao {
     }
 
     @Override
-    public void update(int id, int sum) {
-
-    }
-
-    @Override
-    public void delete(int id) {
+    public void deleteById(int id) {
         String sql = "DELETE FROM wallets WHERE id = ?";
 
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
@@ -105,7 +100,7 @@ public class MySqlWalletDao implements WalletDao {
     }
 
     @Override
-    public void deleteUserWallets(int id) {
+    public void deleteUserWalletById(int id) {
         String sql = "DELETE FROM wallets WHERE 'user_id' = ?";
 
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
@@ -158,7 +153,7 @@ public class MySqlWalletDao implements WalletDao {
     }
 
     @Override
-    public void exchange(int idFirst, int idSecond, int sum) {
+    public void exchangeById(int idFirst, int idSecond, int sum) {
         PreparedStatement statement = null;
         String sqlFrom = "UPDATE wallets SET sum = sum - ? WHERE id = ?";
         String sqlTo = "UPDATE wallets SET sum = sum + ? WHERE id = ?";
@@ -187,7 +182,7 @@ public class MySqlWalletDao implements WalletDao {
             }
             connection.commit();
         } catch (SQLException e) {
-            log.error("Error when making exchange", e);
+            log.error("Error when making exchangeById", e);
         } finally {
             try {
                 connection.setAutoCommit(true);
@@ -201,7 +196,7 @@ public class MySqlWalletDao implements WalletDao {
     }
 
     @Override
-    public void changeBalance(int id, int sum) {
+    public void changeBalanceById(int id, int sum) {
         PreparedStatement statement = null;
         String sql = "UPDATE wallets SET sum = sum + ? WHERE id = ?";
         int result;
@@ -213,7 +208,7 @@ public class MySqlWalletDao implements WalletDao {
             result = statement.executeUpdate();
 
             if (result == 1) {
-                log.info("The sum is update");
+                log.info("The sum is updateById");
             }
         } catch (SQLException e) {
             log.error("Error when change balance", e);
@@ -228,7 +223,7 @@ public class MySqlWalletDao implements WalletDao {
         }
     }
 
-    public Wallet readByWalletId(int id) {
+    public Wallet readWalletById(int id) {
         PreparedStatement statement = null;
         ResultSet resultSet = null;
         String sql = "SELECT * FROM wallets WHERE id = ?";

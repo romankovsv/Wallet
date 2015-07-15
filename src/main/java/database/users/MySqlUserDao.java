@@ -100,7 +100,7 @@ public class MySqlUserDao implements UserDao {
                 result = true;
             }
         } catch (SQLException e) {
-            log.error("Error when update user data", e);
+            log.error("Error when updateById user data", e);
         }
 
         return result;
@@ -118,7 +118,7 @@ public class MySqlUserDao implements UserDao {
                 log.info("A user was deleted successfully!");
             }
         } catch (SQLException e) {
-            log.error("Error when delete user", e);
+            log.error("Error when deleteById user", e);
         }
     }
 

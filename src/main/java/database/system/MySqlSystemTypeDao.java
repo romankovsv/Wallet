@@ -76,7 +76,7 @@ public class MySqlSystemTypeDao implements SystemTypeDao {
                 log.info("An existing system type was updated successfully!");
             }
         } catch (SQLException e) {
-            log.error("Error when update system type", e);
+            log.error("Error when updateById system type", e);
         }
     }
 
@@ -92,7 +92,7 @@ public class MySqlSystemTypeDao implements SystemTypeDao {
                 log.info("A system type was deleted successfully!");
             }
         } catch (SQLException e) {
-            log.error("Error when delete system type", e);
+            log.error("Error when deleteById system type", e);
         }
     }
 

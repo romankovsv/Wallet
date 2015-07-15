@@ -3,7 +3,7 @@ package servlets.history;
 import org.apache.log4j.Logger;
 import database.factory.DaoFactory;
 import database.factory.MySqlDaoFactory;
-import database.transaction.HistoryDao;
+import database.history.HistoryDao;
 import database.users.User;
 
 import javax.servlet.ServletException;
@@ -30,11 +30,11 @@ public class HistoryList extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         DaoFactory daoFactory = new MySqlDaoFactory();
         User user = (User) request.getSession().getAttribute("user");
-        List<database.transaction.History> list = new ArrayList<>();
+        List<database.history.History> list = new ArrayList<>();
 
         try (Connection connection = daoFactory.getConnection()) {
             HistoryDao historyDao = daoFactory.getTransactionDao(connection);
-            list = historyDao.read(user.getId());
+            list = historyDao.readByUserId(user.getId());
         } catch (SQLException e) {
             log.error("Error in operation", e);
         }

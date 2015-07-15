@@ -37,7 +37,7 @@ public class UserPage extends HttpServlet {
 
         try (Connection connection = daoFactory.getConnection()) {
             WalletDao walletDao = daoFactory.getWalletDao(connection);
-            list = walletDao.readByUserId(user.getId());
+            list = walletDao.readForUserById(user.getId());
         } catch (SQLException e) {
             log.error("Error in operation", e);
         }

@@ -32,7 +32,7 @@ public class MySqlCurrencyDao implements CurrencyDao {
     }
 
     @Override
-    public Currency read(int id) {
+    public Currency readById(int id) {
         PreparedStatement statement = null;
         ResultSet resultSet = null;
         Currency currency = new Currency();
@@ -63,7 +63,7 @@ public class MySqlCurrencyDao implements CurrencyDao {
     }
 
     @Override
-    public void update(int id, String name) {
+    public void updateById(int id, String name) {
         String sql = "UPDATE currency SET name = ? WHERE id = ?";
 
         try (PreparedStatement statement = connection.prepareStatement(sql)){
@@ -80,7 +80,7 @@ public class MySqlCurrencyDao implements CurrencyDao {
     }
 
     @Override
-    public void delete(int id) {
+    public void deleteById(int id) {
         String sql = "DELETE * FROM currency WHERE id = ?";
 
         try (PreparedStatement statement = connection.prepareStatement(sql)){
