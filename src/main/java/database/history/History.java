@@ -2,7 +2,6 @@ package database.history;
 
 import java.sql.Date;
 import java.sql.Time;
-
 /**
  * Created by SpiritMoon
  */

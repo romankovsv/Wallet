@@ -2,21 +2,17 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="ct" tagdir="/WEB-INF/tags" %>
-<c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="session" />
-<fmt:setLocale value="${language}" />
-<fmt:setBundle basename="text" />
+<fmt:setLocale value="${sessionScope.language}" />
 
 <html>
 <head>
     <title>User Page</title>
-    <style>
-        <%@include file="../../css/style.css"%>
-    </style>
+    <link href="../../css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
 <div class="Position UserPage">
-    <h3><fmt:message key="user.title" />, ${user.name}</h3>
+    <h3><fmt:message key="user.title" />, ${sessionScope.user.name}</h3>
     <p>
         <button>
             <a href="user/new-wallet"><fmt:message key="user.addWallet" /></a>
@@ -35,7 +31,7 @@
             <th><fmt:message key="user.currencyName" /></th>
             <th><fmt:message key="user.sum" /></th>
         </tr>
-        <c:forEach items="${list}" var="wallet">
+        <c:forEach items="${requestScope.list}" var="wallet">
             <ct:walletInfo wallet="${wallet}"/>
             <tr>
                 <td>

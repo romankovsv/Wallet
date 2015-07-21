@@ -1,16 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java"  %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="session" />
-<fmt:setLocale value="${language}" />
-<fmt:setBundle basename="text" />
+<fmt:setLocale value="${sessionScope.language}" />
 
 <html>
 <head>
     <title>Registration</title>
-    <style>
-        <%@include file="../../css/style.css"%>
-    </style>
+    <link href="../../css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
@@ -24,7 +20,7 @@
         <input type="text" name="password" required placeholder=<fmt:message key="registration.password" />>
         <p><input type="submit" name="create" value=<fmt:message key="registration.create" />></p>
     </form>
-    ${error}
+    <%--${error}--%>
 </div>
 
 </body>

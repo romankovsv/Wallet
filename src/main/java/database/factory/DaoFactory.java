@@ -9,12 +9,14 @@ import database.history.HistoryDao;
 import database.users.UserDao;
 import database.wallets.WalletDao;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 /** Фабрика объектов для работы с базой данных */
 public interface DaoFactory {
     /** Возвращает подключение к базе данных */
-    Connection getConnection() throws SQLException;
+    Connection getConnection() throws SQLException, IOException;
 
     /** Возвращает объект для работы с состоянием user */
     UserDao getUserDao(Connection connection);

@@ -14,21 +14,25 @@ import database.wallets.MySqlWalletDao;
 import database.wallets.WalletDao;
 import org.apache.log4j.Logger;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Properties;
+
 /**
  * Created by SpiritMoon
  */
 public class MySqlDaoFactory implements DaoFactory {
     private static final Logger log = Logger.getLogger(MySqlDaoFactory.class);
 
-    private final static String URL = "jdbc:mysql://localhost:3306/exchange service"; // URL адресс
-    private final static String USERNAME = "root"; // Имя пользователя
-    private final static String PASSWORD = "root"; // Пароль
-    private final static String DRIVER = "com.mysql.jdbc.Driver"; // Имя драйвера
+    private final static String URL = "jdbc:mysql://localhost:3306/exchange service";
+    private final static String USERNAME = "root";
+    private final static String PASSWORD = "root";
+    private final static String DRIVER = "com.mysql.jdbc.Driver";
 
-    public Connection getConnection() throws SQLException {
+    public Connection getConnection() throws SQLException, IOException {
         return DriverManager.getConnection(URL, USERNAME, PASSWORD);
     }
 

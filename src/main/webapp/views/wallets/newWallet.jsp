@@ -2,23 +2,19 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="ct" uri="MyCustomTags" %>
-<c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="session" />
-<fmt:setLocale value="${language}" />
-<fmt:setBundle basename="text" />
+<fmt:setLocale value="${sessionScope.language}" />
 
 <html>
 <head>
     <title>New Wallet</title>
-    <style>
-        <%@include file="../../css/style.css"%>
-    </style>
+    <link href="../../css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
 <div class="Position NewWallet">
     <h3><fmt:message key="wallet.title" /></h3>
     <table class="Table">
-        <ct:listOfWallets types="${type}" sc="${sc}" currency="${currency}" />
+        <ct:listOfWallets types="${requestScope.type}" sc="${requestScope.sc}" currency="${requestScope.currency}" />
     </table>
 </div>
 

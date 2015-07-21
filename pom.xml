@@ -40,25 +40,38 @@
             <version>1.2</version>
         </dependency>
 
-        <!-- Log4j -->
+        <!-- Logger -->
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
         </dependency>
 
-        <!-- Spring Core -->
+        <!-- Test -->
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
-            <version>4.1.7.RELEASE</version>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
         </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>2.0.2-beta</version>
+        </dependency>
+
+        <!-- Google Guava -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>18.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>
         <finalName>Exchange Service</finalName>
         <plugins>
-            <!-- Конфигурирование компилятора -->
+            <!-- Плагин компилятора -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -79,7 +92,26 @@
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
+
+            <!-- Encoding плагин -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>native2ascii-maven-plugin</artifactId>
+                <version>1.0-beta-1</version>
+                <configuration>
+                    <workDir>target/classes/text_ru.properties</workDir>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>native2ascii</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
+
     </build>
 
 </project>

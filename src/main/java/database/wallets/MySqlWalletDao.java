@@ -46,10 +46,11 @@ public class MySqlWalletDao implements WalletDao {
                 "FROM wallets w " +
                 "JOIN system s ON s.id = w.system_id " +
                 "JOIN currency c ON c.id = w.currency_id " +
-                "WHERE w.users_id = " + id + "";
+                "WHERE w.users_id = ?";
 
         try {
             statement = connection.prepareStatement(sql);
+            statement.setInt(1, id);
             resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 Wallet wallet = new Wallet();

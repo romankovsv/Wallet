@@ -1,12 +1,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<fmt:setLocale value="${sessionScope.language}" />
 
 <html>
 <head>
     <title>Users</title>
-    <style>
-        <%@include file="../../css/style.css"%>
-    </style>
+    <link href="../../css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
@@ -21,7 +21,7 @@
         <th>SEX</th>
         <th>EMAIL</th>
     </tr>
-    <c:forEach items="${list}" var ="user">
+    <c:forEach items="${requestScope.list}" var ="user">
         <tr>
             <td>${user.id}</td>
             <td>${user.name}</td>

@@ -1,16 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java"  %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="session" />
-<fmt:setLocale value="${language}" />
-<fmt:setBundle basename="text" />
+<fmt:setLocale value="${sessionScope.language}" />
 
 <html>
 <head>
   <title>History</title>
-  <style>
-    <%@include file="../../css/style.css"%>
-  </style>
+  <link href="../../css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
@@ -23,7 +19,7 @@
       <th><fmt:message key="history.time" /></th>
       <th><fmt:message key="history.sum" /></th>
     </tr>
-    <c:forEach items="${list}" var="history">
+    <c:forEach items="${requestScope.list}" var="history">
       <tr style="border:2px solid #ccc">
         <c:choose>
           <c:when test="${history.walletIdFrom != 0}">
