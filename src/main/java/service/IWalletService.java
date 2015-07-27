@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by SpiritMoon
  */
-public interface WalletService {
+public interface IWalletService {
     /** Сохранить объект Wallet в базе данных для указанного User.id */
     void create(int userId, int systemId, int currencyId);
     /** Извлечь все объекты Wallet для указанного User.id */

@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by SpiritMoon
  */
-public interface CurrencyService {
+public interface ICurrencyService {
     /** Сохранить объект Currency в базе данных */
     void create(Currency currency);
     /** Извлечь объек Currency используя указанный id в качестве первичного ключа */

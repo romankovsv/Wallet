@@ -1,12 +1,10 @@
 package service.impl;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 /**
  * Created by SpiritMoon
  */
-public class CurrencyServiceImplTest {
+public class SystemTypeServiceTest {
 
     @Test
     public void testCreate() throws Exception {

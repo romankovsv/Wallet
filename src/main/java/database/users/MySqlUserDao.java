@@ -1,5 +1,6 @@
 package database.users;
 
+import database.factory.MySqlDaoFactory;
 import org.apache.log4j.Logger;
 
 import java.sql.Connection;
@@ -14,7 +15,7 @@ import java.util.List;
  */
 public class MySqlUserDao implements UserDao {
     private static final Logger log = Logger.getLogger(MySqlUserDao.class);
-    private Connection connection;
+    private MySqlDaoFactory daoFactory = new MySqlDaoFactory();
 
     @Override
     public boolean create(User user) {
@@ -23,7 +24,8 @@ public class MySqlUserDao implements UserDao {
                 "INSERT INTO user (name, date_of_birth, date_of_registration, sex, email, password) " +
                         "VALUES (?, ?, ?, ?, ?, ?)";
 
-        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+        try(Connection connection = daoFactory.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, user.getName());
             statement.setString(2, user.getDateOfBirth());
             statement.setDate(3, new Date(System.currentTimeMillis()));
@@ -46,14 +48,12 @@ public class MySqlUserDao implements UserDao {
     @Override
     public User read(int id) {
         User user = new User();
-        PreparedStatement statement = null;
-        ResultSet resultSet = null;
         String sql = "SELECT * FROM user WHERE id = ?";
 
-        try {
-            statement = connection.prepareStatement(sql);
+        try(Connection connection = daoFactory.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, id);
-            resultSet = statement.executeQuery();
+            ResultSet resultSet = statement.executeQuery();
             resultSet.next();
             user.setId(resultSet.getInt("id"));
             user.setName(resultSet.getString("name"));
@@ -64,17 +64,6 @@ public class MySqlUserDao implements UserDao {
             user.setPassword(resultSet.getString("password"));
         } catch (SQLException e) {
             log.error("Error when reading user's data", e);
-        } finally {
-            try {
-                if (statement != null) {
-                    statement.close();
-                }
-                if (resultSet != null) {
-                    resultSet.close();
-                }
-            } catch (SQLException e) {
-                log.error("Error when closing resources", e);
-            }
         }
 
         return user;
@@ -86,7 +75,8 @@ public class MySqlUserDao implements UserDao {
                 "password = ? WHERE id = ?";
         boolean result = false;
 
-        try (PreparedStatement statement = connection.prepareStatement(sql)){
+        try(Connection connection = daoFactory.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, name);
             statement.setString(2, dateOfBirth);
             statement.setString(3, sex);
@@ -110,7 +100,8 @@ public class MySqlUserDao implements UserDao {
     public void delete(int id) {
         String sql = "DELETE FROM user WHERE id = ?";
 
-        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+        try(Connection connection = daoFactory.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, id);
 
             int rowsDeleted = statement.executeUpdate();
@@ -127,7 +118,8 @@ public class MySqlUserDao implements UserDao {
         List<User> list = new ArrayList<>();
         String sql = "SELECT * FROM user";
 
-        try (PreparedStatement statement = connection.prepareStatement(sql);
+        try(Connection connection = daoFactory.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql);
              ResultSet resultSet = statement.executeQuery()){
             while (resultSet.next()) {
                 User user = new User();
@@ -149,15 +141,13 @@ public class MySqlUserDao implements UserDao {
 
     public User login(String email, String password) {
         User user = null;
-        PreparedStatement statement = null;
-        ResultSet resultSet = null;
         String sql = "SELECT * FROM user WHERE email = ? AND password = ?";
 
-        try {
-            statement = connection.prepareStatement(sql);
+        try(Connection connection = daoFactory.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, email);
             statement.setString(2, password);
-            resultSet = statement.executeQuery();
+            ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 user = new User();
                 user.setId(resultSet.getInt("id"));
@@ -170,23 +160,9 @@ public class MySqlUserDao implements UserDao {
             }
         } catch (SQLException e) {
             log.error("Login error", e);
-        } finally {
-            try {
-                if (statement != null) {
-                    statement.close();
-                }
-                if (resultSet != null) {
-                    resultSet.close();
-                }
-            } catch (SQLException e) {
-                log.error("Error when closing resources", e);
-            }
         }
 
         return user;
     }
 
-    public MySqlUserDao(Connection connection) {
-        this.connection = connection;
-    }
 }

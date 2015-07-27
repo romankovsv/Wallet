@@ -1,5 +1,6 @@
 package servlets.wallet;
 
+import database.wallets.MySqlWalletDao;
 import org.apache.log4j.Logger;
 import database.factory.DaoFactory;
 import database.factory.MySqlDaoFactory;
@@ -25,15 +26,9 @@ public class DeleteWallet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        DaoFactory daoFactory = new MySqlDaoFactory();
-
-        try (Connection connection = daoFactory.getConnection()) {
-            WalletDao walletDao = daoFactory.getWalletDao(connection);
-            int id = Integer.parseInt(request.getParameter("id"));
-            walletDao.deleteById(id);
-            response.sendRedirect("/user");
-        } catch (SQLException e) {
-            log.error("Error in operation", e);
-        }
+        int id = Integer.parseInt(request.getParameter("id"));
+        MySqlWalletDao walletDao = new MySqlWalletDao();
+        walletDao.deleteById(id);
+        response.sendRedirect("/user");
     }
 }

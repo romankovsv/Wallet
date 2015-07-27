@@ -1,26 +1,10 @@
 package database.factory;
 
-import database.currency.CurrencyDao;
-import database.currency.MySqlCurrencyDao;
-import database.system.MySqlSystemTypeDao;
-import database.system.SystemTypeDao;
-import database.system_currency.MySqlSystemCurrencyDao;
-import database.system_currency.SystemCurrencyDao;
-import database.history.MySqlHistoryDao;
-import database.history.HistoryDao;
-import database.users.MySqlUserDao;
-import database.users.UserDao;
-import database.wallets.MySqlWalletDao;
-import database.wallets.WalletDao;
 import org.apache.log4j.Logger;
 
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.Properties;
-
 /**
  * Created by SpiritMoon
  */
@@ -32,37 +16,13 @@ public class MySqlDaoFactory implements DaoFactory {
     private final static String PASSWORD = "root";
     private final static String DRIVER = "com.mysql.jdbc.Driver";
 
-    public Connection getConnection() throws SQLException, IOException {
+    public Connection getConnection() throws SQLException {
         return DriverManager.getConnection(URL, USERNAME, PASSWORD);
-    }
-
-    public UserDao getUserDao(Connection connection) {
-        return new MySqlUserDao(connection);
-    }
-
-    public WalletDao getWalletDao(Connection connection) {
-        return new MySqlWalletDao(connection);
-    }
-
-    public CurrencyDao getCurrencyDao(Connection connection) {
-        return new MySqlCurrencyDao(connection);
-    }
-
-    public SystemTypeDao getSystemTypeDao(Connection connection) {
-        return new MySqlSystemTypeDao(connection);
-    }
-
-    public SystemCurrencyDao getSCDao(Connection connection) {
-        return new MySqlSystemCurrencyDao(connection);
-    }
-
-    public HistoryDao getTransactionDao(Connection connection) {
-        return new MySqlHistoryDao(connection);
     }
 
     public MySqlDaoFactory() {
         try {
-            Class.forName(DRIVER); // Регистрация драйвера
+            Class.forName(DRIVER);
         } catch (ClassNotFoundException e) {
             log.error("Error when registering MySQL driver", e);
         }

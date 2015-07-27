@@ -2,13 +2,13 @@ package service.impl;
 
 import database.history.History;
 import database.history.HistoryDao;
-import service.HistoryService;
+import service.IHistoryService;
 
 import java.util.List;
 /**
  * Created by SpiritMoon
  */
-public class HistoryServiceImpl implements HistoryService {
+public class HistoryService implements IHistoryService {
     private HistoryDao historyDao;
 
     @Override
@@ -19,11 +19,6 @@ public class HistoryServiceImpl implements HistoryService {
     @Override
     public List<History> read(int id) {
         return historyDao.readByUserId(id);
-    }
-
-    @Override
-    public void update(int id) {
-        historyDao.updateById(id);
     }
 
     @Override

@@ -1,5 +1,6 @@
 package database.system;
 
+import database.factory.MySqlDaoFactory;
 import org.apache.log4j.Logger;
 
 import java.sql.Connection;
@@ -13,13 +14,14 @@ import java.util.List;
  */
 public class MySqlSystemTypeDao implements SystemTypeDao {
     private static final Logger log = Logger.getLogger(MySqlSystemTypeDao.class);
-    private Connection connection;
+    private MySqlDaoFactory daoFactory = new MySqlDaoFactory();
 
     @Override
     public void create(SystemType systemType) {
         String sql = "INSERT INTO system (name) VALUES (?)";
 
-        try (PreparedStatement statement = connection.prepareStatement(sql)){
+        try(Connection connection = daoFactory.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, systemType.getName());
 
             int rowsInsert = statement.executeUpdate();
@@ -33,31 +35,18 @@ public class MySqlSystemTypeDao implements SystemTypeDao {
 
     @Override
     public SystemType read(int id) {
-        PreparedStatement statement = null;
-        ResultSet resultSet = null;
+        String sql = "SELECT * FROM system WHERE id = ?";
         SystemType systemType = new SystemType();
 
-        try {
-            String sql = "SELECT * FROM system WHERE id = ?";
-            statement = connection.prepareStatement(sql);
+        try(Connection connection = daoFactory.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, id);
-            resultSet = statement.executeQuery();
+            ResultSet resultSet = statement.executeQuery();
             resultSet.next();
             systemType.setId(resultSet.getInt("id"));
             systemType.setName(resultSet.getString("name"));
         } catch (SQLException e ) {
             log.error("Error when reading system type data", e);
-        } finally {
-            try {
-                if (statement != null) {
-                    statement.close();
-                }
-                if (resultSet != null) {
-                    resultSet.close();
-                }
-            } catch (SQLException e) {
-                log.error("Error when closing resources", e);
-            }
         }
 
         return systemType;
@@ -67,7 +56,8 @@ public class MySqlSystemTypeDao implements SystemTypeDao {
     public void update(int id, String name) {
         String sql = "UPDATE system SET name = ? WHERE id = ?";
 
-        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+        try(Connection connection = daoFactory.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, name);
             statement.setInt(2, id);
 
@@ -84,7 +74,8 @@ public class MySqlSystemTypeDao implements SystemTypeDao {
     public void delete(int id) {
         String sql = "DELETE FROM system WHERE id = ?;";
 
-        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+        try(Connection connection = daoFactory.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, id);
 
             int rowsDeleted = statement.executeUpdate();
@@ -101,8 +92,9 @@ public class MySqlSystemTypeDao implements SystemTypeDao {
         List<SystemType> list = new ArrayList<>();
         String sql = "SELECT * FROM system;";
 
-        try (PreparedStatement statement = connection.prepareStatement(sql);
-             ResultSet resultSet = statement.executeQuery()){
+        try(Connection connection = daoFactory.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql);
+            ResultSet resultSet = statement.executeQuery()){
             while (resultSet.next()) {
                 SystemType systemType = new SystemType();
                 systemType.setId(resultSet.getInt("id"));
@@ -116,7 +108,4 @@ public class MySqlSystemTypeDao implements SystemTypeDao {
         return list;
     }
 
-    public MySqlSystemTypeDao(Connection connection) {
-        this.connection = connection;
-    }
 }

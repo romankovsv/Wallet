@@ -1,5 +1,7 @@
 package servlets.wallet;
 
+import database.history.MySqlHistoryDao;
+import database.wallets.MySqlWalletDao;
 import exception.MyException;
 import org.apache.log4j.Logger;
 import database.factory.DaoFactory;
@@ -31,27 +33,24 @@ public class ChangeBalance extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        DaoFactory daoFactory = new MySqlDaoFactory();
         int sum = Integer.parseInt(request.getParameter("sum"));
         int id = Integer.parseInt(request.getParameter("id"));
         int operation = Integer.parseInt(request.getParameter("operation"));
         History history = new History();
         User user = (User) request.getSession().getAttribute("user");
 
-        try (Connection connection = daoFactory.getConnection()) {
+        try {
+            MySqlWalletDao walletDao = new MySqlWalletDao();
+            MySqlHistoryDao historyDao = new MySqlHistoryDao();
             check(sum, operation);
-            WalletDao walletDao = daoFactory.getWalletDao(connection);
             walletDao.changeBalanceById(id, operation);
 
-            HistoryDao historyDao = daoFactory.getTransactionDao(connection);
             history.setUserIdTo(user.getId());
             history.setWalletIdTo(id);
             history.setSum(operation);
             historyDao.create(history);
 
             response.sendRedirect("/user");
-        } catch (SQLException e) {
-            log.error("Error in operation", e);
         } catch (MyException e) {
             request.setAttribute("error", "<font color = red>Not enough money</font>");
             getServletContext().getRequestDispatcher("/views/wallets/changeBalance.jsp?id=" + id

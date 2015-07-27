@@ -9,8 +9,6 @@ public interface HistoryDao {
     void create(History history);
     /** Извлечь все записи по User.id учавствующих в транзакции */
     List<History> readByUserId(int id);
-    /** Внести изменения в History по id */
-    void updateById(int id);
     /** Удалить объект History по id */
     void deleteById(int id);
     /** Вывод всех записей по History */

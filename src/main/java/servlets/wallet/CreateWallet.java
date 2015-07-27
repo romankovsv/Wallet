@@ -1,5 +1,6 @@
 package servlets.wallet;
 
+import database.wallets.MySqlWalletDao;
 import org.apache.log4j.Logger;
 import database.factory.DaoFactory;
 import database.factory.MySqlDaoFactory;
@@ -26,17 +27,12 @@ public class CreateWallet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        DaoFactory daoFactory = new MySqlDaoFactory();
         User user = (User) request.getSession().getAttribute("user");
         int walletId = Integer.parseInt(request.getParameter("type"));
         int currencyId = Integer.parseInt(request.getParameter("currency"));
 
-        try (Connection connection = daoFactory.getConnection()) {
-            WalletDao walletDao = daoFactory.getWalletDao(connection);
-            walletDao.createForUserById(user.getId(), walletId, currencyId);
-        } catch (SQLException e) {
-            log.error("Error in operation", e);
-        }
+        MySqlWalletDao walletDao = new MySqlWalletDao();
+        walletDao.createForUserById(user.getId(), walletId, currencyId);
 
         response.sendRedirect("/user");
     }

@@ -2,13 +2,13 @@ package service.impl;
 
 import database.currency.Currency;
 import database.currency.CurrencyDao;
-import service.CurrencyService;
+import service.ICurrencyService;
 
 import java.util.List;
 /**
  * Created by SpiritMoon
  */
-public class CurrencyServiceImpl implements CurrencyService {
+public class CurrencyService implements ICurrencyService {
     private CurrencyDao currencyDao;
 
     @Override
@@ -34,5 +34,9 @@ public class CurrencyServiceImpl implements CurrencyService {
     @Override
     public List<Currency> getAll() {
         return currencyDao.getAll();
+    }
+
+    public void setCurrencyDao(CurrencyDao currencyDao) {
+        this.currencyDao = currencyDao;
     }
 }

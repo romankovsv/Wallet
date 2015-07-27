@@ -2,13 +2,13 @@ package service.impl;
 
 import database.system.SystemType;
 import database.system.SystemTypeDao;
-import service.SystemTypeService;
+import service.ISystemTypeService;
 
 import java.util.List;
 /**
  * Created by SpiritMoon
  */
-public class SystemTypeServiceImpl implements SystemTypeService {
+public class SystemTypeService implements ISystemTypeService {
     private SystemTypeDao systemTypeDao;
 
     @Override

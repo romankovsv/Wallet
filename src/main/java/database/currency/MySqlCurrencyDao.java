@@ -1,5 +1,6 @@
 package database.currency;
 
+import database.factory.MySqlDaoFactory;
 import org.apache.log4j.Logger;
 
 import java.sql.Connection;
@@ -13,13 +14,14 @@ import java.util.List;
  */
 public class MySqlCurrencyDao implements CurrencyDao {
     private static final Logger log = Logger.getLogger(MySqlCurrencyDao.class);
-    private Connection connection;
+    private MySqlDaoFactory daoFactory = new MySqlDaoFactory();
 
     @Override
     public void create(Currency currency) {
         String sql = "INSERT INTO currency (name) VALUES (?)";
 
-        try (PreparedStatement statement = connection.prepareStatement(sql)){
+        try(Connection connection = daoFactory.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, currency.getName());
 
             int rowsInsert = statement.executeUpdate();
@@ -33,30 +35,17 @@ public class MySqlCurrencyDao implements CurrencyDao {
 
     @Override
     public Currency readById(int id) {
-        PreparedStatement statement = null;
-        ResultSet resultSet = null;
         Currency currency = new Currency();
         String sql = "SELECT * FROM currency WHERE id = ?";
 
-        try {
-            statement = connection.prepareStatement(sql);
-            resultSet = statement.executeQuery();
+        try(Connection connection = daoFactory.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql)) {
+            ResultSet resultSet = statement.executeQuery();
             resultSet.next();
             currency.setId(resultSet.getInt("id"));
             currency.setName(resultSet.getString("name"));
         } catch (SQLException e) {
             log.error("Error when reading user data", e);
-        } finally {
-            try {
-                if (statement != null) {
-                    statement.close();
-                }
-                if (resultSet != null) {
-                    resultSet.close();
-                }
-            } catch (SQLException e) {
-                log.error("Error when closing resources", e);
-            }
         }
 
         return currency;
@@ -66,7 +55,8 @@ public class MySqlCurrencyDao implements CurrencyDao {
     public void updateById(int id, String name) {
         String sql = "UPDATE currency SET name = ? WHERE id = ?";
 
-        try (PreparedStatement statement = connection.prepareStatement(sql)){
+        try(Connection connection = daoFactory.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, name);
             statement.setInt(2, id);
 
@@ -83,7 +73,8 @@ public class MySqlCurrencyDao implements CurrencyDao {
     public void deleteById(int id) {
         String sql = "DELETE * FROM currency WHERE id = ?";
 
-        try (PreparedStatement statement = connection.prepareStatement(sql)){
+        try(Connection connection = daoFactory.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, id);
 
             int rowsDeleted = statement.executeUpdate();
@@ -100,7 +91,8 @@ public class MySqlCurrencyDao implements CurrencyDao {
         List<Currency> list = new ArrayList<>();
         String sql = "SELECT * FROM currency";
 
-        try (PreparedStatement statement = connection.prepareStatement(sql);
+        try(Connection connection = daoFactory.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql);
              ResultSet resultSet = statement.executeQuery()) {
             while (resultSet.next()) {
                 Currency currency = new Currency();
@@ -113,10 +105,6 @@ public class MySqlCurrencyDao implements CurrencyDao {
         }
 
         return list;
-    }
-
-    public MySqlCurrencyDao(Connection connection) {
-        this.connection = connection;
     }
 
 }

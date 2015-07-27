@@ -1193,3 +1193,20 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 21-07-2015 05:36:34 INFO  MySqlWalletDao:96 - A wallet was deleted successfully!
 21-07-2015 05:36:36 INFO  MySqlWalletDao:96 - A wallet was deleted successfully!
 21-07-2015 05:36:41 INFO  MySqlUserDao:118 - A user was deleted successfully!
+24-07-2015 03:06:44 INFO  MySqlUserDao:36 - A new user was created successfully!
+24-07-2015 03:06:59 INFO  MySqlWalletDao:31 - A new wallet was created successfully!
+24-07-2015 03:07:05 INFO  MySqlWalletDao:31 - A new wallet was created successfully!
+24-07-2015 03:07:07 INFO  MySqlWalletDao:31 - A new wallet was created successfully!
+24-07-2015 03:07:43 INFO  MySqlWalletDao:82 - A wallet was deleted successfully!
+24-07-2015 03:07:48 INFO  MySqlWalletDao:182 - The sum is updateById
+24-07-2015 03:07:48 INFO  MySqlHistoryDao:32 - A new history was created successfully!
+24-07-2015 03:07:59 INFO  MySqlWalletDao:147 - Exchange complete
+24-07-2015 03:07:59 INFO  MySqlHistoryDao:32 - A new history was created successfully!
+24-07-2015 03:08:02 INFO  MySqlWalletDao:82 - A wallet was deleted successfully!
+24-07-2015 03:08:08 INFO  MySqlWalletDao:82 - A wallet was deleted successfully!
+24-07-2015 03:08:16 INFO  MySqlUserDao:85 - An existing user was updated successfully!
+24-07-2015 03:08:31 INFO  MySqlUserDao:104 - A user was deleted successfully!
+27-07-2015 17:36:24 INFO  MySqlWalletDao:33 - A new wallet was created successfully!
+27-07-2015 17:36:28 INFO  MySqlWalletDao:86 - A wallet was deleted successfully!
+27-07-2015 17:36:40 INFO  MySqlWalletDao:153 - Exchange complete
+27-07-2015 17:36:40 INFO  MySqlHistoryDao:34 - A new history was created successfully!

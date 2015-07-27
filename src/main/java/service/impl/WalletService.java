@@ -2,13 +2,13 @@ package service.impl;
 
 import database.wallets.Wallet;
 import database.wallets.WalletDao;
-import service.WalletService;
+import service.IWalletService;
 
 import java.util.List;
 /**
  * Created by SpiritMoon
  */
-public class WalletServiceImpl implements WalletService {
+public class WalletService implements IWalletService {
     private WalletDao walletDao;
 
     @Override

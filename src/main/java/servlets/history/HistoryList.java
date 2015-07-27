@@ -1,9 +1,8 @@
 package servlets.history;
 
+import database.history.History;
+import database.history.MySqlHistoryDao;
 import org.apache.log4j.Logger;
-import database.factory.DaoFactory;
-import database.factory.MySqlDaoFactory;
-import database.history.HistoryDao;
 import database.users.User;
 
 import javax.servlet.ServletException;
@@ -12,9 +11,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 /**
  * Created by SpiritMoon
@@ -28,16 +24,11 @@ public class HistoryList extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        DaoFactory daoFactory = new MySqlDaoFactory();
         User user = (User) request.getSession().getAttribute("user");
-        List<database.history.History> list = new ArrayList<>();
+        List<History> list;
 
-        try (Connection connection = daoFactory.getConnection()) {
-            HistoryDao historyDao = daoFactory.getTransactionDao(connection);
-            list = historyDao.readByUserId(user.getId());
-        } catch (SQLException e) {
-            log.error("Error in operation", e);
-        }
+        MySqlHistoryDao historyDao = new MySqlHistoryDao();
+        list = historyDao.readByUserId(user.getId());
 
         request.setAttribute("list", list);
         getServletContext().getRequestDispatcher("/views/user/history.jsp").forward(request, response);

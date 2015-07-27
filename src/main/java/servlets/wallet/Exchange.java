@@ -1,5 +1,7 @@
 package servlets.wallet;
 
+import database.history.MySqlHistoryDao;
+import database.wallets.MySqlWalletDao;
 import org.apache.log4j.Logger;
 import database.factory.DaoFactory;
 import database.factory.MySqlDaoFactory;
@@ -26,7 +28,6 @@ public class Exchange extends HttpServlet {
     private static final Logger log = Logger.getLogger(Exchange.class);
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        DaoFactory daoFactory = new MySqlDaoFactory();
         int fromId = Integer.parseInt(request.getParameter("firstId"));
         int toId = Integer.parseInt(request.getParameter("secondId"));
         int sum = Integer.parseInt(request.getParameter("sum"));
@@ -34,32 +35,29 @@ public class Exchange extends HttpServlet {
         User user = (User) request.getSession().getAttribute("user");
         boolean complete = false;
 
-        try (Connection connection = daoFactory.getConnection()) {
-            WalletDao walletDao = daoFactory.getWalletDao(connection);
-            for (Wallet walletFrom : walletDao.readForUserById(user.getId())) {
-                if ((walletFrom.getId() == fromId) && (walletFrom.getSum() - sum >= 0)) {
-                    for (Wallet walletTo : walletDao.getAll()) {
-                        if (walletTo.getId() == toId) {
-                            walletDao.exchangeById(fromId, toId, sum);
+        MySqlWalletDao walletDao = new MySqlWalletDao();
+        MySqlHistoryDao historyDao = new MySqlHistoryDao();
 
-                            int userIdTo = walletDao.readWalletById(toId).getUserId();
+        for (Wallet walletFrom : walletDao.readForUserById(user.getId())) {
+            if ((walletFrom.getId() == fromId) && (walletFrom.getSum() - sum >= 0)) {
+                for (Wallet walletTo : walletDao.getAll()) {
+                    if (walletTo.getId() == toId) {
+                        walletDao.exchangeById(fromId, toId, sum);
 
-                            HistoryDao historyDao = daoFactory.getTransactionDao(connection);
-                            history.setUserIdFrom(user.getId());
-                            history.setUserIdTo(userIdTo);
-                            history.setWalletIdFrom(fromId);
-                            history.setWalletIdTo(toId);
-                            history.setSum(sum);
-                            historyDao.create(history);
+                        int userIdTo = walletDao.readWalletById(toId).getUserId();
 
-                            complete = true;
-                            response.sendRedirect("/user");
-                        }
+                        history.setUserIdFrom(user.getId());
+                        history.setUserIdTo(userIdTo);
+                        history.setWalletIdFrom(fromId);
+                        history.setWalletIdTo(toId);
+                        history.setSum(sum);
+                        historyDao.create(history);
+
+                        complete = true;
+                        response.sendRedirect("/user");
                     }
                 }
             }
-        } catch (SQLException e) {
-            log.error("Error in operation", e);
         }
 
         if (!complete) {

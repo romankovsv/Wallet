@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by SpiritMoon
  */
-public interface UserService {
+public interface IUserService {
     /** Сохранить объект User в базе данных */
     boolean create(User user);
     /** Извлечь объек User используя указанный id в качестве первичного ключа */

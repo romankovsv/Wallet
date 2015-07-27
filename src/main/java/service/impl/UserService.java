@@ -2,13 +2,13 @@ package service.impl;
 
 import database.users.User;
 import database.users.UserDao;
-import service.UserService;
+import service.IUserService;
 
 import java.util.List;
 /**
  * Created by SpiritMoon
  */
-public class UserServiceImpl implements UserService {
+public class UserService implements IUserService {
     private UserDao userDao;
 
     @Override

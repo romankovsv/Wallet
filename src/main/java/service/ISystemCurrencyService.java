@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created by SpiritMoon
  */
-public interface SystemCurrencyService {
+public interface ISystemCurrencyService {
     /** охранить объект SystemCurrency в базе данных */
     void create(SystemType systemType, Currency currency);
     /** Извлечь объек WalletSystem используя id */

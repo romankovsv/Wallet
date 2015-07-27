@@ -1,5 +1,8 @@
 package servlets.wallet;
 
+import database.currency.MySqlCurrencyDao;
+import database.system.MySqlSystemTypeDao;
+import database.system_currency.MySqlSystemCurrencyDao;
 import org.apache.log4j.Logger;
 import database.currency.Currency;
 import database.factory.DaoFactory;
@@ -29,18 +32,17 @@ public class NewWallet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        DaoFactory daoFactory = new MySqlDaoFactory();
-        List<Currency> currencyList = new ArrayList<>();
-        List<SystemType> systemTypeList = new ArrayList<>();
-        List<SystemCurrency> systemCurrencies = new ArrayList<>();
+        List<Currency> currencyList;
+        List<SystemType> systemTypeList;
+        List<SystemCurrency> systemCurrencies;
 
-        try(Connection connection = daoFactory.getConnection()) {
-            currencyList = daoFactory.getCurrencyDao(connection).getAll();
-            systemTypeList = daoFactory.getSystemTypeDao(connection).getAll();
-            systemCurrencies = daoFactory.getSCDao(connection).getAll();
-        } catch (SQLException e) {
-            log.error("Error in operation", e);
-        }
+        MySqlCurrencyDao currencyDao = new MySqlCurrencyDao();
+        MySqlSystemTypeDao systemTypeDao = new MySqlSystemTypeDao();
+        MySqlSystemCurrencyDao systemCurrenciesDao = new MySqlSystemCurrencyDao();
+
+        currencyList = currencyDao.getAll();
+        systemTypeList = systemTypeDao.getAll();
+        systemCurrencies = systemCurrenciesDao.getAll();
 
         request.setAttribute("type", systemTypeList);
         request.setAttribute("currency", currencyList);

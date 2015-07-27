@@ -1,5 +1,6 @@
 package database.wallets;
 
+import database.factory.MySqlDaoFactory;
 import org.apache.log4j.Logger;
 import database.currency.Currency;
 import database.system.SystemType;
@@ -15,13 +16,14 @@ import java.util.List;
  */
 public class MySqlWalletDao implements WalletDao {
     private static final Logger log = Logger.getLogger(MySqlWalletDao.class);
-    private Connection connection;
+    private MySqlDaoFactory daoFactory = new MySqlDaoFactory();
 
     @Override
     public void createForUserById(int userId, int systemId, int currencyId) {
         String sql = "INSERT INTO wallets (users_id, system_id, currency_id) VALUES (?, ?, ?)";
 
-        try (PreparedStatement statement = connection.prepareStatement(sql)){
+        try(Connection connection = daoFactory.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, userId);
             statement.setInt(2, systemId);
             statement.setInt(3, currencyId);
@@ -31,14 +33,12 @@ public class MySqlWalletDao implements WalletDao {
                 log.info("A new wallet was created successfully!");
             }
         } catch (SQLException e) {
-           log.error("Error when creating new wallet", e);
+            log.error("Error when creating new wallet", e);
         }
     }
 
     @Override
     public List<Wallet> readForUserById(int id) {
-        PreparedStatement statement = null;
-        ResultSet resultSet = null;
         List<Wallet> list = new ArrayList<>();
 
         String sql =
@@ -48,10 +48,10 @@ public class MySqlWalletDao implements WalletDao {
                 "JOIN currency c ON c.id = w.currency_id " +
                 "WHERE w.users_id = ?";
 
-        try {
-            statement = connection.prepareStatement(sql);
+        try(Connection connection = daoFactory.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, id);
-            resultSet = statement.executeQuery();
+            ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 Wallet wallet = new Wallet();
                 Currency currency = new Currency();
@@ -68,17 +68,6 @@ public class MySqlWalletDao implements WalletDao {
             }
         } catch (SQLException e) {
             log.error("Error when reading user's wallets", e);
-        } finally {
-            try {
-                if (statement != null) {
-                    statement.close();
-                }
-                if (resultSet != null) {
-                    resultSet.close();
-                }
-            } catch (SQLException e) {
-                log.error("Error when closing resources", e);
-            }
         }
 
         return list;
@@ -88,7 +77,8 @@ public class MySqlWalletDao implements WalletDao {
     public void deleteById(int id) {
         String sql = "DELETE FROM wallets WHERE id = ?";
 
-        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+        try(Connection connection = daoFactory.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, id);
 
             int rowDeleted = statement.executeUpdate();
@@ -104,7 +94,8 @@ public class MySqlWalletDao implements WalletDao {
     public void deleteUserWalletById(int id) {
         String sql = "DELETE FROM wallets WHERE 'user_id' = ?";
 
-        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+        try(Connection connection = daoFactory.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, id);
 
             int rowsDelete = statement.executeUpdate();
@@ -118,14 +109,12 @@ public class MySqlWalletDao implements WalletDao {
 
     @Override
     public List<Wallet> getAll() {
-        PreparedStatement statement = null;
-        ResultSet resultSet = null;
         List<Wallet> list = new ArrayList<>();
         String sql = "SELECT * FROM wallets";
 
-        try {
-            statement = connection.prepareStatement(sql);
-            resultSet = statement.executeQuery();
+        try(Connection connection = daoFactory.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql)) {
+            ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 Wallet wallet = new Wallet();
                 wallet.setId(resultSet.getInt("id"));
@@ -137,17 +126,6 @@ public class MySqlWalletDao implements WalletDao {
             }
         } catch (SQLException e) {
             log.error("Error when getting all wallets", e);
-        } finally {
-            try {
-                if (statement != null) {
-                    statement.close();
-                }
-                if (resultSet != null) {
-                    resultSet.close();
-                }
-            } catch (SQLException e) {
-                log.error("Error when closing resources", e);
-            }
         }
 
         return list;
@@ -160,7 +138,7 @@ public class MySqlWalletDao implements WalletDao {
         String sqlTo = "UPDATE wallets SET sum = sum + ? WHERE id = ?";
         int result;
 
-        try {
+        try(Connection connection = daoFactory.getConnection()) {
             connection.setAutoCommit(false);
             statement = connection.prepareStatement(sqlFrom);
             statement.setInt(1, sum);
@@ -182,11 +160,11 @@ public class MySqlWalletDao implements WalletDao {
                 throw new SQLException();
             }
             connection.commit();
+            connection.setAutoCommit(true);
         } catch (SQLException e) {
             log.error("Error when making exchangeById", e);
         } finally {
             try {
-                connection.setAutoCommit(true);
                 if (statement != null) {
                     statement.close();
                 }
@@ -198,12 +176,11 @@ public class MySqlWalletDao implements WalletDao {
 
     @Override
     public void changeBalanceById(int id, int sum) {
-        PreparedStatement statement = null;
         String sql = "UPDATE wallets SET sum = sum + ? WHERE id = ?";
         int result;
 
-        try {
-            statement = connection.prepareStatement(sql);
+        try(Connection connection = daoFactory.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, sum);
             statement.setInt(2, id);
             result = statement.executeUpdate();
@@ -213,27 +190,17 @@ public class MySqlWalletDao implements WalletDao {
             }
         } catch (SQLException e) {
             log.error("Error when change balance", e);
-        } finally {
-            try {
-                if (statement != null) {
-                    statement.close();
-                }
-            } catch (SQLException e) {
-                log.error("Error when closing resources", e);
-            }
         }
     }
 
     public Wallet readWalletById(int id) {
-        PreparedStatement statement = null;
-        ResultSet resultSet = null;
         String sql = "SELECT * FROM wallets WHERE id = ?";
         Wallet wallet = new Wallet();
 
-        try {
-            statement = connection.prepareStatement(sql);
+        try(Connection connection = daoFactory.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, id);
-            resultSet = statement.executeQuery();
+            ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 wallet.setId(resultSet.getInt("id"));
                 wallet.setUserId(resultSet.getInt("users_id"));
@@ -243,21 +210,9 @@ public class MySqlWalletDao implements WalletDao {
             }
         } catch (SQLException e) {
             log.error("Error when reading wallet's data by wallet's id", e);
-        } finally {
-            try {
-                if (statement != null) {
-                    statement.close();
-                }
-                if (resultSet != null) {
-                    resultSet.close();
-                }
-            } catch (SQLException e) {
-                log.error("Error when closing resources", e);
-            }
         }
 
         return wallet;
     }
 
-    public MySqlWalletDao(Connection connection) { this.connection = connection; }
 }

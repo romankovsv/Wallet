@@ -1,5 +1,6 @@
 package database.history;
 
+import database.factory.MySqlDaoFactory;
 import org.apache.log4j.Logger;
 
 import java.sql.*;
@@ -10,7 +11,7 @@ import java.util.List;
  */
 public class MySqlHistoryDao implements HistoryDao {
     private static final Logger log = Logger.getLogger(MySqlHistoryDao.class);
-    private Connection connection;
+    private MySqlDaoFactory daoFactory = new MySqlDaoFactory();
 
     @Override
     public void create(History history) {
@@ -18,7 +19,8 @@ public class MySqlHistoryDao implements HistoryDao {
                 "INSERT INTO history (user_id_from, user_id_to, wallet_id_from, wallet_id_to, time, date, sum) " +
                         "VALUES (?, ?, ?, ?, ?, ?, ?)";
 
-        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+        try(Connection connection = daoFactory.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, history.getUserIdFrom());
             statement.setInt(2, history.getUserIdTo());
             statement.setInt(3, history.getWalletIdFrom());
@@ -38,16 +40,14 @@ public class MySqlHistoryDao implements HistoryDao {
 
     @Override
     public List<History> readByUserId(int id) {
-        PreparedStatement statement = null;
-        ResultSet resultSet = null;
         String sql = "SELECT * FROM history WHERE user_id_from = ? OR user_id_to = ?";
         List<History> list = new ArrayList<>();
 
-        try {
-            statement = connection.prepareStatement(sql);
+        try(Connection connection = daoFactory.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, id);
             statement.setInt(2, id);
-            resultSet = statement.executeQuery();
+            ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 History history = new History();
                 history.setId(resultSet.getInt("id"));
@@ -62,32 +62,17 @@ public class MySqlHistoryDao implements HistoryDao {
             }
         } catch (SQLException e) {
             log.error("Error when getting user's history", e);
-        } finally {
-            try {
-                if (statement != null) {
-                    statement.close();
-                }
-                if (resultSet != null) {
-                    resultSet.close();
-                }
-            } catch (SQLException e) {
-                log.error("Error when closing resources", e);
-            }
         }
 
         return list;
     }
 
     @Override
-    public void updateById(int id) {
-
-    }
-
-    @Override
     public void deleteById(int id) {
         String sql = "DELETE FROM history WHERE id = ?";
 
-        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+        try(Connection connection = daoFactory.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, id);
 
             int rowsDeleted = statement.executeUpdate();
@@ -104,7 +89,8 @@ public class MySqlHistoryDao implements HistoryDao {
         List<History> list = new ArrayList<>();
         String sql = "SELECT * FROM history";
 
-        try (PreparedStatement statement = connection.prepareStatement(sql);
+        try(Connection connection = daoFactory.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql);
              ResultSet resultSet = statement.executeQuery()){
             while (resultSet.next()) {
                 History history = new History();
@@ -124,9 +110,4 @@ public class MySqlHistoryDao implements HistoryDao {
         return list;
     }
 
-
-
-    public MySqlHistoryDao(Connection connection) {
-        this.connection = connection;
-    }
 }

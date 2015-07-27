@@ -4,13 +4,13 @@ import database.currency.Currency;
 import database.system.SystemType;
 import database.system_currency.SystemCurrency;
 import database.system_currency.SystemCurrencyDao;
-import service.SystemCurrencyService;
+import service.ISystemCurrencyService;
 
 import java.util.List;
 /**
  * Created by SpiritMoon
  */
-public class SystemCurrencyServiceImpl implements SystemCurrencyService {
+public class SystemCurrencyService implements ISystemCurrencyService {
     private SystemCurrencyDao systemCurrencyDao;
 
     @Override

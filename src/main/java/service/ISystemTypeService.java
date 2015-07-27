@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by SpiritMoon
  */
-public interface SystemTypeService {
+public interface ISystemTypeService {
     /** Сохранить объект System в базе данных */
     void create(SystemType systemType);
     /** Извлечь объек System используя указанный id в качестве первичного ключа */
