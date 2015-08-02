@@ -23,14 +23,14 @@ CREATE TABLE IF NOT EXISTS wallets (
   PRIMARY KEY (id)
 );
 
--- Table system
+-- Table type
 CREATE TABLE IF NOT EXISTS system (
   id INT NOT NULL AUTO_INCREMENT ,
   name VARCHAR(45) NOT NULL ,
   PRIMARY KEY (id)
 );
 
--- Table system_currency
+-- Table type_currency
 CREATE TABLE IF NOT EXISTS system_currency (
   id INT NOT NULL AUTO_INCREMENT ,
   system_id INT NOT NULL ,
@@ -73,12 +73,12 @@ ALTER TABLE wallets ADD FOREIGN KEY (system_id) REFERENCES system (id)
 ALTER TABLE wallets ADD FOREIGN KEY (currency_id) REFERENCES currency (id)
   ON UPDATE CASCADE ON DELETE CASCADE;
 
--- system's values
+-- type's values
 INSERT INTO system (name) VALUES ('Bitcoin'), ('Yandex Money'), ('WebMoney');
 
 -- currency's values
 INSERT INTO currency (name) VALUES ('USD'), ('UAH'), ('EUR'), ('RUR'), ('B');
 
--- system_currency's values
+-- type_currency's values
 INSERT INTO system_currency (system_id, currency_id)
 VALUES (1, 5), (2, 4), (3, 1), (3, 2), (3, 3), (3, 4);

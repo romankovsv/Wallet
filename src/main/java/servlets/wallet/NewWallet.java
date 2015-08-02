@@ -1,11 +1,11 @@
 package servlets.wallet;
 
 import database.currency.MySqlCurrencyDao;
-import database.system.MySqlSystemTypeDao;
-import database.system_currency.MySqlSystemCurrencyDao;
+import database.type.MySqlTypeDao;
+import database.type_currency.MySqlTypeCurrencyDao;
 import database.currency.Currency;
-import database.system.SystemType;
-import database.system_currency.SystemCurrency;
+import database.type.Type;
+import database.type_currency.TypeCurrency;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,18 +25,18 @@ public class NewWallet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Currency> currencyList;
-        List<SystemType> systemTypeList;
-        List<SystemCurrency> systemCurrencies;
+        List<Type> typeList;
+        List<TypeCurrency> systemCurrencies;
 
         MySqlCurrencyDao currencyDao = new MySqlCurrencyDao();
-        MySqlSystemTypeDao systemTypeDao = new MySqlSystemTypeDao();
-        MySqlSystemCurrencyDao systemCurrenciesDao = new MySqlSystemCurrencyDao();
+        MySqlTypeDao systemTypeDao = new MySqlTypeDao();
+        MySqlTypeCurrencyDao systemCurrenciesDao = new MySqlTypeCurrencyDao();
 
         currencyList = currencyDao.getAll();
-        systemTypeList = systemTypeDao.getAll();
+        typeList = systemTypeDao.getAll();
         systemCurrencies = systemCurrenciesDao.getAll();
 
-        request.setAttribute("type", systemTypeList);
+        request.setAttribute("type", typeList);
         request.setAttribute("currency", currencyList);
         request.setAttribute("sc", systemCurrencies);
         getServletContext().getRequestDispatcher("/views/wallets/newWallet.jsp").forward(request, response);

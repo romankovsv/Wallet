@@ -1,8 +1,7 @@
 package servlets.system;
 
-import database.system.MySqlSystemTypeDao;
-import org.apache.log4j.Logger;
-import database.system.SystemType;
+import database.type.MySqlTypeDao;
+import database.type.Type;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "DeleteSystemType", urlPatterns = "/deleteById-system-type")
+@WebServlet(name = "DeleteSystemType", urlPatterns = "/deleteById-type-type")
 public class DeleteSystemType extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -21,12 +20,12 @@ public class DeleteSystemType extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<SystemType> list;
+        List<Type> list;
 
-        MySqlSystemTypeDao systemTypeDao = new MySqlSystemTypeDao();
+        MySqlTypeDao systemTypeDao = new MySqlTypeDao();
         list = systemTypeDao.getAll();
 
         request.setAttribute("list", list);
-        getServletContext().getRequestDispatcher("/views/system/systemTypes.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/views/type/systemTypes.jsp").forward(request, response);
     }
 }

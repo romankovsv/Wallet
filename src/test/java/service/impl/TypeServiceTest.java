@@ -4,7 +4,7 @@ import org.junit.Test;
 /**
  * Created by SpiritMoon
  */
-public class SystemTypeServiceTest {
+public class TypeServiceTest {
 
     @Test
     public void testCreate() throws Exception {

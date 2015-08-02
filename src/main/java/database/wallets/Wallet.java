@@ -1,7 +1,7 @@
 package database.wallets;
 
 import database.currency.Currency;
-import database.system.SystemType;
+import database.type.Type;
 
 public class Wallet {
     private int id;
@@ -9,7 +9,7 @@ public class Wallet {
     private int systemId;
     private int currencyId;
     private int sum;
-    private SystemType systemType;
+    private Type type;
     private Currency currency;
 
     public Wallet() {}
@@ -54,12 +54,12 @@ public class Wallet {
         this.sum = sum;
     }
 
-    public SystemType getSystemType() {
-        return systemType;
+    public Type getType() {
+        return type;
     }
 
-    public void setSystemType(SystemType systemType) {
-        this.systemType = systemType;
+    public void setType(Type type) {
+        this.type = type;
     }
 
     public Currency getCurrency() {

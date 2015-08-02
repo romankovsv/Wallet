@@ -13,9 +13,9 @@ public class MySqlHistoryDao implements HistoryDao {
 
     @Override
     public void create(History history) {
-        log.info("Create new history");
+        log.info("Create new transaction");
         String sql =
-                "INSERT INTO history (user_id_from, user_id_to, wallet_id_from, wallet_id_to, time, date, sum) " +
+                "INSERT INTO transaction (user_id_from, user_id_to, wallet_id_from, wallet_id_to, time, date, sum) " +
                         "VALUES (?, ?, ?, ?, ?, ?, ?)";
 
         try(Connection connection = daoFactory.getConnection();
@@ -30,17 +30,17 @@ public class MySqlHistoryDao implements HistoryDao {
 
             int rowsInsert = statement.executeUpdate();
             if (rowsInsert > 0) {
-                log.info("A new history was created successfully!");
+                log.info("A new transaction was created successfully!");
             }
         } catch (SQLException e) {
-            log.error("Error when creating new history", e);
+            log.error("Error when transaction new history", e);
         }
     }
 
     @Override
     public List<History> readByUserId(int id) {
-        log.info("Read user's history");
-        String sql = "SELECT * FROM history WHERE user_id_from = ? OR user_id_to = ?";
+        log.info("Read user's transaction");
+        String sql = "SELECT * FROM transaction WHERE user_id_from = ? OR user_id_to = ?";
         List<History> list = new ArrayList<>();
 
         try(Connection connection = daoFactory.getConnection();
@@ -61,7 +61,7 @@ public class MySqlHistoryDao implements HistoryDao {
                 list.add(history);
             }
         } catch (SQLException e) {
-            log.error("Error when getting user's history", e);
+            log.error("Error when getting user's transaction", e);
         }
 
         return list;
@@ -69,8 +69,8 @@ public class MySqlHistoryDao implements HistoryDao {
 
     @Override
     public void deleteById(int id) {
-        log.info("Delete history");
-        String sql = "DELETE FROM history WHERE id = ?";
+        log.info("Delete transaction");
+        String sql = "DELETE FROM transaction WHERE id = ?";
 
         try(Connection connection = daoFactory.getConnection();
             PreparedStatement statement = connection.prepareStatement(sql)) {
@@ -78,18 +78,18 @@ public class MySqlHistoryDao implements HistoryDao {
 
             int rowsDeleted = statement.executeUpdate();
             if (rowsDeleted > 0) {
-                log.info("A history was deleted successfully!");
+                log.info("A transaction was deleted successfully!");
             }
         } catch (SQLException e) {
-            log.error("Error when deleting history", e);
+            log.error("Error when deleting transaction", e);
         }
     }
 
     @Override
     public List<History> getAll() {
-        log.info("Get all history");
+        log.info("Get all transaction");
         List<History> list = new ArrayList<>();
-        String sql = "SELECT * FROM history";
+        String sql = "SELECT * FROM transaction";
 
         try(Connection connection = daoFactory.getConnection();
             PreparedStatement statement = connection.prepareStatement(sql);
@@ -106,7 +106,7 @@ public class MySqlHistoryDao implements HistoryDao {
                 list.add(history);
             }
         } catch (SQLException e) {
-            log.error("Error when getting all history", e);
+            log.error("Error when getting all transaction", e);
         }
 
         return list;

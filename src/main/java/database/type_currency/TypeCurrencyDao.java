@@ -1,12 +1,11 @@
-package service;
+package database.type_currency;
 
 import database.currency.Currency;
 import database.type.Type;
-import database.type_currency.TypeCurrency;
 
 import java.util.List;
 
-public interface ISystemCurrencyService {
+public interface TypeCurrencyDao {
 
     void create(Type type, Currency currency);
 

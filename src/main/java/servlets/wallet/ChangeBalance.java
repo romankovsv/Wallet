@@ -19,7 +19,7 @@ public class ChangeBalance extends HttpServlet {
     private static final Logger log = Logger.getLogger(ChangeBalance.class);
 
     static void check(int sum, int operation) {
-        if (sum + operation < 0 || operation < 0) {
+        if (sum + operation < 0) {
             throw new MyException("Not enough money");
         }
     }

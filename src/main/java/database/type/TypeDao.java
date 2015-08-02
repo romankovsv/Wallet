@@ -1,10 +1,8 @@
-package service;
-
-import database.type.Type;
+package database.type;
 
 import java.util.List;
 
-public interface ISystemTypeService {
+public interface TypeDao {
 
     void create(Type type);
 

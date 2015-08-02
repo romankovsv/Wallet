@@ -51,7 +51,7 @@ public class Exchange extends HttpServlet {
 
         if (!complete) {
             request.setAttribute("error", "<font color = red>Wrong data</font>");
-            getServletContext().getRequestDispatcher("/views/wallets/exchangeById.jsp").forward(request, response);
+            getServletContext().getRequestDispatcher("/views/wallets/exchange.jsp").forward(request, response);
         }
     }
 

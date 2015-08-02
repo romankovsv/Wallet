@@ -3,7 +3,7 @@ package database.wallets;
 import database.factory.MySqlDaoFactory;
 import org.apache.log4j.Logger;
 import database.currency.Currency;
-import database.system.SystemType;
+import database.type.Type;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -19,7 +19,7 @@ public class MySqlWalletDao implements WalletDao {
     @Override
     public void createForUserById(int userId, int systemId, int currencyId) {
         log.info("Create new wallet");
-        String sql = "INSERT INTO wallets (users_id, system_id, currency_id) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO wallets (users_id, type_id, currency_id) VALUES (?, ?, ?)";
 
         try(Connection connection = daoFactory.getConnection();
             PreparedStatement statement = connection.prepareStatement(sql)) {
@@ -42,9 +42,9 @@ public class MySqlWalletDao implements WalletDao {
         List<Wallet> list = new ArrayList<>();
 
         String sql =
-                "SELECT w.id, s.name AS 'system.name', c.name AS 'currency.name', w.sum " +
+                "SELECT w.id, t.name AS 'type.name', c.name AS 'currency.name', w.sum " +
                 "FROM wallets w " +
-                "JOIN system s ON s.id = w.system_id " +
+                "JOIN type t ON t.id = w.type_id " +
                 "JOIN currency c ON c.id = w.currency_id " +
                 "WHERE w.users_id = ?";
 
@@ -55,15 +55,15 @@ public class MySqlWalletDao implements WalletDao {
             while (resultSet.next()) {
                 Wallet wallet = new Wallet();
                 Currency currency = new Currency();
-                SystemType systemType = new SystemType();
+                Type type = new Type();
                 wallet.setId(resultSet.getInt("id"));
                 wallet.setSum(resultSet.getInt("w.sum"));
 
                 currency.setName(resultSet.getString("currency.name"));
                 wallet.setCurrency(currency);
 
-                systemType.setName(resultSet.getString("system.name"));
-                wallet.setSystemType(systemType);
+                type.setName(resultSet.getString("type.name"));
+                wallet.setType(type);
                 list.add(wallet);
             }
         } catch (SQLException e) {
@@ -122,7 +122,7 @@ public class MySqlWalletDao implements WalletDao {
                 Wallet wallet = new Wallet();
                 wallet.setId(resultSet.getInt("id"));
                 wallet.setUserId(resultSet.getInt("users_id"));
-                wallet.setSystemId(resultSet.getInt("system_id"));
+                wallet.setSystemId(resultSet.getInt("type_id"));
                 wallet.setCurrencyId(resultSet.getInt("currency_id"));
                 wallet.setSum(resultSet.getInt("sum"));
                 list.add(wallet);

@@ -4,7 +4,7 @@
 
 <tr style="border:2px solid #ccc">
     <td>${wallet.id}</td>
-    <td>${wallet.systemType.name}</td>
+    <td>${wallet.type.name}</td>
     <td>${wallet.currency.name}</td>
     <td>${wallet.sum}</td>
 </tr>

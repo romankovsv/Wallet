@@ -1,8 +1,8 @@
 package tags;
 
 import database.currency.Currency;
-import database.system.SystemType;
-import database.system_currency.SystemCurrency;
+import database.type.Type;
+import database.type_currency.TypeCurrency;
 
 import javax.servlet.jsp.JspContext;
 import javax.servlet.jsp.JspException;
@@ -12,18 +12,18 @@ import java.io.IOException;
 import java.util.List;
 
 public class CustomTag extends SimpleTagSupport {
-    private List<SystemType> types;
-    private List<SystemCurrency> sc;
+    private List<Type> types;
+    private List<TypeCurrency> sc;
     private List<Currency> currency;
 
     @Override
     public void doTag() throws JspException, IOException {
         JspContext jspContext = getJspContext();
         JspWriter jspWriter = jspContext.getOut();
-        for (SystemType s : types) {
-            for (SystemCurrency sc : this.sc) {
+        for (Type s : types) {
+            for (TypeCurrency sc : this.sc) {
                 for (Currency c : currency) {
-                    if (s.getId() == sc.getSystemId() && c.getId() == sc.getCurrencyId()) {
+                    if (s.getId() == sc.getTypeId() && c.getId() == sc.getCurrencyId()) {
                         jspWriter.println("<tr style=\"border: 2px solid #ccc\">");
                         jspWriter.println("<td>" + s.getName() + "</td>");
                         jspWriter.println("<td>" + c.getName() + "</td>");
@@ -41,19 +41,19 @@ public class CustomTag extends SimpleTagSupport {
         }
     }
 
-    public List<SystemType> getTypes() {
+    public List<Type> getTypes() {
         return types;
     }
 
-    public void setTypes(List<SystemType> types) {
+    public void setTypes(List<Type> types) {
         this.types = types;
     }
 
-    public List<SystemCurrency> getSc() {
+    public List<TypeCurrency> getSc() {
         return sc;
     }
 
-    public void setSc(List<SystemCurrency> sc) {
+    public void setSc(List<TypeCurrency> sc) {
         this.sc = sc;
     }
 
