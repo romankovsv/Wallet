@@ -24,7 +24,7 @@
   <form action="login" method="post">
     <input type="email" name="email" required placeholder="Email"><br>
     <input type="password" name="password" required placeholder=<fmt:message key="login.password" />><br>
-    <%--${error}--%>
+    ${error}
     <p>
       <input type="submit" name="enter" value=<fmt:message key="login.enter" />>
       <input type="button" name="registration" value=<fmt:message key="login.registration" /> onclick="parent.location='views/user/registration.jsp'" />
