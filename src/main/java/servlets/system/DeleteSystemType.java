@@ -11,17 +11,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
-/**
- * Created by SpiritMoon
- */
+
 @WebServlet(name = "DeleteSystemType", urlPatterns = "/deleteById-system-type")
 public class DeleteSystemType extends HttpServlet {
-    private static final Logger log = Logger.getLogger(DeleteSystemType.class);
-
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<SystemType> list;
 

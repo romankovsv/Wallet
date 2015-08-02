@@ -1,7 +1,6 @@
 package servlets.users;
 
 import database.users.MySqlUserDao;
-import org.apache.log4j.Logger;
 import database.users.User;
 
 import javax.servlet.ServletException;
@@ -10,13 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-/**
- * Created by SpiritMoon
- */
+
 @WebServlet(name = "Registration", urlPatterns = "/registration")
 public class Registration extends HttpServlet {
-    private static final Logger log = Logger.getLogger(Registration.class);
-
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         MySqlUserDao userDao = new MySqlUserDao();
         User user = new User(request.getParameter("name"), request.getParameter("date of birth"),
@@ -30,6 +26,7 @@ public class Registration extends HttpServlet {
         }
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }

@@ -5,9 +5,7 @@ import database.wallets.WalletDao;
 import service.IWalletService;
 
 import java.util.List;
-/**
- * Created by SpiritMoon
- */
+
 public class WalletService implements IWalletService {
     private WalletDao walletDao;
 

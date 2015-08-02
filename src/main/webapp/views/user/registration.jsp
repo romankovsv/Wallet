@@ -20,7 +20,7 @@
         <input type="text" name="password" required placeholder=<fmt:message key="registration.password" />>
         <p><input type="submit" name="create" value=<fmt:message key="registration.create" />></p>
     </form>
-    <%--${error}--%>
+    ${error}
 </div>
 
 </body>

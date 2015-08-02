@@ -20,7 +20,7 @@
     <input type="password" name="password" required placeholder=<fmt:message key="registration.password" /> value="${sessionScope.user.password}"><br>
     <p><input type="submit" name="create" value=<fmt:message key="edit.save" />></p>
   </form>
-  <%--${error}--%>
+  ${error}
 </div>
 
 </body>

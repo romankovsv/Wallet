@@ -1,7 +1,5 @@
 package database.system;
-/**
- * Created by SpiritMoon
- */
+
 public class SystemType {
     private int id;
     private String name;

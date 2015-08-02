@@ -5,9 +5,7 @@ import database.currency.CurrencyDao;
 import service.ICurrencyService;
 
 import java.util.List;
-/**
- * Created by SpiritMoon
- */
+
 public class CurrencyService implements ICurrencyService {
     private CurrencyDao currencyDao;
 

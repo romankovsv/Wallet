@@ -11,15 +11,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-/**
- * Created by SpiritMoon
- */
+
 public class MySqlSystemCurrencyDao implements SystemCurrencyDao {
     public static final Logger log = Logger.getLogger(MySqlSystemCurrencyDao.class);
     private MySqlDaoFactory daoFactory = new MySqlDaoFactory();
 
     @Override
     public void create(SystemType systemType, Currency currency) {
+        log.info("Create system-currency dependency");
         String sql = "INSERT INTO system_currency (system_id, currency_id) VALUES (?, ?)";
 
         try(Connection connection = daoFactory.getConnection();
@@ -34,6 +33,7 @@ public class MySqlSystemCurrencyDao implements SystemCurrencyDao {
 
     @Override
     public SystemCurrency read(int id) {
+        log.info("Read system-currency dependency");
         SystemCurrency systemCurrency = new SystemCurrency();
         String sql = "SELECT * FROM system_currency WHERE id = ?";
 
@@ -54,6 +54,7 @@ public class MySqlSystemCurrencyDao implements SystemCurrencyDao {
 
     @Override
     public void update(int system_id, int currency_id , int id) {
+        log.info("Update system-currency dependency");
         String sql = "UPDATE system_currency SET system_id = ?, currency_id = ? WHERE id = ?";
 
         try(Connection connection = daoFactory.getConnection();
@@ -69,6 +70,7 @@ public class MySqlSystemCurrencyDao implements SystemCurrencyDao {
 
     @Override
     public void delete(int id) {
+        log.info("Delete system-currency dependency");
         String sql = "DELETE FROM system_currency WHERE id = ?";
 
         try(Connection connection = daoFactory.getConnection();
@@ -82,6 +84,7 @@ public class MySqlSystemCurrencyDao implements SystemCurrencyDao {
 
     @Override
     public List<SystemCurrency> getAll() {
+        log.info("Get all system-currency dependency");
         List<SystemCurrency> list = new ArrayList<>();
         String sql = "SELECT * FROM system_currency";
 

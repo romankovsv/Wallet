@@ -6,15 +6,14 @@ import org.apache.log4j.Logger;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-/**
- * Created by SpiritMoon
- */
+
 public class MySqlHistoryDao implements HistoryDao {
     private static final Logger log = Logger.getLogger(MySqlHistoryDao.class);
     private MySqlDaoFactory daoFactory = new MySqlDaoFactory();
 
     @Override
     public void create(History history) {
+        log.info("Create new history");
         String sql =
                 "INSERT INTO history (user_id_from, user_id_to, wallet_id_from, wallet_id_to, time, date, sum) " +
                         "VALUES (?, ?, ?, ?, ?, ?, ?)";
@@ -40,6 +39,7 @@ public class MySqlHistoryDao implements HistoryDao {
 
     @Override
     public List<History> readByUserId(int id) {
+        log.info("Read user's history");
         String sql = "SELECT * FROM history WHERE user_id_from = ? OR user_id_to = ?";
         List<History> list = new ArrayList<>();
 
@@ -69,6 +69,7 @@ public class MySqlHistoryDao implements HistoryDao {
 
     @Override
     public void deleteById(int id) {
+        log.info("Delete history");
         String sql = "DELETE FROM history WHERE id = ?";
 
         try(Connection connection = daoFactory.getConnection();
@@ -86,6 +87,7 @@ public class MySqlHistoryDao implements HistoryDao {
 
     @Override
     public List<History> getAll() {
+        log.info("Get all history");
         List<History> list = new ArrayList<>();
         String sql = "SELECT * FROM history";
 

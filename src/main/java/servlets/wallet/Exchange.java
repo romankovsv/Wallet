@@ -2,14 +2,9 @@ package servlets.wallet;
 
 import database.history.MySqlHistoryDao;
 import database.wallets.MySqlWalletDao;
-import org.apache.log4j.Logger;
-import database.factory.DaoFactory;
-import database.factory.MySqlDaoFactory;
 import database.history.History;
-import database.history.HistoryDao;
 import database.users.User;
 import database.wallets.Wallet;
-import database.wallets.WalletDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,16 +12,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
 
-/**
- * Created by SpiritMoon
- */
 @WebServlet(name = "Exchange", urlPatterns = "/user/wallet/exchange")
 public class Exchange extends HttpServlet {
-    private static final Logger log = Logger.getLogger(Exchange.class);
-
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int fromId = Integer.parseInt(request.getParameter("firstId"));
         int toId = Integer.parseInt(request.getParameter("secondId"));
@@ -66,6 +55,7 @@ public class Exchange extends HttpServlet {
         }
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         getServletContext().getRequestDispatcher("/views/wallets/exchange.jsp").forward(request, response);
     }

@@ -5,9 +5,7 @@ import org.apache.log4j.Logger;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-/**
- * Created by SpiritMoon
- */
+
 public class MySqlDaoFactory implements DaoFactory {
     private static final Logger log = Logger.getLogger(MySqlDaoFactory.class);
 

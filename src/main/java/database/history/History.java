@@ -2,9 +2,7 @@ package database.history;
 
 import java.sql.Date;
 import java.sql.Time;
-/**
- * Created by SpiritMoon
- */
+
 public class History {
     private int id;
     private int userIdFrom;

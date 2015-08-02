@@ -5,9 +5,7 @@ import database.history.HistoryDao;
 import service.IHistoryService;
 
 import java.util.List;
-/**
- * Created by SpiritMoon
- */
+
 public class HistoryService implements IHistoryService {
     private HistoryDao historyDao;
 

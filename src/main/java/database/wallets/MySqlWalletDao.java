@@ -11,15 +11,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-/**
- * Created by SpiritMoon
- */
+
 public class MySqlWalletDao implements WalletDao {
     private static final Logger log = Logger.getLogger(MySqlWalletDao.class);
     private MySqlDaoFactory daoFactory = new MySqlDaoFactory();
 
     @Override
     public void createForUserById(int userId, int systemId, int currencyId) {
+        log.info("Create new wallet");
         String sql = "INSERT INTO wallets (users_id, system_id, currency_id) VALUES (?, ?, ?)";
 
         try(Connection connection = daoFactory.getConnection();
@@ -39,6 +38,7 @@ public class MySqlWalletDao implements WalletDao {
 
     @Override
     public List<Wallet> readForUserById(int id) {
+        log.info("Read user's wallet");
         List<Wallet> list = new ArrayList<>();
 
         String sql =
@@ -75,6 +75,7 @@ public class MySqlWalletDao implements WalletDao {
 
     @Override
     public void deleteById(int id) {
+        log.info("Delete wallet");
         String sql = "DELETE FROM wallets WHERE id = ?";
 
         try(Connection connection = daoFactory.getConnection();
@@ -92,6 +93,7 @@ public class MySqlWalletDao implements WalletDao {
 
     @Override
     public void deleteUserWalletById(int id) {
+        log.info("Delete user's wallet");
         String sql = "DELETE FROM wallets WHERE 'user_id' = ?";
 
         try(Connection connection = daoFactory.getConnection();
@@ -109,6 +111,7 @@ public class MySqlWalletDao implements WalletDao {
 
     @Override
     public List<Wallet> getAll() {
+        log.info("Get all wallet");
         List<Wallet> list = new ArrayList<>();
         String sql = "SELECT * FROM wallets";
 
@@ -133,6 +136,7 @@ public class MySqlWalletDao implements WalletDao {
 
     @Override
     public void exchangeById(int idFirst, int idSecond, int sum) {
+        log.info("Exchange money");
         PreparedStatement statement = null;
         String sqlFrom = "UPDATE wallets SET sum = sum - ? WHERE id = ?";
         String sqlTo = "UPDATE wallets SET sum = sum + ? WHERE id = ?";
@@ -162,7 +166,7 @@ public class MySqlWalletDao implements WalletDao {
             connection.commit();
             connection.setAutoCommit(true);
         } catch (SQLException e) {
-            log.error("Error when making exchangeById", e);
+            log.error("Error when making exchange", e);
         } finally {
             try {
                 if (statement != null) {
@@ -176,6 +180,7 @@ public class MySqlWalletDao implements WalletDao {
 
     @Override
     public void changeBalanceById(int id, int sum) {
+        log.info("Change balance");
         String sql = "UPDATE wallets SET sum = sum + ? WHERE id = ?";
         int result;
 
@@ -186,7 +191,7 @@ public class MySqlWalletDao implements WalletDao {
             result = statement.executeUpdate();
 
             if (result == 1) {
-                log.info("The sum is updateById");
+                log.info("The sum is update");
             }
         } catch (SQLException e) {
             log.error("Error when change balance", e);
@@ -194,6 +199,7 @@ public class MySqlWalletDao implements WalletDao {
     }
 
     public Wallet readWalletById(int id) {
+        log.info("Read wallet");
         String sql = "SELECT * FROM wallets WHERE id = ?";
         Wallet wallet = new Wallet();
 

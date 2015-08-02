@@ -1,7 +1,5 @@
 package database.currency;
-/**
- * Created by SpiritMoon
- */
+
 public class Currency {
     private int id;
     private String name;

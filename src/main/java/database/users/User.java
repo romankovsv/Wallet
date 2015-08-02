@@ -1,9 +1,7 @@
 package database.users;
 
 import java.sql.Date;
-/**
- * Created by SpiritMoon
- */
+
 public class User {
     private int id;
     private String name;

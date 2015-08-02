@@ -10,15 +10,14 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.sql.Date;
 import java.util.List;
-/**
- * Created by SpiritMoon
- */
+
 public class MySqlUserDao implements UserDao {
     private static final Logger log = Logger.getLogger(MySqlUserDao.class);
     private MySqlDaoFactory daoFactory = new MySqlDaoFactory();
 
     @Override
     public boolean create(User user) {
+        log.info("Create new user");
         boolean result = false;
         String sql =
                 "INSERT INTO user (name, date_of_birth, date_of_registration, sex, email, password) " +
@@ -47,6 +46,7 @@ public class MySqlUserDao implements UserDao {
 
     @Override
     public User read(int id) {
+        log.info("Read user");
         User user = new User();
         String sql = "SELECT * FROM user WHERE id = ?";
 
@@ -71,6 +71,7 @@ public class MySqlUserDao implements UserDao {
 
     @Override
     public boolean update(int id, String name, String dateOfBirth, String sex, String email, String password) {
+        log.info("Update user");
         String sql = "UPDATE user SET name = ?, date_of_birth = ?, sex = ?, email = ?, " +
                 "password = ? WHERE id = ?";
         boolean result = false;
@@ -90,7 +91,7 @@ public class MySqlUserDao implements UserDao {
                 result = true;
             }
         } catch (SQLException e) {
-            log.error("Error when updateById user data", e);
+            log.error("Error when update user data", e);
         }
 
         return result;
@@ -98,6 +99,7 @@ public class MySqlUserDao implements UserDao {
 
     @Override
     public void delete(int id) {
+        log.info("Delete user");
         String sql = "DELETE FROM user WHERE id = ?";
 
         try(Connection connection = daoFactory.getConnection();
@@ -109,12 +111,13 @@ public class MySqlUserDao implements UserDao {
                 log.info("A user was deleted successfully!");
             }
         } catch (SQLException e) {
-            log.error("Error when deleteById user", e);
+            log.error("Error when delete user", e);
         }
     }
 
     @Override
     public List<User> getAll() {
+        log.info("Get all users");
         List<User> list = new ArrayList<>();
         String sql = "SELECT * FROM user";
 
@@ -140,6 +143,7 @@ public class MySqlUserDao implements UserDao {
     }
 
     public User login(String email, String password) {
+        log.info("Login user");
         User user = null;
         String sql = "SELECT * FROM user WHERE email = ? AND password = ?";
 

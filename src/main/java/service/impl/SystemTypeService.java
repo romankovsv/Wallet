@@ -5,9 +5,7 @@ import database.system.SystemTypeDao;
 import service.ISystemTypeService;
 
 import java.util.List;
-/**
- * Created by SpiritMoon
- */
+
 public class SystemTypeService implements ISystemTypeService {
     private SystemTypeDao systemTypeDao;
 

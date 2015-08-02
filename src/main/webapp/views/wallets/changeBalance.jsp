@@ -15,7 +15,7 @@
         <label>
             <input type="number" name="operation" required>
         </label>
-        <%--${error}--%>
+        ${error}
         <p>
             <input type="submit" name="change" value=<fmt:message key="balance.change" />>
         </p>

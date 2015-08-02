@@ -5,9 +5,7 @@ import database.users.UserDao;
 import service.IUserService;
 
 import java.util.List;
-/**
- * Created by SpiritMoon
- */
+
 public class UserService implements IUserService {
     private UserDao userDao;
 

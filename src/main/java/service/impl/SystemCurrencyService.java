@@ -7,9 +7,7 @@ import database.system_currency.SystemCurrencyDao;
 import service.ISystemCurrencyService;
 
 import java.util.List;
-/**
- * Created by SpiritMoon
- */
+
 public class SystemCurrencyService implements ISystemCurrencyService {
     private SystemCurrencyDao systemCurrencyDao;
 

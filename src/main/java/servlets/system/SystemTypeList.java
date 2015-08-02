@@ -1,7 +1,6 @@
 package servlets.system;
 
 import database.system.MySqlSystemTypeDao;
-import org.apache.log4j.Logger;
 import database.system.SystemType;
 
 import javax.servlet.ServletException;
@@ -11,17 +10,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
-/**
- * Created by SpiritMoon
- */
+
 @WebServlet(name = "SystemTypeList", urlPatterns = "/system-type-list")
 public class SystemTypeList extends HttpServlet {
-    private static final Logger log = Logger.getLogger(SystemTypeList.class);
-
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<SystemType> list;
 

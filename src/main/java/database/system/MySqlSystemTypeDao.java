@@ -9,15 +9,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-/**
- * Created by SpiritMoon
- */
+
 public class MySqlSystemTypeDao implements SystemTypeDao {
     private static final Logger log = Logger.getLogger(MySqlSystemTypeDao.class);
     private MySqlDaoFactory daoFactory = new MySqlDaoFactory();
 
     @Override
     public void create(SystemType systemType) {
+        log.info("Create new system type");
         String sql = "INSERT INTO system (name) VALUES (?)";
 
         try(Connection connection = daoFactory.getConnection();
@@ -35,6 +34,7 @@ public class MySqlSystemTypeDao implements SystemTypeDao {
 
     @Override
     public SystemType read(int id) {
+        log.info("Read system type");
         String sql = "SELECT * FROM system WHERE id = ?";
         SystemType systemType = new SystemType();
 
@@ -54,6 +54,7 @@ public class MySqlSystemTypeDao implements SystemTypeDao {
 
     @Override
     public void update(int id, String name) {
+        log.info("Update system type");
         String sql = "UPDATE system SET name = ? WHERE id = ?";
 
         try(Connection connection = daoFactory.getConnection();
@@ -66,12 +67,13 @@ public class MySqlSystemTypeDao implements SystemTypeDao {
                 log.info("An existing system type was updated successfully!");
             }
         } catch (SQLException e) {
-            log.error("Error when updateById system type", e);
+            log.error("Error when update system type", e);
         }
     }
 
     @Override
     public void delete(int id) {
+        log.info("Delete system type");
         String sql = "DELETE FROM system WHERE id = ?;";
 
         try(Connection connection = daoFactory.getConnection();
@@ -83,12 +85,13 @@ public class MySqlSystemTypeDao implements SystemTypeDao {
                 log.info("A system type was deleted successfully!");
             }
         } catch (SQLException e) {
-            log.error("Error when deleteById system type", e);
+            log.error("Error when delete system type", e);
         }
     }
 
     @Override
     public List<SystemType> getAll() {
+        log.info("Get all system type");
         List<SystemType> list = new ArrayList<>();
         String sql = "SELECT * FROM system;";
 

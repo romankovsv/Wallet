@@ -1,7 +1,5 @@
 package database.system_currency;
-/**
- * Created by SpiritMoon
- */
+
 public class SystemCurrency {
     private int id;
     private int systemId;

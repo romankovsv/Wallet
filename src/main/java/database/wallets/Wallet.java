@@ -2,9 +2,7 @@ package database.wallets;
 
 import database.currency.Currency;
 import database.system.SystemType;
-/**
- * Created by SpiritMoon
- */
+
 public class Wallet {
     private int id;
     private int userId;

@@ -10,9 +10,7 @@ import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
 import java.io.IOException;
 import java.util.List;
-/**
- * Created by SpiritMoon
- */
+
 public class CustomTag extends SimpleTagSupport {
     private List<SystemType> types;
     private List<SystemCurrency> sc;
