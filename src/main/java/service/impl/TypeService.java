@@ -2,11 +2,11 @@ package service.impl;
 
 import database.type.Type;
 import database.type.TypeDao;
-import service.ISystemTypeService;
+import service.ITypeService;
 
 import java.util.List;
 
-public class SystemTypeService implements ISystemTypeService {
+public class TypeService implements ITypeService {
     private TypeDao typeDao;
 
     @Override

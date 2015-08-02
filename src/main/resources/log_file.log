@@ -3654,7 +3654,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 02-08-2015 12:50:31 INFO  MySqlUserDao:146 - Login user
 02-08-2015 12:50:32 INFO  MySqlWalletDao:41 - Read user's wallet
 02-08-2015 12:50:32 ERROR MySqlWalletDao:70 - Error when reading user's wallets
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange service.system' doesn't exist
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange service.type' doesn't exist
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -3700,7 +3700,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 02-08-2015 12:51:21 INFO  MySqlCurrencyDao:93 - Get all currency
 02-08-2015 12:51:21 INFO  MySqlSystemTypeDao:94 - Get all system type
 02-08-2015 12:51:21 ERROR MySqlSystemTypeDao:108 - Error when getting all system type's
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange service.system' doesn't exist
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange service.type' doesn't exist
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -3745,7 +3745,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at java.lang.Thread.run(Thread.java:745)
 02-08-2015 12:51:21 INFO  MySqlSystemCurrencyDao:87 - Get all system-currency dependency
 02-08-2015 12:51:21 ERROR MySqlSystemCurrencyDao:102 - Error when getting all system-currency dependency
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange service.system_currency' doesn't exist
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange service.type_currency' doesn't exist
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -3760,7 +3760,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
 	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2034)
-	at database.system_currency.MySqlSystemCurrencyDao.getAll(MySqlSystemCurrencyDao.java:93)
+	at database.type_currency.MySqlSystemCurrencyDao.getAll(MySqlSystemCurrencyDao.java:93)
 	at servlets.wallet.NewWallet.doGet(NewWallet.java:37)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
@@ -3791,7 +3791,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 02-08-2015 12:53:01 INFO  MySqlUserDao:146 - Login user
 02-08-2015 12:53:02 INFO  MySqlWalletDao:41 - Read user's wallet
 02-08-2015 12:53:02 ERROR MySqlWalletDao:70 - Error when reading user's wallets
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange service.system' doesn't exist
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange service.type' doesn't exist
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -3927,7 +3927,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 02-08-2015 12:53:55 INFO  MySqlCurrencyDao:93 - Get all currency
 02-08-2015 12:53:55 INFO  MySqlSystemTypeDao:94 - Get all system type
 02-08-2015 12:53:55 ERROR MySqlSystemTypeDao:108 - Error when getting all system type's
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange service.system' doesn't exist
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange service.type' doesn't exist
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -3972,7 +3972,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at java.lang.Thread.run(Thread.java:745)
 02-08-2015 12:53:55 INFO  MySqlSystemCurrencyDao:87 - Get all system-currency dependency
 02-08-2015 12:53:55 ERROR MySqlSystemCurrencyDao:102 - Error when getting all system-currency dependency
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange service.system_currency' doesn't exist
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange service.type_currency' doesn't exist
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -3987,7 +3987,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
 	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2034)
-	at database.system_currency.MySqlSystemCurrencyDao.getAll(MySqlSystemCurrencyDao.java:93)
+	at database.type_currency.MySqlSystemCurrencyDao.getAll(MySqlSystemCurrencyDao.java:93)
 	at servlets.wallet.NewWallet.doGet(NewWallet.java:37)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
@@ -4109,7 +4109,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 02-08-2015 13:02:35 INFO  MySqlCurrencyDao:93 - Get all currency
 02-08-2015 13:02:35 INFO  MySqlTypeDao:94 - Get all type type
 02-08-2015 13:02:35 ERROR MySqlTypeDao:108 - Error when getting all type type's
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange service.system' doesn't exist
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange service.type' doesn't exist
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -4154,7 +4154,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at java.lang.Thread.run(Thread.java:745)
 02-08-2015 13:02:35 INFO  MySqlSystemCurrencyDao:87 - Get all type-currency dependency
 02-08-2015 13:02:35 ERROR MySqlSystemCurrencyDao:102 - Error when getting all type-currency dependency
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange service.system_currency' doesn't exist
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange service.type_currency' doesn't exist
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -4169,7 +4169,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
 	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2034)
-	at database.system_currency.MySqlSystemCurrencyDao.getAll(MySqlSystemCurrencyDao.java:93)
+	at database.type_currency.MySqlSystemCurrencyDao.getAll(MySqlSystemCurrencyDao.java:93)
 	at servlets.wallet.NewWallet.doGet(NewWallet.java:37)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
@@ -4265,7 +4265,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'w.sys
 02-08-2015 13:09:36 INFO  MySqlTypeDao:94 - Get all type type
 02-08-2015 13:09:36 INFO  MySqlSystemCurrencyDao:87 - Get all type-currency dependency
 02-08-2015 13:09:36 ERROR MySqlSystemCurrencyDao:102 - Error when getting all type-currency dependency
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange service.system_currency' doesn't exist
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange service.type_currency' doesn't exist
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -4280,7 +4280,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
 	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2034)
-	at database.system_currency.MySqlSystemCurrencyDao.getAll(MySqlSystemCurrencyDao.java:93)
+	at database.type_currency.MySqlSystemCurrencyDao.getAll(MySqlSystemCurrencyDao.java:93)
 	at servlets.wallet.NewWallet.doGet(NewWallet.java:37)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)

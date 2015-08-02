@@ -4,7 +4,7 @@ import database.type.Type;
 
 import java.util.List;
 
-public interface ISystemTypeService {
+public interface ITypeService {
 
     void create(Type type);
 

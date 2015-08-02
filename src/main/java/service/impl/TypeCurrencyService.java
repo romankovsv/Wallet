@@ -4,11 +4,11 @@ import database.currency.Currency;
 import database.type.Type;
 import database.type_currency.TypeCurrency;
 import database.type_currency.TypeCurrencyDao;
-import service.ISystemCurrencyService;
+import service.ITypeCurrencyService;
 
 import java.util.List;
 
-public class SystemCurrencyService implements ISystemCurrencyService {
+public class TypeCurrencyService implements ITypeCurrencyService {
     private TypeCurrencyDao typeCurrencyDao;
 
     @Override

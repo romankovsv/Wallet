@@ -6,7 +6,7 @@ import database.type_currency.TypeCurrency;
 
 import java.util.List;
 
-public interface ISystemCurrencyService {
+public interface ITypeCurrencyService {
 
     void create(Type type, Currency currency);
 
