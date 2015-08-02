@@ -1,6 +1,6 @@
 CREATE SCHEMA If NOT EXISTS `exchange service` DEFAULT CHARACTER SET utf8 ;
 
--- database
+-- dao
 -- Table users
 CREATE TABLE IF NOT EXISTS user (
   id INT NOT NULL AUTO_INCREMENT ,

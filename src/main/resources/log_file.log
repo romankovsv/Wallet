@@ -36,8 +36,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2145)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2081)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2066)
-	at database.users.MySqlUserDao.create(MySqlUserDao.java:33)
-	at servlets.users.Registration.doPost(Registration.java:32)
+	at dao.users.MySqlUserDao.create(MySqlUserDao.java:33)
+	at web.users.Registration.doPost(Registration.java:32)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -79,8 +79,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2145)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2081)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2066)
-	at database.users.MySqlUserDao.create(MySqlUserDao.java:33)
-	at servlets.users.Registration.doPost(Registration.java:32)
+	at dao.users.MySqlUserDao.create(MySqlUserDao.java:33)
+	at web.users.Registration.doPost(Registration.java:32)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -122,8 +122,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2145)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2081)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2066)
-	at database.users.MySqlUserDao.create(MySqlUserDao.java:33)
-	at servlets.users.Registration.doPost(Registration.java:32)
+	at dao.users.MySqlUserDao.create(MySqlUserDao.java:33)
+	at web.users.Registration.doPost(Registration.java:32)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -165,8 +165,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2145)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2081)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2066)
-	at database.users.MySqlUserDao.create(MySqlUserDao.java:33)
-	at servlets.users.Registration.doPost(Registration.java:32)
+	at dao.users.MySqlUserDao.create(MySqlUserDao.java:33)
+	at web.users.Registration.doPost(Registration.java:32)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -208,8 +208,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2145)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2081)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2066)
-	at database.users.MySqlUserDao.create(MySqlUserDao.java:33)
-	at servlets.users.Registration.doPost(Registration.java:32)
+	at dao.users.MySqlUserDao.create(MySqlUserDao.java:33)
+	at web.users.Registration.doPost(Registration.java:32)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -251,8 +251,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2145)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2081)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2066)
-	at database.users.MySqlUserDao.create(MySqlUserDao.java:34)
-	at servlets.users.Registration.doPost(Registration.java:32)
+	at dao.users.MySqlUserDao.create(MySqlUserDao.java:34)
+	at web.users.Registration.doPost(Registration.java:32)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -294,8 +294,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2145)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2081)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2066)
-	at database.users.MySqlUserDao.create(MySqlUserDao.java:34)
-	at servlets.users.Registration.doPost(Registration.java:32)
+	at dao.users.MySqlUserDao.create(MySqlUserDao.java:34)
+	at web.users.Registration.doPost(Registration.java:32)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -339,8 +339,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2145)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2081)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2066)
-	at database.users.MySqlUserDao.create(MySqlUserDao.java:35)
-	at servlets.users.Registration.doPost(Registration.java:32)
+	at dao.users.MySqlUserDao.create(MySqlUserDao.java:35)
+	at web.users.Registration.doPost(Registration.java:32)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -382,8 +382,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2145)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2081)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2066)
-	at database.users.MySqlUserDao.create(MySqlUserDao.java:35)
-	at servlets.users.Registration.doPost(Registration.java:32)
+	at dao.users.MySqlUserDao.create(MySqlUserDao.java:35)
+	at web.users.Registration.doPost(Registration.java:32)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -430,8 +430,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2145)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2081)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2066)
-	at database.users.MySqlUserDao.create(MySqlUserDao.java:33)
-	at servlets.users.Registration.doPost(Registration.java:32)
+	at dao.users.MySqlUserDao.create(MySqlUserDao.java:33)
+	at web.users.Registration.doPost(Registration.java:32)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -473,8 +473,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2145)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2081)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2066)
-	at database.users.MySqlUserDao.create(MySqlUserDao.java:34)
-	at servlets.users.Registration.doPost(Registration.java:32)
+	at dao.users.MySqlUserDao.create(MySqlUserDao.java:34)
+	at web.users.Registration.doPost(Registration.java:32)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -521,8 +521,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2145)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2081)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2066)
-	at database.users.MySqlUserDao.update(MySqlUserDao.java:97)
-	at servlets.users.ChangeData.doPost(ChangeData.java:30)
+	at dao.users.MySqlUserDao.update(MySqlUserDao.java:97)
+	at web.users.ChangeData.doPost(ChangeData.java:30)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -530,7 +530,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
-	at servlets.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
+	at web.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
@@ -598,8 +598,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2145)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2081)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2066)
-	at database.users.MySqlUserDao.update(MySqlUserDao.java:97)
-	at servlets.users.Edit.doPost(Edit.java:30)
+	at dao.users.MySqlUserDao.update(MySqlUserDao.java:97)
+	at web.users.Edit.doPost(Edit.java:30)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -607,7 +607,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
-	at servlets.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
+	at web.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
@@ -649,7 +649,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 14-07-2015 18:24:03 INFO  MySqlWalletDao:179 - Exchange complete
 14-07-2015 18:24:03 INFO  MySqlHistoryDao:32 - A new history was created successfully!
 14-07-2015 20:48:55 ERROR Registration:39 - Error in operation
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'exchangebyid service'
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown dao 'exchangebyid service'
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -676,8 +676,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'exc
 	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
 	at java.sql.DriverManager.getConnection(DriverManager.java:664)
 	at java.sql.DriverManager.getConnection(DriverManager.java:247)
-	at database.factory.MySqlDaoFactory.getConnection(MySqlDaoFactory.java:32)
-	at servlets.users.Registration.doPost(Registration.java:27)
+	at dao.factory.MySqlDaoFactory.getConnection(MySqlDaoFactory.java:32)
+	at web.users.Registration.doPost(Registration.java:27)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -702,7 +702,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'exc
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
 14-07-2015 20:50:39 ERROR Registration:39 - Error in operation
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'exchangebyid service'
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown dao 'exchangebyid service'
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -729,8 +729,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'exc
 	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
 	at java.sql.DriverManager.getConnection(DriverManager.java:664)
 	at java.sql.DriverManager.getConnection(DriverManager.java:247)
-	at database.factory.MySqlDaoFactory.getConnection(MySqlDaoFactory.java:32)
-	at servlets.users.Registration.doPost(Registration.java:27)
+	at dao.factory.MySqlDaoFactory.getConnection(MySqlDaoFactory.java:32)
+	at web.users.Registration.doPost(Registration.java:27)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -755,7 +755,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'exc
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
 14-07-2015 20:52:04 ERROR Registration:39 - Error in operation
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'exchangebyid service'
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown dao 'exchangebyid service'
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -782,8 +782,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'exc
 	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
 	at java.sql.DriverManager.getConnection(DriverManager.java:664)
 	at java.sql.DriverManager.getConnection(DriverManager.java:247)
-	at database.factory.MySqlDaoFactory.getConnection(MySqlDaoFactory.java:32)
-	at servlets.users.Registration.doPost(Registration.java:27)
+	at dao.factory.MySqlDaoFactory.getConnection(MySqlDaoFactory.java:32)
+	at web.users.Registration.doPost(Registration.java:27)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -808,7 +808,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'exc
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
 14-07-2015 20:53:00 ERROR Login:39 - Error in operation
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'exchangebyid service'
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown dao 'exchangebyid service'
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -835,8 +835,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'exc
 	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
 	at java.sql.DriverManager.getConnection(DriverManager.java:664)
 	at java.sql.DriverManager.getConnection(DriverManager.java:247)
-	at database.factory.MySqlDaoFactory.getConnection(MySqlDaoFactory.java:32)
-	at servlets.security.Login.doPost(Login.java:28)
+	at dao.factory.MySqlDaoFactory.getConnection(MySqlDaoFactory.java:32)
+	at web.security.Login.doPost(Login.java:28)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -861,7 +861,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'exc
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
 14-07-2015 20:53:12 ERROR Login:39 - Error in operation
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'exchangebyid service'
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown dao 'exchangebyid service'
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -888,8 +888,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'exc
 	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
 	at java.sql.DriverManager.getConnection(DriverManager.java:664)
 	at java.sql.DriverManager.getConnection(DriverManager.java:247)
-	at database.factory.MySqlDaoFactory.getConnection(MySqlDaoFactory.java:32)
-	at servlets.security.Login.doPost(Login.java:28)
+	at dao.factory.MySqlDaoFactory.getConnection(MySqlDaoFactory.java:32)
+	at web.security.Login.doPost(Login.java:28)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -914,7 +914,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'exc
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
 14-07-2015 20:55:04 ERROR Registration:39 - Error in operation
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'exchangebyid service'
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown dao 'exchangebyid service'
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -941,8 +941,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'exc
 	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
 	at java.sql.DriverManager.getConnection(DriverManager.java:664)
 	at java.sql.DriverManager.getConnection(DriverManager.java:247)
-	at database.factory.MySqlDaoFactory.getConnection(MySqlDaoFactory.java:32)
-	at servlets.users.Registration.doPost(Registration.java:27)
+	at dao.factory.MySqlDaoFactory.getConnection(MySqlDaoFactory.java:32)
+	at web.users.Registration.doPost(Registration.java:27)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -967,7 +967,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'exc
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
 14-07-2015 20:57:39 ERROR Registration:39 - Error in operation
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'exchangebyid service'
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown dao 'exchangebyid service'
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -994,8 +994,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'exc
 	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
 	at java.sql.DriverManager.getConnection(DriverManager.java:664)
 	at java.sql.DriverManager.getConnection(DriverManager.java:247)
-	at database.factory.MySqlDaoFactory.getConnection(MySqlDaoFactory.java:32)
-	at servlets.users.Registration.doPost(Registration.java:27)
+	at dao.factory.MySqlDaoFactory.getConnection(MySqlDaoFactory.java:32)
+	at web.users.Registration.doPost(Registration.java:27)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -1020,7 +1020,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'exc
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
 14-07-2015 20:59:24 ERROR Registration:39 - Error in operation
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'exchangebyid service'
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown dao 'exchangebyid service'
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -1047,8 +1047,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'exc
 	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
 	at java.sql.DriverManager.getConnection(DriverManager.java:664)
 	at java.sql.DriverManager.getConnection(DriverManager.java:247)
-	at database.factory.MySqlDaoFactory.getConnection(MySqlDaoFactory.java:32)
-	at servlets.users.Registration.doPost(Registration.java:27)
+	at dao.factory.MySqlDaoFactory.getConnection(MySqlDaoFactory.java:32)
+	at web.users.Registration.doPost(Registration.java:27)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -1095,8 +1095,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2145)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2081)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2066)
-	at database.users.MySqlUserDao.create(MySqlUserDao.java:34)
-	at servlets.users.Registration.doPost(Registration.java:32)
+	at dao.users.MySqlUserDao.create(MySqlUserDao.java:34)
+	at web.users.Registration.doPost(Registration.java:32)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -1155,8 +1155,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2145)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2081)
 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2066)
-	at database.users.MySqlUserDao.create(MySqlUserDao.java:34)
-	at servlets.users.Registration.doPost(Registration.java:32)
+	at dao.users.MySqlUserDao.create(MySqlUserDao.java:34)
+	at web.users.Registration.doPost(Registration.java:32)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -2769,7 +2769,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 02-08-2015 11:03:24 ERROR SqlExceptionHelper:146 - Table 'exchange service.history' doesn't exist
 02-08-2015 11:03:24 WARN  SqlExceptionHelper:232 - SQL Warning Code: 1146, SQLState: 42S02
 02-08-2015 11:03:24 WARN  SqlExceptionHelper:233 - Table 'exchange service.history' doesn't exist
-02-08-2015 11:03:24 ERROR AssertionFailure:50 - HHH000099: an assertion failure occured (this may indicate a bug in Hibernate, but is more likely due to unsafe use of the session): org.hibernate.AssertionFailure: null id in database.history.History entry (don't flush the Session after an exception occurs)
+02-08-2015 11:03:24 ERROR AssertionFailure:50 - HHH000099: an assertion failure occured (this may indicate a bug in Hibernate, but is more likely due to unsafe use of the session): org.hibernate.AssertionFailure: null id in domain.History entry (don't flush the Session after an exception occurs)
 02-08-2015 11:08:59 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
 02-08-2015 11:08:59 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
 02-08-2015 11:08:59 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
@@ -2878,7 +2878,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 02-08-2015 11:18:55 ERROR SqlExceptionHelper:146 - Column 'date' cannot be null
 02-08-2015 11:18:55 WARN  SqlExceptionHelper:232 - SQL Warning Code: 1048, SQLState: 23000
 02-08-2015 11:18:55 WARN  SqlExceptionHelper:233 - Column 'date' cannot be null
-02-08-2015 11:18:55 ERROR AssertionFailure:50 - HHH000099: an assertion failure occured (this may indicate a bug in Hibernate, but is more likely due to unsafe use of the session): org.hibernate.AssertionFailure: null id in database.history.History entry (don't flush the Session after an exception occurs)
+02-08-2015 11:18:55 ERROR AssertionFailure:50 - HHH000099: an assertion failure occured (this may indicate a bug in Hibernate, but is more likely due to unsafe use of the session): org.hibernate.AssertionFailure: null id in domain.History entry (don't flush the Session after an exception occurs)
 02-08-2015 11:20:13 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
 02-08-2015 11:20:13 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
 02-08-2015 11:20:13 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
@@ -3669,8 +3669,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
 	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2034)
-	at database.wallets.MySqlWalletDao.readForUserById(MySqlWalletDao.java:54)
-	at servlets.users.UserPage.doGet(UserPage.java:28)
+	at dao.wallets.MySqlWalletDao.readForUserById(MySqlWalletDao.java:54)
+	at web.users.UserPage.doGet(UserPage.java:28)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -3678,7 +3678,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
-	at servlets.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
+	at web.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
@@ -3715,8 +3715,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
 	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2034)
-	at database.system.MySqlSystemTypeDao.getAll(MySqlSystemTypeDao.java:100)
-	at servlets.wallet.NewWallet.doGet(NewWallet.java:36)
+	at dao.system.MySqlSystemTypeDao.getAll(MySqlSystemTypeDao.java:100)
+	at web.wallet.NewWallet.doGet(NewWallet.java:36)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -3724,7 +3724,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
-	at servlets.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
+	at web.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
@@ -3760,8 +3760,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
 	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2034)
-	at database.type_currency.MySqlSystemCurrencyDao.getAll(MySqlSystemCurrencyDao.java:93)
-	at servlets.wallet.NewWallet.doGet(NewWallet.java:37)
+	at dao.type_currency.MySqlSystemCurrencyDao.getAll(MySqlSystemCurrencyDao.java:93)
+	at web.wallet.NewWallet.doGet(NewWallet.java:37)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -3769,7 +3769,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
-	at servlets.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
+	at web.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
@@ -3806,8 +3806,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
 	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2034)
-	at database.wallets.MySqlWalletDao.readForUserById(MySqlWalletDao.java:54)
-	at servlets.users.UserPage.doGet(UserPage.java:28)
+	at dao.wallets.MySqlWalletDao.readForUserById(MySqlWalletDao.java:54)
+	at web.users.UserPage.doGet(UserPage.java:28)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -3815,7 +3815,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
-	at servlets.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
+	at web.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
@@ -3851,8 +3851,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
 	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2034)
-	at database.history.MySqlHistoryDao.readByUserId(MySqlHistoryDao.java:50)
-	at servlets.history.HistoryList.doGet(HistoryList.java:28)
+	at dao.history.MySqlHistoryDao.readByUserId(MySqlHistoryDao.java:50)
+	at web.history.HistoryList.doGet(HistoryList.java:28)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -3860,7 +3860,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
-	at servlets.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
+	at web.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
@@ -3896,8 +3896,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
 	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2034)
-	at database.history.MySqlHistoryDao.readByUserId(MySqlHistoryDao.java:50)
-	at servlets.history.HistoryList.doGet(HistoryList.java:28)
+	at dao.history.MySqlHistoryDao.readByUserId(MySqlHistoryDao.java:50)
+	at web.history.HistoryList.doGet(HistoryList.java:28)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -3905,7 +3905,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
-	at servlets.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
+	at web.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
@@ -3942,8 +3942,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
 	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2034)
-	at database.system.MySqlSystemTypeDao.getAll(MySqlSystemTypeDao.java:100)
-	at servlets.wallet.NewWallet.doGet(NewWallet.java:36)
+	at dao.system.MySqlSystemTypeDao.getAll(MySqlSystemTypeDao.java:100)
+	at web.wallet.NewWallet.doGet(NewWallet.java:36)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -3951,7 +3951,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
-	at servlets.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
+	at web.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
@@ -3987,8 +3987,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
 	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2034)
-	at database.type_currency.MySqlSystemCurrencyDao.getAll(MySqlSystemCurrencyDao.java:93)
-	at servlets.wallet.NewWallet.doGet(NewWallet.java:37)
+	at dao.type_currency.MySqlSystemCurrencyDao.getAll(MySqlSystemCurrencyDao.java:93)
+	at web.wallet.NewWallet.doGet(NewWallet.java:37)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -3996,7 +3996,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
-	at servlets.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
+	at web.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
@@ -4033,8 +4033,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'w.sys
 	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
 	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2034)
-	at database.wallets.MySqlWalletDao.readForUserById(MySqlWalletDao.java:54)
-	at servlets.users.UserPage.doGet(UserPage.java:28)
+	at dao.wallets.MySqlWalletDao.readForUserById(MySqlWalletDao.java:54)
+	at web.users.UserPage.doGet(UserPage.java:28)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -4042,7 +4042,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'w.sys
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
-	at servlets.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
+	at web.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
@@ -4078,8 +4078,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
 	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2034)
-	at database.history.MySqlHistoryDao.readByUserId(MySqlHistoryDao.java:50)
-	at servlets.history.HistoryList.doGet(HistoryList.java:28)
+	at dao.history.MySqlHistoryDao.readByUserId(MySqlHistoryDao.java:50)
+	at web.history.HistoryList.doGet(HistoryList.java:28)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -4087,7 +4087,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
-	at servlets.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
+	at web.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
@@ -4124,8 +4124,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
 	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2034)
-	at database.type.MySqlTypeDao.getAll(MySqlTypeDao.java:100)
-	at servlets.wallet.NewWallet.doGet(NewWallet.java:36)
+	at dao.type.MySqlTypeDao.getAll(MySqlTypeDao.java:100)
+	at web.wallet.NewWallet.doGet(NewWallet.java:36)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -4133,7 +4133,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
-	at servlets.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
+	at web.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
@@ -4169,8 +4169,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
 	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2034)
-	at database.type_currency.MySqlSystemCurrencyDao.getAll(MySqlSystemCurrencyDao.java:93)
-	at servlets.wallet.NewWallet.doGet(NewWallet.java:37)
+	at dao.type_currency.MySqlSystemCurrencyDao.getAll(MySqlSystemCurrencyDao.java:93)
+	at web.wallet.NewWallet.doGet(NewWallet.java:37)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -4178,7 +4178,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
-	at servlets.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
+	at web.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
@@ -4215,8 +4215,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'w.sys
 	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
 	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2034)
-	at database.wallets.MySqlWalletDao.readForUserById(MySqlWalletDao.java:54)
-	at servlets.users.UserPage.doGet(UserPage.java:28)
+	at dao.wallets.MySqlWalletDao.readForUserById(MySqlWalletDao.java:54)
+	at web.users.UserPage.doGet(UserPage.java:28)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -4224,7 +4224,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'w.sys
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
-	at servlets.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
+	at web.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
@@ -4280,8 +4280,8 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2535)
 	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1911)
 	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2034)
-	at database.type_currency.MySqlSystemCurrencyDao.getAll(MySqlSystemCurrencyDao.java:93)
-	at servlets.wallet.NewWallet.doGet(NewWallet.java:37)
+	at dao.type_currency.MySqlSystemCurrencyDao.getAll(MySqlSystemCurrencyDao.java:93)
+	at web.wallet.NewWallet.doGet(NewWallet.java:37)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -4289,7 +4289,7 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'exchange servi
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
-	at servlets.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
+	at web.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
@@ -4320,8 +4320,8 @@ java.sql.SQLException: Column 'system_id' not found.
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:872)
 	at com.mysql.jdbc.ResultSetImpl.findColumn(ResultSetImpl.java:1073)
 	at com.mysql.jdbc.ResultSetImpl.getInt(ResultSetImpl.java:2571)
-	at database.wallets.MySqlWalletDao.getAll(MySqlWalletDao.java:125)
-	at servlets.wallet.Exchange.doPost(Exchange.java:32)
+	at dao.wallets.MySqlWalletDao.getAll(MySqlWalletDao.java:125)
+	at web.wallet.Exchange.doPost(Exchange.java:32)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -4329,7 +4329,7 @@ java.sql.SQLException: Column 'system_id' not found.
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
-	at servlets.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
+	at web.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
@@ -4361,8 +4361,8 @@ java.sql.SQLException: Column 'system_id' not found.
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:872)
 	at com.mysql.jdbc.ResultSetImpl.findColumn(ResultSetImpl.java:1073)
 	at com.mysql.jdbc.ResultSetImpl.getInt(ResultSetImpl.java:2571)
-	at database.type_currency.MySqlTypeCurrencyDao.getAll(MySqlTypeCurrencyDao.java:97)
-	at servlets.wallet.NewWallet.doGet(NewWallet.java:37)
+	at dao.type_currency.MySqlTypeCurrencyDao.getAll(MySqlTypeCurrencyDao.java:97)
+	at web.wallet.NewWallet.doGet(NewWallet.java:37)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -4370,7 +4370,7 @@ java.sql.SQLException: Column 'system_id' not found.
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
-	at servlets.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
+	at web.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
@@ -4410,8 +4410,8 @@ java.sql.SQLException: Column 'system_id' not found.
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:872)
 	at com.mysql.jdbc.ResultSetImpl.findColumn(ResultSetImpl.java:1073)
 	at com.mysql.jdbc.ResultSetImpl.getInt(ResultSetImpl.java:2571)
-	at database.wallets.MySqlWalletDao.getAll(MySqlWalletDao.java:125)
-	at servlets.wallet.Exchange.doPost(Exchange.java:32)
+	at dao.wallets.MySqlWalletDao.getAll(MySqlWalletDao.java:125)
+	at web.wallet.Exchange.doPost(Exchange.java:32)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -4419,7 +4419,7 @@ java.sql.SQLException: Column 'system_id' not found.
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
-	at servlets.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
+	at web.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
@@ -4450,8 +4450,8 @@ java.sql.SQLException: Column 'system_id' not found.
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:872)
 	at com.mysql.jdbc.ResultSetImpl.findColumn(ResultSetImpl.java:1073)
 	at com.mysql.jdbc.ResultSetImpl.getInt(ResultSetImpl.java:2571)
-	at database.wallets.MySqlWalletDao.getAll(MySqlWalletDao.java:125)
-	at servlets.wallet.Exchange.doPost(Exchange.java:32)
+	at dao.wallets.MySqlWalletDao.getAll(MySqlWalletDao.java:125)
+	at web.wallet.Exchange.doPost(Exchange.java:32)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -4459,7 +4459,7 @@ java.sql.SQLException: Column 'system_id' not found.
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
-	at servlets.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
+	at web.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
@@ -4509,8 +4509,8 @@ java.sql.SQLException: Column 'system_id' not found.
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:872)
 	at com.mysql.jdbc.ResultSetImpl.findColumn(ResultSetImpl.java:1073)
 	at com.mysql.jdbc.ResultSetImpl.getInt(ResultSetImpl.java:2571)
-	at database.wallets.MySqlWalletDao.readWalletById(MySqlWalletDao.java:213)
-	at servlets.wallet.Exchange.doPost(Exchange.java:36)
+	at dao.wallets.MySqlWalletDao.readWalletById(MySqlWalletDao.java:213)
+	at web.wallet.Exchange.doPost(Exchange.java:36)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
@@ -4518,7 +4518,7 @@ java.sql.SQLException: Column 'system_id' not found.
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
-	at servlets.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
+	at web.security.UserCheckFilter.doFilter(UserCheckFilter.java:27)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
@@ -4541,3 +4541,737 @@ java.sql.SQLException: Column 'system_id' not found.
 02-08-2015 13:22:33 INFO  MySqlHistoryDao:33 - A new transaction was created successfully!
 02-08-2015 13:22:33 INFO  MySqlWalletDao:41 - Read user's wallet
 02-08-2015 13:22:39 INFO  MySqlHistoryDao:42 - Read user's transaction
+02-08-2015 13:51:55 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+02-08-2015 13:51:55 INFO  Version:54 - HHH000412: Hibernate Core {4.3.10.Final}
+02-08-2015 13:51:55 INFO  Environment:239 - HHH000206: hibernate.properties not found
+02-08-2015 13:51:55 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+02-08-2015 13:51:56 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 13:51:56 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 13:51:56 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 13:51:56 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 13:51:56 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 13:51:56 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 13:51:56 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 13:51:56 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 13:51:57 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 13:51:58 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 13:51:58 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 13:52:00 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 13:52:00 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 13:52:00 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 13:52:00 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 13:52:00 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 13:52:00 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 13:52:00 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 13:52:00 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 13:52:00 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 13:52:00 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 13:52:00 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 13:52:05 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 13:52:05 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 13:52:05 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 13:52:05 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 13:52:05 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 13:52:05 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 13:52:05 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 13:52:05 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 13:52:06 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 13:52:06 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 13:52:06 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 13:52:06 INFO  HistoryDaoImp:34 - Read user history
+02-08-2015 13:52:06 WARN  SqlExceptionHelper:144 - SQL Error: 1064, SQLState: 42000
+02-08-2015 13:52:06 ERROR SqlExceptionHelper:146 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'user_id_to = 1' at line 1
+02-08-2015 13:52:06 WARN  SqlExceptionHelper:232 - SQL Warning Code: 1064, SQLState: 42000
+02-08-2015 13:52:06 WARN  SqlExceptionHelper:233 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'user_id_to = 1' at line 1
+02-08-2015 13:52:17 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 13:52:17 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 13:52:17 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 13:52:17 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 13:52:17 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 13:52:17 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 13:52:17 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 13:52:17 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 13:52:17 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 13:52:17 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 13:52:17 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 13:52:17 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 13:52:17 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 13:52:17 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 13:52:17 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 13:52:17 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 13:52:17 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 13:52:17 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 13:52:17 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 13:52:17 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 13:52:17 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 13:52:17 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 13:52:17 INFO  ChangeBalance:50 - Not enough money
+02-08-2015 13:52:20 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 13:52:20 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 13:52:20 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 13:52:20 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 13:52:20 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 13:52:20 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 13:52:20 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 13:52:20 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 13:52:20 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 13:52:20 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 13:52:20 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 13:52:20 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 13:52:20 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 13:52:20 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 13:52:20 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 13:52:20 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 13:52:20 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 13:52:20 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 13:52:20 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 13:52:20 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 13:52:20 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 13:52:20 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 13:52:21 INFO  HistoryDaoImp:20 - Create new history
+02-08-2015 13:52:21 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 13:52:21 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 13:52:21 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 13:52:21 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 13:52:21 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 13:52:21 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 13:52:21 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 13:52:21 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 13:52:21 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 13:52:21 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 13:52:21 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 13:52:33 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 13:52:33 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 13:52:33 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 13:52:33 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 13:52:33 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 13:52:33 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 13:52:33 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 13:52:33 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 13:52:34 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 13:52:34 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 13:52:34 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 13:52:34 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 13:52:34 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 13:52:34 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 13:52:34 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 13:52:34 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 13:52:34 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 13:52:34 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 13:52:34 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 13:52:34 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 13:52:34 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 13:52:34 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 13:52:52 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 13:52:52 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 13:52:52 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 13:52:52 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 13:52:52 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 13:52:52 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 13:52:52 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 13:52:52 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 13:52:52 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 13:52:52 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 13:52:52 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 13:52:56 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 13:52:56 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 13:52:56 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 13:52:56 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 13:52:56 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 13:52:56 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 13:52:56 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 13:52:56 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 13:52:56 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 13:52:56 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 13:52:56 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 13:52:56 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 13:52:56 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 13:52:56 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 13:52:56 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 13:52:56 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 13:52:56 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 13:52:56 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 13:52:56 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 13:52:56 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 13:52:56 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 13:52:56 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 13:52:56 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 13:52:56 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 13:52:56 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 13:52:56 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 13:52:56 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 13:52:56 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 13:52:56 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 13:52:56 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 13:52:56 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 13:52:56 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 13:52:56 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 13:52:56 INFO  CurrencyDaoImp:77 - Get all currency
+02-08-2015 13:52:57 INFO  TypeDaoImp:77 - Get all systems
+02-08-2015 16:05:20 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+02-08-2015 16:05:20 INFO  Version:54 - HHH000412: Hibernate Core {4.3.10.Final}
+02-08-2015 16:05:20 INFO  Environment:239 - HHH000206: hibernate.properties not found
+02-08-2015 16:05:20 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+02-08-2015 16:05:20 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:05:20 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:05:20 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:05:21 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:05:21 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:05:21 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:05:21 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:05:21 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:05:22 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:05:23 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:05:23 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:05:24 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:05:24 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:05:24 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:05:24 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:05:24 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:05:24 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:05:24 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:05:24 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:05:24 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:05:25 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:05:25 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:05:31 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:05:31 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:05:31 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:05:31 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:05:31 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:05:31 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:05:31 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:05:31 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:05:31 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:05:31 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:05:31 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:05:32 INFO  HistoryDaoImp:34 - Read user history
+02-08-2015 16:08:07 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:08:07 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:08:07 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:08:07 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:08:07 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:08:07 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:08:07 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:08:07 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:08:07 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:08:07 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:08:07 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:08:07 INFO  HistoryDaoImp:34 - Read user history
+02-08-2015 16:08:13 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:08:13 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:08:13 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:08:13 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:08:13 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:08:13 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:08:13 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:08:13 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:08:13 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:08:14 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:08:14 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:08:14 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:08:14 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:08:14 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:08:14 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:08:14 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:08:14 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:08:14 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:08:14 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:08:14 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:08:14 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:08:14 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:08:14 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:08:14 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:08:14 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:08:14 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:08:14 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:08:14 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:08:14 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:08:14 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:08:14 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:08:14 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:08:14 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:08:14 INFO  CurrencyDaoImp:77 - Get all currency
+02-08-2015 16:08:14 INFO  TypeDaoImp:77 - Get all systems
+02-08-2015 16:08:17 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:08:17 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:08:17 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:08:17 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:08:17 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:08:17 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:08:17 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:08:17 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:08:17 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:08:17 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:08:17 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:08:18 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:08:18 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:08:18 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:08:18 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:08:18 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:08:18 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:08:18 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:08:18 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:08:18 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:08:18 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:08:18 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:08:20 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:08:20 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:08:20 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:08:20 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:08:20 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:08:20 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:08:20 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:08:20 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:08:21 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:08:21 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:08:21 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:08:21 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:08:21 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:08:21 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:08:21 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:08:21 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:08:21 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:08:21 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:08:21 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:08:21 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:08:21 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:08:21 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:08:29 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:08:29 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:08:29 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:08:29 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:08:29 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:08:29 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:08:29 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:08:29 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:08:29 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:08:29 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:08:29 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:08:29 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:08:29 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:08:29 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:08:29 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:08:29 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:08:29 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:08:29 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:08:29 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:08:30 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:08:30 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:08:30 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:08:30 INFO  HistoryDaoImp:20 - Create new history
+02-08-2015 16:08:30 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:08:30 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:08:30 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:08:30 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:08:30 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:08:30 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:08:30 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:08:30 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:08:30 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:08:30 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:08:30 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:08:34 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:08:34 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:08:34 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:08:34 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:08:34 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:08:34 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:08:34 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:08:34 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:08:35 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:08:35 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:08:35 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:08:36 INFO  HistoryDaoImp:34 - Read user history
+02-08-2015 16:59:14 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+02-08-2015 16:59:14 INFO  Version:54 - HHH000412: Hibernate Core {4.3.10.Final}
+02-08-2015 16:59:14 INFO  Environment:239 - HHH000206: hibernate.properties not found
+02-08-2015 16:59:14 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+02-08-2015 16:59:14 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:59:14 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:59:14 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:59:14 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:59:14 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:59:14 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:59:14 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:59:15 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:59:15 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:59:16 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:59:16 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:59:17 INFO  UserDaoImp:20 - Create user
+02-08-2015 16:59:24 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:59:24 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:59:24 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:59:24 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:59:24 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:59:24 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:59:24 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:59:24 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:59:24 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:59:24 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:59:24 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:59:26 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:59:26 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:59:26 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:59:26 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:59:26 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:59:26 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:59:26 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:59:26 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:59:26 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:59:26 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:59:26 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:59:34 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:59:34 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:59:34 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:59:34 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:59:34 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:59:34 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:59:34 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:59:34 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:59:34 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:59:34 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:59:34 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:59:34 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:59:34 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:59:34 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:59:34 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:59:34 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:59:34 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:59:34 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:59:34 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:59:34 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:59:34 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:59:34 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:59:34 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:59:34 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:59:34 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:59:34 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:59:34 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:59:34 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:59:34 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:59:34 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:59:34 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:59:34 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:59:34 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:59:35 INFO  CurrencyDaoImp:77 - Get all currency
+02-08-2015 16:59:35 INFO  TypeDaoImp:77 - Get all systems
+02-08-2015 16:59:37 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:59:37 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:59:37 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:59:38 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:59:38 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:59:38 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:59:38 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:59:38 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:59:38 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:59:38 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:59:38 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:59:38 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:59:38 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:59:38 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:59:38 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:59:38 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:59:38 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:59:38 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:59:38 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:59:38 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:59:38 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:59:38 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:59:39 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:59:39 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:59:39 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:59:39 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:59:39 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:59:39 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:59:39 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:59:39 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:59:39 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:59:39 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:59:39 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:59:39 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:59:39 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:59:39 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:59:39 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:59:39 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:59:39 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:59:39 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:59:39 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:59:39 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:59:39 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:59:39 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:59:39 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:59:39 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:59:39 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:59:39 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:59:39 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:59:39 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:59:39 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:59:39 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:59:39 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:59:39 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:59:39 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:59:39 INFO  CurrencyDaoImp:77 - Get all currency
+02-08-2015 16:59:39 INFO  TypeDaoImp:77 - Get all systems
+02-08-2015 16:59:41 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:59:41 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:59:41 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:59:41 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:59:41 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:59:41 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:59:41 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:59:41 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:59:42 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:59:42 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:59:42 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:59:42 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:59:42 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:59:42 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:59:42 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:59:42 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:59:42 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:59:42 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:59:42 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:59:42 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:59:42 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:59:42 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:59:47 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:59:47 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:59:47 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:59:47 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:59:47 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:59:47 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:59:47 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:59:47 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:59:47 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:59:47 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:59:47 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:59:47 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:59:47 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:59:47 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:59:47 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:59:47 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:59:47 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:59:47 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:59:47 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:59:47 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:59:47 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:59:48 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:59:48 INFO  HistoryDaoImp:20 - Create new history
+02-08-2015 16:59:48 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:59:48 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:59:48 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:59:48 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:59:48 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:59:48 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:59:48 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:59:48 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:59:48 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:59:48 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:59:48 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:59:53 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:59:53 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:59:53 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:59:53 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:59:53 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:59:53 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:59:53 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:59:53 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:59:53 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:59:53 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:59:53 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:59:53 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:59:53 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:59:53 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:59:54 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:59:54 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:59:54 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:59:54 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:59:54 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:59:54 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:59:54 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:59:54 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 16:59:54 INFO  ChangeBalance:50 - Not enough money
+02-08-2015 16:59:59 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 16:59:59 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 16:59:59 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 16:59:59 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 16:59:59 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 16:59:59 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 16:59:59 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 16:59:59 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 16:59:59 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 16:59:59 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 16:59:59 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 17:00:00 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 17:00:00 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 17:00:00 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 17:00:00 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 17:00:00 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 17:00:00 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 17:00:00 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 17:00:00 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 17:00:00 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 17:00:00 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 17:00:00 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 17:00:00 INFO  HistoryDaoImp:20 - Create new history
+02-08-2015 17:00:00 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 17:00:00 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 17:00:00 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 17:00:00 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 17:00:00 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 17:00:00 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 17:00:00 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 17:00:00 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 17:00:00 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 17:00:00 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 17:00:00 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 17:00:18 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 17:00:18 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 17:00:18 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 17:00:18 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 17:00:18 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 17:00:18 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 17:00:18 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 17:00:18 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 17:00:18 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 17:00:18 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 17:00:18 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 17:00:18 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 17:00:18 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 17:00:18 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 17:00:19 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 17:00:19 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 17:00:19 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 17:00:19 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 17:00:19 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 17:00:19 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 17:00:19 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 17:00:19 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 17:00:33 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 17:00:33 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 17:00:33 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 17:00:33 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 17:00:33 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 17:00:33 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 17:00:33 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 17:00:33 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 17:00:33 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 17:00:33 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 17:00:33 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 17:00:37 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 17:00:37 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 17:00:37 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 17:00:37 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 17:00:37 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 17:00:37 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 17:00:37 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 17:00:37 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 17:00:37 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 17:00:37 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 17:00:37 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 17:00:37 INFO  HistoryDaoImp:34 - Read user history
+02-08-2015 17:00:50 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 17:00:50 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 17:00:50 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 17:00:50 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 17:00:50 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 17:00:50 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 17:00:50 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 17:00:50 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 17:00:50 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 17:00:50 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 17:00:50 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 17:00:50 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 17:00:50 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 17:00:50 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 17:00:50 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 17:00:50 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 17:00:50 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 17:00:50 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 17:00:50 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 17:00:50 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 17:00:50 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 17:00:50 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 17:00:55 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 17:00:55 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 17:00:55 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 17:00:55 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 17:00:55 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 17:00:55 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 17:00:55 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 17:00:55 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 17:00:55 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 17:00:55 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 17:00:55 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 17:00:55 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 17:00:55 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 17:00:55 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 17:00:55 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 17:00:55 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 17:00:55 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 17:00:55 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 17:00:55 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 17:00:55 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 17:00:55 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 17:00:55 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 17:02:07 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 17:02:07 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 17:02:07 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 17:02:07 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 17:02:07 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 17:02:07 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 17:02:07 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 17:02:07 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 17:02:07 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 17:02:08 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 17:02:08 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 17:02:55 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+02-08-2015 17:02:55 INFO  Version:54 - HHH000412: Hibernate Core {4.3.10.Final}
+02-08-2015 17:02:55 INFO  Environment:239 - HHH000206: hibernate.properties not found
+02-08-2015 17:02:55 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+02-08-2015 17:02:55 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 17:02:55 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 17:02:56 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 17:02:56 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 17:02:56 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 17:02:56 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 17:02:56 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 17:02:56 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 17:02:57 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 17:02:58 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 17:02:58 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 17:02:59 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 17:02:59 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 17:02:59 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 17:02:59 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 17:02:59 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 17:02:59 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 17:02:59 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 17:02:59 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 17:02:59 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 17:02:59 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 17:02:59 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 17:03:59 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 17:03:59 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 17:03:59 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 17:03:59 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 17:03:59 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 17:03:59 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 17:03:59 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 17:03:59 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 17:03:59 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 17:03:59 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 17:03:59 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 17:03:59 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+02-08-2015 17:03:59 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+02-08-2015 17:03:59 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+02-08-2015 17:03:59 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+02-08-2015 17:03:59 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+02-08-2015 17:03:59 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+02-08-2015 17:03:59 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+02-08-2015 17:03:59 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+02-08-2015 17:03:59 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+02-08-2015 17:03:59 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+02-08-2015 17:03:59 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+02-08-2015 17:03:59 INFO  UserDaoImp:66 - Delete user

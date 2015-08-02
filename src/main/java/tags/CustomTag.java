@@ -1,8 +1,8 @@
 package tags;
 
-import database.currency.Currency;
-import database.type.Type;
-import database.type_currency.TypeCurrency;
+import domain.Currency;
+import domain.Type;
+import domain.TypeCurrency;
 
 import javax.servlet.jsp.JspContext;
 import javax.servlet.jsp.JspException;

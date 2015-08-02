@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ tag language="java" %>
-<%@ attribute name="wallet" required="true" type="database.wallets.Wallet" %>
+<%@ attribute name="wallet" required="true" type="domain.Wallet" %>
 
 <tr style="border:2px solid #ccc">
     <td>${wallet.id}</td>
