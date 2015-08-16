@@ -5,7 +5,7 @@ public class TypeCurrency {
     private int typeId;
     private int currencyId;
 
-    TypeCurrency() {}
+    public TypeCurrency() {}
 
     public int getId() {
         return id;
