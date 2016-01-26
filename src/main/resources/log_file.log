@@ -9101,3 +9101,18 @@ Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown co
 26-01-2016 19:34:56 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
 26-01-2016 19:34:56 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
 26-01-2016 19:34:56 INFO  HistoryDaoImp:39 - Read user history
+26-01-2016 19:42:04 INFO  MySqlUserDao:148 - Login user
+26-01-2016 19:42:13 INFO  MySqlUserDao:148 - Login user
+26-01-2016 19:42:13 INFO  MySqlWalletDao:43 - Read user's wallet
+26-01-2016 19:42:24 INFO  MySqlHistoryDao:44 - Read user's transaction
+26-01-2016 19:42:29 INFO  MySqlHistoryDao:44 - Read user's transaction
+26-01-2016 19:42:34 INFO  MySqlHistoryDao:44 - Read user's transaction
+26-01-2016 19:42:45 INFO  MySqlWalletDao:185 - Change balance
+26-01-2016 19:42:45 INFO  MySqlWalletDao:196 - The sum is update
+26-01-2016 19:42:45 INFO  MySqlHistoryDao:18 - Create new transaction
+26-01-2016 19:42:45 INFO  MySqlHistoryDao:35 - A new transaction was created successfully!
+26-01-2016 19:42:45 INFO  MySqlWalletDao:43 - Read user's wallet
+26-01-2016 19:42:47 INFO  MySqlHistoryDao:44 - Read user's transaction
+26-01-2016 19:42:52 INFO  MySqlCurrencyDao:95 - Get all currency
+26-01-2016 19:42:52 INFO  MySqlTypeDao:96 - Get all type type
+26-01-2016 19:42:52 INFO  MySqlTypeCurrencyDao:89 - Get all type-currency dependency
