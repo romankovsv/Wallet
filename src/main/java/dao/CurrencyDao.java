@@ -1,4 +1,4 @@
-package dao.currency;
+package dao;
 
 import domain.Currency;
 

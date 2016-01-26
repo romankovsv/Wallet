@@ -1,7 +1,7 @@
 package web.wallet;
 
-import dao.history.MySqlHistoryDao;
-import dao.wallets.MySqlWalletDao;
+import dao.impl.MySqlHistoryDao;
+import dao.impl.MySqlWalletDao;
 import exception.MyException;
 import org.apache.log4j.Logger;
 import domain.History;

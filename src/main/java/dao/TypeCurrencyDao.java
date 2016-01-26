@@ -1,4 +1,4 @@
-package dao.type_currency;
+package dao;
 
 import domain.Currency;
 import domain.Type;

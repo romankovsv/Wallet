@@ -1,7 +1,7 @@
 package web.users;
 
-import dao.users.MySqlUserDao;
-import dao.wallets.MySqlWalletDao;
+import dao.impl.MySqlUserDao;
+import dao.impl.MySqlWalletDao;
 import org.apache.log4j.Logger;
 import domain.User;
 

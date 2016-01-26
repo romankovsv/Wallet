@@ -1,4 +1,4 @@
-package dao.type;
+package dao;
 
 import domain.Type;
 

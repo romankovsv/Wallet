@@ -1,8 +1,8 @@
 package web.wallet;
 
-import dao.currency.MySqlCurrencyDao;
-import dao.type.MySqlTypeDao;
-import dao.type_currency.MySqlTypeCurrencyDao;
+import dao.impl.MySqlCurrencyDao;
+import dao.impl.MySqlTypeDao;
+import dao.impl.MySqlTypeCurrencyDao;
 import domain.Currency;
 import domain.Type;
 import domain.TypeCurrency;

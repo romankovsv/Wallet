@@ -1,6 +1,6 @@
 package web.security;
 
-import dao.users.MySqlUserDao;
+import dao.impl.MySqlUserDao;
 import domain.User;
 
 import javax.servlet.ServletException;

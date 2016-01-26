@@ -1,4 +1,4 @@
-package dao.history;
+package dao;
 
 import domain.History;
 

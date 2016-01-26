@@ -1,6 +1,6 @@
 package web.users;
 
-import dao.users.MySqlUserDao;
+import dao.impl.MySqlUserDao;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;

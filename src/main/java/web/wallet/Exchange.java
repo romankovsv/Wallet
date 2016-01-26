@@ -1,7 +1,7 @@
 package web.wallet;
 
-import dao.history.MySqlHistoryDao;
-import dao.wallets.MySqlWalletDao;
+import dao.impl.MySqlHistoryDao;
+import dao.impl.MySqlWalletDao;
 import domain.History;
 import domain.User;
 import domain.Wallet;

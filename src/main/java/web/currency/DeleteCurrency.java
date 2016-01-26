@@ -1,6 +1,6 @@
 package web.currency;
 
-import dao.currency.MySqlCurrencyDao;
+import dao.impl.MySqlCurrencyDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

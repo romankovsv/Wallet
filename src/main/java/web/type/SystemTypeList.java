@@ -1,6 +1,6 @@
 package web.type;
 
-import dao.type.MySqlTypeDao;
+import dao.impl.MySqlTypeDao;
 import domain.Type;
 
 import javax.servlet.ServletException;

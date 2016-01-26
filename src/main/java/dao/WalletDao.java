@@ -1,4 +1,4 @@
-package dao.wallets;
+package dao;
 
 import domain.Wallet;
 

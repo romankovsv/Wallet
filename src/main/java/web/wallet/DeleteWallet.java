@@ -1,6 +1,6 @@
 package web.wallet;
 
-import dao.wallets.MySqlWalletDao;
+import dao.impl.MySqlWalletDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

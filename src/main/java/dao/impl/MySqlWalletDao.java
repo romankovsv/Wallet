@@ -1,6 +1,7 @@
-package dao.wallets;
+package dao.impl;
 
 import dao.factory.MySqlDaoFactory;
+import dao.WalletDao;
 import domain.Wallet;
 import org.apache.log4j.Logger;
 import domain.Currency;

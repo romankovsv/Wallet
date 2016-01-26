@@ -1,7 +1,7 @@
 package web.history;
 
 import domain.History;
-import dao.history.MySqlHistoryDao;
+import dao.impl.MySqlHistoryDao;
 import domain.User;
 
 import javax.servlet.ServletException;

@@ -1,6 +1,7 @@
-package dao.history;
+package dao.impl;
 
 import dao.factory.MySqlDaoFactory;
+import dao.HistoryDao;
 import domain.History;
 import org.apache.log4j.Logger;
 

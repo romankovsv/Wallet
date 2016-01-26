@@ -1,4 +1,4 @@
-package dao.users;
+package dao;
 
 import domain.User;
 

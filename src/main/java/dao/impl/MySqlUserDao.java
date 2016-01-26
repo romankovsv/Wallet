@@ -1,6 +1,7 @@
-package dao.users;
+package dao.impl;
 
 import dao.factory.MySqlDaoFactory;
+import dao.UserDao;
 import domain.User;
 import org.apache.log4j.Logger;
 

@@ -1,6 +1,7 @@
-package dao.type_currency;
+package dao.impl;
 
 import dao.factory.MySqlDaoFactory;
+import dao.TypeCurrencyDao;
 import domain.TypeCurrency;
 import org.apache.log4j.Logger;
 import domain.Currency;

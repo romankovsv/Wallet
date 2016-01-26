@@ -1,6 +1,6 @@
 package web.users;
 
-import dao.wallets.MySqlWalletDao;
+import dao.impl.MySqlWalletDao;
 import domain.User;
 import domain.Wallet;
 
