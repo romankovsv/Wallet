@@ -25,12 +25,12 @@ public class Edit extends HttpServlet {
             response.sendRedirect("/user");
         } else {
             request.setAttribute("error", "<font color = red>Current user is exist</font>");
-            getServletContext().getRequestDispatcher("/views/user/edit.jsp").forward(request, response);
+            getServletContext().getRequestDispatcher("/views/edit.jsp").forward(request, response);
         }
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        getServletContext().getRequestDispatcher("/views/user/edit.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/views/edit.jsp").forward(request, response);
     }
 }

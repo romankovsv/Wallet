@@ -28,6 +28,6 @@ public class HistoryList extends HttpServlet {
         list = historyDao.readByUserId(user.getId());
 
         request.setAttribute("list", list);
-        getServletContext().getRequestDispatcher("/views/user/history.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/views/history.jsp").forward(request, response);
     }
 }

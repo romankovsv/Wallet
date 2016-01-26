@@ -54,7 +54,7 @@ public class ChangeBalance extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        getServletContext().getRequestDispatcher("/views/wallets/changeBalance.jsp?id=" + request.getParameter("id")
+        getServletContext().getRequestDispatcher("/views/changeBalance.jsp?id=" + request.getParameter("id")
                 + "&sum=" + request.getParameter("sum")).forward(request, response);
     }
 }

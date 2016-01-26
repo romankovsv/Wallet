@@ -25,7 +25,7 @@ public class Users extends HttpServlet {
         list = userDao.getAll();
 
         request.setAttribute("list", list);
-        getServletContext().getRequestDispatcher("/views/user/users.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/views/users.jsp").forward(request, response);
     }
 }
 

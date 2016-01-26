@@ -22,7 +22,7 @@ public class Registration extends HttpServlet {
             response.sendRedirect("/");
         } else {
             request.setAttribute("error", "<font color = red>The current user is exist</font>");
-            getServletContext().getRequestDispatcher("/views/user/registration.jsp").forward(request, response);
+            getServletContext().getRequestDispatcher("/views/registration.jsp").forward(request, response);
         }
     }
 

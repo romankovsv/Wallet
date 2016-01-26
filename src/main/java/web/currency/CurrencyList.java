@@ -26,6 +26,6 @@ public class CurrencyList extends HttpServlet {
         list = currencyDao.getAll();
 
         request.setAttribute("list", list);
-        getServletContext().getRequestDispatcher("/views/currency/currency.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/views/currency.jsp").forward(request, response);
     }
 }

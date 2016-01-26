@@ -26,6 +26,6 @@ public class SystemTypeList extends HttpServlet {
         list = systemTypeDao.getAll();
 
         request.setAttribute("list", list);
-        getServletContext().getRequestDispatcher("/views/type/types.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/views/types.jsp").forward(request, response);
     }
 }

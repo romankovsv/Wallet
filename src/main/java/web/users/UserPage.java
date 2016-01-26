@@ -28,6 +28,6 @@ public class UserPage extends HttpServlet {
         list = walletDao.readForUserById(user.getId());
 
         request.setAttribute("list", list);
-        getServletContext().getRequestDispatcher("/views/user/userMainPage.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/views/userMainPage.jsp").forward(request, response);
     }
 }

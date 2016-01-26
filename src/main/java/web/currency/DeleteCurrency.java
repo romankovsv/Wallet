@@ -21,6 +21,6 @@ public class DeleteCurrency extends HttpServlet {
         MySqlCurrencyDao currencyDao = new MySqlCurrencyDao();
         int id = Integer.parseInt(request.getParameter("id"));
         currencyDao.deleteById(id);
-        getServletContext().getRequestDispatcher("/views/currency/currency-list").forward(request, response);
+        getServletContext().getRequestDispatcher("/views/currency-list").forward(request, response);
     }
 }
