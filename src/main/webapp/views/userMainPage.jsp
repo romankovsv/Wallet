@@ -11,7 +11,7 @@
 <body>
 
 <fieldset>
-    <legend><fmt:message key="user.title"/>, ${sessionScope.user.name} /></legend>
+    <legend><fmt:message key="user.title"/>, ${sessionScope.user.name}</legend>
     <p>
         <button>
             <a href="user/new-wallet"><fmt:message key="user.addWallet"/></a>

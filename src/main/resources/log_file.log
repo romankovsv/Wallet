@@ -9355,3 +9355,12 @@ Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown co
 26-01-2016 20:57:26 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
 26-01-2016 20:57:26 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
 26-01-2016 20:57:26 INFO  CurrencyDaoImp:88 - Get all currency
+26-01-2016 21:21:06 INFO  MySqlUserDao:148 - Login user
+26-01-2016 21:21:28 INFO  MySqlUserDao:22 - Create new user
+26-01-2016 21:21:28 INFO  MySqlUserDao:39 - A new user was created successfully!
+26-01-2016 21:21:33 INFO  MySqlUserDao:148 - Login user
+26-01-2016 21:21:33 INFO  MySqlWalletDao:43 - Read user's wallet
+26-01-2016 21:21:47 INFO  MySqlHistoryDao:44 - Read user's transaction
+26-01-2016 21:21:54 INFO  MySqlCurrencyDao:95 - Get all currency
+26-01-2016 21:21:54 INFO  MySqlTypeDao:96 - Get all type type
+26-01-2016 21:21:54 INFO  MySqlTypeCurrencyDao:89 - Get all type-currency dependency
