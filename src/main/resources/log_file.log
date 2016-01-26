@@ -9234,3 +9234,124 @@ Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown co
 26-01-2016 20:01:59 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
 26-01-2016 20:01:59 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
 26-01-2016 20:01:59 INFO  UserDaoImp:74 - Delete user
+26-01-2016 20:03:45 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+26-01-2016 20:03:45 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+26-01-2016 20:03:45 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+26-01-2016 20:03:46 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+26-01-2016 20:03:46 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+26-01-2016 20:03:46 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+26-01-2016 20:03:46 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+26-01-2016 20:03:46 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+26-01-2016 20:03:46 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+26-01-2016 20:03:46 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+26-01-2016 20:03:46 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+26-01-2016 20:03:46 INFO  UserDaoImp:92 - Get all users
+26-01-2016 20:03:46 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+26-01-2016 20:03:46 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+26-01-2016 20:03:46 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+26-01-2016 20:03:46 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+26-01-2016 20:03:46 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+26-01-2016 20:03:46 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+26-01-2016 20:03:46 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+26-01-2016 20:03:46 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+26-01-2016 20:03:46 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+26-01-2016 20:03:46 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+26-01-2016 20:03:46 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+26-01-2016 20:03:46 INFO  UserDaoImp:92 - Get all users
+26-01-2016 20:04:23 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+26-01-2016 20:04:23 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+26-01-2016 20:04:23 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+26-01-2016 20:04:23 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+26-01-2016 20:04:23 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+26-01-2016 20:04:23 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+26-01-2016 20:04:23 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+26-01-2016 20:04:23 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+26-01-2016 20:04:23 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+26-01-2016 20:04:23 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+26-01-2016 20:04:23 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+26-01-2016 20:04:23 INFO  CurrencyDaoImp:88 - Get all currency
+26-01-2016 20:04:42 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+26-01-2016 20:04:42 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+26-01-2016 20:04:42 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+26-01-2016 20:04:42 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+26-01-2016 20:04:42 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+26-01-2016 20:04:42 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+26-01-2016 20:04:42 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+26-01-2016 20:04:42 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+26-01-2016 20:04:42 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+26-01-2016 20:04:42 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+26-01-2016 20:04:42 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+26-01-2016 20:04:42 INFO  TypeDaoImp:88 - Get all systems
+26-01-2016 20:56:42 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+26-01-2016 20:56:43 INFO  Version:54 - HHH000412: Hibernate Core {4.3.11.Final}
+26-01-2016 20:56:43 INFO  Environment:239 - HHH000206: hibernate.properties not found
+26-01-2016 20:56:43 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+26-01-2016 20:56:43 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+26-01-2016 20:56:43 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+26-01-2016 20:56:43 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+26-01-2016 20:56:43 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+26-01-2016 20:56:43 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+26-01-2016 20:56:43 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+26-01-2016 20:56:43 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+26-01-2016 20:56:43 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+26-01-2016 20:56:44 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+26-01-2016 20:56:45 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+26-01-2016 20:56:45 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+26-01-2016 20:56:54 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+26-01-2016 20:56:54 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+26-01-2016 20:56:54 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+26-01-2016 20:56:55 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+26-01-2016 20:56:55 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+26-01-2016 20:56:55 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+26-01-2016 20:56:55 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+26-01-2016 20:56:55 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+26-01-2016 20:56:55 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+26-01-2016 20:56:55 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+26-01-2016 20:56:55 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+26-01-2016 20:57:08 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+26-01-2016 20:57:08 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+26-01-2016 20:57:08 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+26-01-2016 20:57:08 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+26-01-2016 20:57:08 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+26-01-2016 20:57:08 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+26-01-2016 20:57:08 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+26-01-2016 20:57:08 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+26-01-2016 20:57:08 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+26-01-2016 20:57:08 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+26-01-2016 20:57:08 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+26-01-2016 20:57:14 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+26-01-2016 20:57:14 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+26-01-2016 20:57:14 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+26-01-2016 20:57:14 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+26-01-2016 20:57:14 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+26-01-2016 20:57:14 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+26-01-2016 20:57:14 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+26-01-2016 20:57:14 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+26-01-2016 20:57:14 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+26-01-2016 20:57:14 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+26-01-2016 20:57:14 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+26-01-2016 20:57:15 INFO  UserDaoImp:92 - Get all users
+26-01-2016 20:57:15 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+26-01-2016 20:57:15 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+26-01-2016 20:57:15 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+26-01-2016 20:57:15 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+26-01-2016 20:57:15 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+26-01-2016 20:57:15 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+26-01-2016 20:57:15 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+26-01-2016 20:57:15 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+26-01-2016 20:57:15 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+26-01-2016 20:57:15 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+26-01-2016 20:57:15 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+26-01-2016 20:57:15 INFO  UserDaoImp:92 - Get all users
+26-01-2016 20:57:26 INFO  Configuration:2075 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+26-01-2016 20:57:26 INFO  Configuration:2094 - HHH000040: Configuration resource: /hibernate.cfg.xml
+26-01-2016 20:57:26 INFO  Configuration:2216 - HHH000041: Configured SessionFactory: null
+26-01-2016 20:57:26 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+26-01-2016 20:57:26 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/exchange service]
+26-01-2016 20:57:26 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+26-01-2016 20:57:26 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+26-01-2016 20:57:26 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+26-01-2016 20:57:26 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+26-01-2016 20:57:26 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+26-01-2016 20:57:26 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+26-01-2016 20:57:26 INFO  CurrencyDaoImp:88 - Get all currency

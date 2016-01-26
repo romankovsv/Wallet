@@ -4,30 +4,30 @@
 
 <html>
 <head>
-  <title>Currency</title>
-  <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <title>Currency</title>
 </head>
 <body>
 
-<h3>CURRENCY</h3>
-
-<table border="1">
-  <tr>
-    <td>ID</td>
-    <td>Name</td>
-  </tr>
-  <c:forEach items="${requestScope.list}" var="currency">
-    <tr>
-      <td>${currency.id}</td>
-      <td>${currency.name}</td>
-      <td>
-        <button>
-          <a href="delete-currency?id=${currency.id}">Delete</a>
-        </button>
-      </td>
-    </tr>
-  </c:forEach>
-</table>
+<fieldset>
+    <legend>CURRENCY</legend>
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+        </tr>
+        <c:forEach items="${requestScope.list}" var="currency">
+            <tr>
+                <td>${currency.id}</td>
+                <td>${currency.name}</td>
+                <td>
+                    <button>
+                        <a href="delete-currency?id=${currency.id}">Delete</a>
+                    </button>
+                </td>
+            </tr>
+        </c:forEach>
+    </table>
+</fieldset>
 
 </body>
 </html>
