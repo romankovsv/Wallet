@@ -12,7 +12,7 @@ import java.io.IOException;
 /**
  * Created by SpiritMoon
  */
-@WebServlet(name = "DeleteUser", urlPatterns = "/deleteById-user")
+@WebServlet(name = "DeleteUser", urlPatterns = "/delete-user")
 public class DeleteUser extends HttpServlet {
     private static final Logger log = Logger.getLogger(DeleteUser.class);
 
